@@ -1,0 +1,961 @@
+success,total_return,path_length,collision,repeated_failure_rate,optimality_gap,inference_time_per_action,Algorithm,Map,Seed
+0,-1.02,3,1,0.0,,3.3053414275248847e-06,Random Policy,easy,0
+0,-1.01,2,1,0.0,,1.2284144759178162e-06,Random Policy,easy,0
+0,-1.06,7,1,0.0,,7.798496101583754e-07,Random Policy,easy,0
+0,-1.01,2,1,0.0,,1.1040829122066498e-06,Random Policy,easy,0
+0,-1.0,1,1,0.0,,1.2498348951339722e-06,Random Policy,easy,0
+0,-1.0,1,1,0.0,,1.125037670135498e-06,Random Policy,easy,0
+0,-1.01,2,1,0.0,,1.0414514690637589e-06,Random Policy,easy,0
+0,-1.02,3,1,0.0,,8.890250076850256e-07,Random Policy,easy,0
+0,-1.0,1,1,0.0,,1.0831281542778015e-06,Random Policy,easy,0
+0,-1.09,10,1,0.0,,7.499707862734794e-07,Random Policy,easy,0
+1,0.96,5,0,0.0,0.0,5.667097866535187e-07,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.1660158634185791e-07,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.0817311704158783e-07,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.1664815247058868e-07,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,9.98377799987793e-08,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.0863877832889557e-07,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,9.159557521343231e-08,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,9.140931069850922e-08,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,9.201467037200927e-08,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,8.316710591316223e-08,Value Iteration,easy,0
+1,0.96,5,0,0.0,0.0,4.0838494896888733e-07,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.1646188795566559e-07,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,9.17818397283554e-08,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,9.997747838497161e-08,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.6684643924236298e-07,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.916661858558655e-07,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.082196831703186e-07,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.3345852494239808e-07,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,1.0831281542778015e-07,Policy Iteration,easy,0
+1,0.96,5,0,0.0,0.0,9.173527359962463e-08,Policy Iteration,easy,0
+1,0.94,7,0,0.0,2.0,1.6070636255400522e-06,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,9.048464042799813e-07,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,8.212602032082421e-07,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,8.03565074290548e-07,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,7.498809801680701e-07,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,7.144574608121599e-07,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,6.96462978209768e-07,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,7.499807647296361e-07,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,7.381396634238107e-07,Q-learning,easy,0
+1,0.94,7,0,0.0,2.0,6.668602249452046e-07,Q-learning,easy,0
+0,-0.9900000000000002,50,0,0.0,,0.0004782599536702037,MCTS,easy,0
+0,-0.9900000000000002,50,0,0.0,,0.0005538425082340836,MCTS,easy,0
+1,0.82,19,0,0.0,14.0,0.00040303724572846765,MCTS,easy,0
+1,0.96,5,0,0.0,0.0,0.00038269166834652423,MCTS,easy,0
+1,0.84,17,0,0.0,12.0,0.0004651201341082068,MCTS,easy,0
+1,0.5999999999999999,41,0,0.0,36.0,0.00047040346828175754,MCTS,easy,0
+1,0.74,27,0,0.0,22.0,0.0004578611071876906,MCTS,easy,0
+1,0.74,27,0,0.0,22.0,0.0004986065905541182,MCTS,easy,0
+1,0.92,9,0,0.0,4.0,0.0003670231542653508,MCTS,easy,0
+1,0.72,29,0,0.0,24.0,0.001900346315433753,MCTS,easy,0
+1,0.92,9,0,0.0,4.0,0.0021720602073603207,Standard Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.0018590998370200396,Standard Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.001850059289219124,Standard Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.00184422479942441,Standard Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.0018393749836832286,Standard Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.0018341723896030868,Standard Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.0018288002349436284,Standard Diffusion,easy,0
+1,0.88,13,0,0.0,8.0,0.0018429486260104638,Standard Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.0018193415831774472,Standard Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.0018430954244519984,Standard Diffusion,easy,0
+1,0.92,9,0,0.0,4.0,0.0021369166982670626,Failure-Memory Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.0020026999525725843,Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.002007773711479136,Failure-Memory Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.001999241625890136,Failure-Memory Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.00199867500923574,Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.0019775418830769403,Failure-Memory Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.0020052169915288688,Failure-Memory Diffusion,easy,0
+1,0.88,13,0,0.0,8.0,0.0020154390412454423,Failure-Memory Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.002028441661968827,Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.0020598035106169327,Failure-Memory Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.004169808467850089,Improved Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.004254488174670509,Improved Failure-Memory Diffusion,easy,0
+1,0.92,9,0,0.0,4.0,0.0041514258417818285,Improved Failure-Memory Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.0052559416275471445,Improved Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.02226729757551636,Improved Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.015483708520020758,Improved Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.01749533335013049,Improved Failure-Memory Diffusion,easy,0
+1,0.96,5,0,0.0,0.0,0.006116949999704957,Improved Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.006270702362858823,Improved Failure-Memory Diffusion,easy,0
+1,0.94,7,0,0.0,2.0,0.010680857114493847,Improved Failure-Memory Diffusion,easy,0
+0,-1.02,3,1,0.0,,9.444387008746466e-06,Random Policy,obstacle,0
+0,-1.01,2,1,0.0,,6.104586645960808e-06,Random Policy,obstacle,0
+0,-1.01,2,1,0.0,,1.706206239759922e-05,Random Policy,obstacle,0
+0,-1.01,2,1,0.0,,2.813059836626053e-06,Random Policy,obstacle,0
+0,-1.0,1,1,0.0,,1.2832926586270332e-05,Random Policy,obstacle,0
+0,-1.0,1,1,0.0,,1.500011421740055e-05,Random Policy,obstacle,0
+0,-1.01,2,1,0.0,,2.870860043913126e-05,Random Policy,obstacle,0
+0,-1.02,3,1,0.0,,2.277937407294909e-06,Random Policy,obstacle,0
+0,-1.0,1,1,0.0,,2.458924427628517e-06,Random Policy,obstacle,0
+0,-1.01,2,1,0.0,,1.2705568224191666e-06,Random Policy,obstacle,0
+1,0.92,9,0,0.0,0.0,3.4246800674332513e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.9896672003799014e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,3.1025976770453985e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.7601996660232544e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.203475726975335e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.0190221170584361e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.202958325544993e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.2960905830065408e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.0689513550864325e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.2515940599971347e-07,Value Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,2.869767033391529e-07,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.6668087078465356e-07,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.618949075539907e-07,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.4355302684836917e-07,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,4.5834005706840094e-07,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,7.592089888122347e-07,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,5.002495729260975e-07,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.0093208402395248e-06,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,1.6389466408226226e-06,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,3.3333587149779004e-07,Policy Iteration,obstacle,0
+1,0.92,9,0,0.0,0.0,2.310042166047626e-06,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,9.258639895253712e-07,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,5.0929116292132275e-06,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,1.3517371068398158e-06,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,9.351513452000088e-07,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,1.2408062401745055e-06,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,9.583567993508445e-07,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,8.609818501604927e-07,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,8.795565615097681e-07,Q-learning,obstacle,0
+1,0.92,9,0,0.0,0.0,8.381385770108965e-07,Q-learning,obstacle,0
+1,0.88,13,0,0.0,4.0,0.0015742658601643948,MCTS,obstacle,0
+1,0.9,11,0,0.0,2.0,0.0015051550951532342,MCTS,obstacle,0
+1,0.7,31,0,0.0,22.0,0.0015086464944385712,MCTS,obstacle,0
+1,0.88,13,0,0.0,4.0,0.0044954038189294245,MCTS,obstacle,0
+1,0.9,11,0,0.0,2.0,0.002027833368629217,MCTS,obstacle,0
+1,0.6399999999999999,37,0,0.0,28.0,0.0010560935338002604,MCTS,obstacle,0
+1,0.84,17,0,0.0,8.0,0.0009997573352473624,MCTS,obstacle,0
+1,0.7799999999999999,23,0,0.0,14.0,0.001140965695452431,MCTS,obstacle,0
+1,0.86,15,0,0.0,6.0,0.000851030508056283,MCTS,obstacle,0
+1,0.9,11,0,0.0,2.0,0.0008982348001816056,MCTS,obstacle,0
+0,-1.02,3,1,0.0,,0.0024169583339244127,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.0018555970552066963,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.0017837359725187223,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.0020969309844076633,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.0017798753300060828,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.0017616113958259423,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.00201861133488516,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.0017796946534266074,Standard Diffusion,obstacle,0
+0,-1.04,5,1,0.0,,0.0018772002309560775,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.0017756529462834199,Standard Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,0.0019589586493869624,Failure-Memory Diffusion,obstacle,0
+0,-1.03,4,1,0.6,,0.002181333489716053,Failure-Memory Diffusion,obstacle,0
+0,-1.01,2,1,0.3333333333333333,,0.0019646669970825315,Failure-Memory Diffusion,obstacle,0
+0,-1.01,2,1,1.0,,0.001961458008736372,Failure-Memory Diffusion,obstacle,0
+1,0.92,9,0,0.4,0.0,0.0021945926257305676,Failure-Memory Diffusion,obstacle,0
+1,0.92,9,0,0.4,0.0,0.0021842269537349543,Failure-Memory Diffusion,obstacle,0
+1,0.9,11,0,0.3333333333333333,2.0,0.0021341212559491396,Failure-Memory Diffusion,obstacle,0
+1,0.92,9,0,0.4,0.0,0.0021851620274699396,Failure-Memory Diffusion,obstacle,0
+1,0.92,9,0,0.4,0.0,0.002169583380843202,Failure-Memory Diffusion,obstacle,0
+1,0.92,9,0,0.4,0.0,0.0022019766943736207,Failure-Memory Diffusion,obstacle,0
+1,0.92,9,0,0.0,0.0,0.004260726945681704,Improved Failure-Memory Diffusion,obstacle,0
+1,0.84,17,0,0.0,8.0,0.004091879873372176,Improved Failure-Memory Diffusion,obstacle,0
+1,0.88,13,0,0.0,4.0,0.004059416635964925,Improved Failure-Memory Diffusion,obstacle,0
+1,0.9,11,0,0.0,2.0,0.0039789771915159445,Improved Failure-Memory Diffusion,obstacle,0
+1,0.92,9,0,0.0,0.0,0.004079740779060457,Improved Failure-Memory Diffusion,obstacle,0
+1,0.9,11,0,0.0,2.0,0.004106382670050318,Improved Failure-Memory Diffusion,obstacle,0
+1,0.86,15,0,0.0,6.0,0.004298186209052801,Improved Failure-Memory Diffusion,obstacle,0
+1,0.88,13,0,0.0,4.0,0.004622826997477274,Improved Failure-Memory Diffusion,obstacle,0
+1,0.9,11,0,0.0,2.0,0.007661723383617672,Improved Failure-Memory Diffusion,obstacle,0
+1,0.92,9,0,0.0,0.0,0.006628657535960277,Improved Failure-Memory Diffusion,obstacle,0
+0,-1.02,3,1,0.0,,3.0003332843383155e-06,Random Policy,deceptive,0
+0,-1.01,2,1,0.0,,1.2915115803480148e-06,Random Policy,deceptive,0
+0,-1.01,2,1,0.0,,1.2711388990283012e-06,Random Policy,deceptive,0
+0,-1.01,2,1,0.0,,1.1245720088481903e-06,Random Policy,deceptive,0
+0,-1.0,1,1,0.0,,1.2498348951339722e-06,Random Policy,deceptive,0
+0,-1.0,1,1,0.0,,1.2081582099199295e-06,Random Policy,deceptive,0
+0,-1.01,2,1,0.0,,1.0005896911025047e-06,Random Policy,deceptive,0
+0,-1.02,3,1,0.0,,8.89413058757782e-07,Random Policy,deceptive,0
+0,-1.0,1,1,0.0,,9.578652679920197e-07,Random Policy,deceptive,0
+0,-1.01,2,1,0.0,,9.579816833138466e-07,Random Policy,deceptive,0
+1,0.88,13,0,0.0,0.0,2.0829387582265414e-07,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.2177042663097382e-07,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.2825386455425849e-07,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.2501214559261615e-07,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.1845706747128413e-07,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.0590212276348701e-07,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.0896474123001099e-07,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,9.938286474117866e-08,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.0892892113098732e-07,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,9.624860607660733e-08,Value Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,2.2109956122361697e-07,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.2800312386109278e-07,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.31477673466389e-07,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.1213481999360599e-07,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.3129857297127063e-07,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.0244548320770264e-07,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,9.621278597758366e-08,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,9.938286474117866e-08,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,9.940077479069049e-08,Policy Iteration,deceptive,0
+1,0.88,13,0,0.0,0.0,1.0885728093293997e-07,Policy Iteration,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,7.582688704133033e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.816769018769265e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.565824151039124e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.632227450609207e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.715487688779831e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.948644295334816e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.649317219853401e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.650481373071671e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.616301834583282e-07,Q-learning,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,6.556930020451545e-07,Q-learning,deceptive,0
+1,0.7799999999999999,23,0,0.0,10.0,0.0006968642827933249,MCTS,deceptive,0
+1,0.72,29,0,0.0,16.0,0.000883969935941799,MCTS,deceptive,0
+1,0.7,31,0,0.0,18.0,0.0010319569809061865,MCTS,deceptive,0
+1,0.7999999999999999,21,0,0.0,8.0,0.0008663652309527,MCTS,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,0.001181379989720881,MCTS,deceptive,0
+1,0.7999999999999999,21,0,0.0,8.0,0.0009610456347997699,MCTS,deceptive,0
+1,0.82,19,0,0.0,6.0,0.0007764979045053846,MCTS,deceptive,0
+1,0.6399999999999999,37,0,0.0,24.0,0.0008009032321137351,MCTS,deceptive,0
+1,0.7599999999999999,25,0,0.0,12.0,0.0007184748817235232,MCTS,deceptive,0
+1,0.72,29,0,0.0,16.0,0.0008978964680613115,MCTS,deceptive,0
+0,-1.03,4,1,0.0,,0.0018174999859184027,Standard Diffusion,deceptive,0
+0,-1.05,6,1,0.0,,0.0017412432935088873,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.0017326457309536636,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.001762749976478517,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.0017343543004244566,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.0017445937264710665,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.0017300625331699848,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.001734635268803686,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.0017818749765865505,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.0017628335626795888,Standard Diffusion,deceptive,0
+0,-1.03,4,1,0.0,,0.0019173749606125057,Failure-Memory Diffusion,deceptive,0
+0,-1.04,5,1,0.6666666666666666,,0.0019604084081947803,Failure-Memory Diffusion,deceptive,0
+0,-1.01,2,1,0.3333333333333333,,0.0019725209567695856,Failure-Memory Diffusion,deceptive,0
+0,-1.02,3,1,1.0,,0.0019608609533558288,Failure-Memory Diffusion,deceptive,0
+0,-1.05,6,1,0.7142857142857143,,0.001958305831067264,Failure-Memory Diffusion,deceptive,0
+1,0.88,13,0,0.14285714285714285,0.0,0.001961304537522105,Failure-Memory Diffusion,deceptive,0
+0,-1.19,20,1,1.0,,0.0019498415756970644,Failure-Memory Diffusion,deceptive,0
+0,-1.02,3,1,1.0,,0.001966416680564483,Failure-Memory Diffusion,deceptive,0
+0,-1.08,9,1,0.2,,0.001961560376609365,Failure-Memory Diffusion,deceptive,0
+0,-1.4000000000000001,41,1,1.0,,0.0019590701146914463,Failure-Memory Diffusion,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,0.003935291706584394,Improved Failure-Memory Diffusion,deceptive,0
+0,-0.9900000000000002,50,0,0.0,,0.003940551746636629,Improved Failure-Memory Diffusion,deceptive,0
+0,-0.9900000000000002,50,0,0.058823529411764705,,0.00402834081556648,Improved Failure-Memory Diffusion,deceptive,0
+0,-0.9900000000000002,50,0,0.0196078431372549,,0.004031283324584365,Improved Failure-Memory Diffusion,deceptive,0
+0,-0.9900000000000002,50,0,1.0,,0.003899542558938265,Improved Failure-Memory Diffusion,deceptive,0
+1,0.88,13,0,0.21428571428571427,0.0,0.003892080159857869,Improved Failure-Memory Diffusion,deceptive,0
+1,0.88,13,0,0.21428571428571427,0.0,0.003907246909175928,Improved Failure-Memory Diffusion,deceptive,0
+1,0.88,13,0,0.21428571428571427,0.0,0.003906666677301893,Improved Failure-Memory Diffusion,deceptive,0
+1,0.88,13,0,0.21428571428571427,0.0,0.004132922971621156,Improved Failure-Memory Diffusion,deceptive,0
+1,0.88,13,0,0.21428571428571427,0.0,0.0039305160037026955,Improved Failure-Memory Diffusion,deceptive,0
+0,-1.0,1,1,0.0,,3.1660310924053192e-06,Random Policy,random_small,0
+0,-1.01,2,1,0.0,,1.4170072972774506e-06,Random Policy,random_small,0
+0,-1.0,1,1,0.0,,1.3329554349184036e-06,Random Policy,random_small,0
+0,-1.0,1,1,0.0,,1.4170072972774506e-06,Random Policy,random_small,0
+0,-1.0,1,1,0.0,,1.333886757493019e-06,Random Policy,random_small,0
+0,-1.0,1,1,0.0,,1.2498348951339722e-06,Random Policy,random_small,0
+0,-1.01,2,1,0.0,,1.0830117389559746e-06,Random Policy,random_small,0
+0,-1.0,1,1,0.0,,1.125037670135498e-06,Random Policy,random_small,0
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,random_small,0
+0,-1.09,10,1,0.0,,7.875263690948487e-07,Random Policy,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.7689308151602745e-07,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.35303707793355e-07,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.3023964129388332e-07,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.61642674356699e-07,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.2497184798121452e-07,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.0940129868686199e-07,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,9.880750440061092e-08,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.0407529771327972e-07,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,9.423820301890373e-08,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.1452357284724712e-07,Value Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,2.446176949888468e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.2500095181167126e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.197622623294592e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.1964584700763226e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.2497184798121452e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.1466909199953079e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.25030055642128e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.3026874512434006e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.25030055642128e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.0937219485640526e-07,Policy Iteration,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,1.1770171113312244e-06,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,8.281203918159008e-07,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,7.866474334150553e-07,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,7.502967491745949e-07,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,8.073984645307064e-07,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,7.758499123156071e-07,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,8.020433597266674e-07,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,7.398484740406275e-07,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,7.549533620476723e-07,Q-learning,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,7.762573659420013e-07,Q-learning,random_small,0
+0,-0.9900000000000002,50,0,0.0,,0.0006153141567483545,MCTS,random_small,0
+0,-0.9900000000000002,50,0,0.0,,0.0005768274888396264,MCTS,random_small,0
+0,-0.9900000000000002,50,0,0.0,,0.0006038899626582861,MCTS,random_small,0
+1,0.6699999999999999,34,0,0.0,26.0,0.0005975588471354807,MCTS,random_small,0
+0,-0.9900000000000002,50,0,0.0,,0.0005733058042824269,MCTS,random_small,0
+0,-0.9900000000000002,50,0,0.0,,0.0005601716041564942,MCTS,random_small,0
+0,-0.9900000000000002,50,0,0.0,,0.0005509974760934711,MCTS,random_small,0
+0,-0.9900000000000002,50,0,0.0,,0.0005668842140585184,MCTS,random_small,0
+1,0.8099999999999999,20,0,0.0,12.0,0.0005725583177991211,MCTS,random_small,0
+0,-0.9900000000000002,50,0,0.0,,0.0005284258117899299,MCTS,random_small,0
+1,0.91,10,0,0.0,2.0,0.0018122042063623666,Standard Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0018698291620239615,Standard Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.001802849886007607,Standard Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.0018031980434898287,Standard Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.0018180419283453375,Standard Diffusion,random_small,0
+1,0.89,12,0,0.0,4.0,0.0018015694222413003,Standard Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0017991625936701894,Standard Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0018171833828091622,Standard Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0018139251274988054,Standard Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0018169747898355126,Standard Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0019856458995491265,Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0019802665105089546,Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0019861500477418303,Failure-Memory Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.001983932248549536,Failure-Memory Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.0019904063956346363,Failure-Memory Diffusion,random_small,0
+1,0.89,12,0,0.0,4.0,0.001982961742517849,Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0019808919401839375,Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0020659708650782706,Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.0021631126524880528,Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.002090445952489972,Failure-Memory Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.004321468441048637,Improved Failure-Memory Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.004220703121973202,Improved Failure-Memory Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.004281755100237206,Improved Failure-Memory Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.004255088628269732,Improved Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.004180104192346335,Improved Failure-Memory Diffusion,random_small,0
+1,0.89,12,0,0.0,4.0,0.0041377914797825115,Improved Failure-Memory Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.004267338459612802,Improved Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.004145904257893562,Improved Failure-Memory Diffusion,random_small,0
+1,0.91,10,0,0.0,2.0,0.00414796678815037,Improved Failure-Memory Diffusion,random_small,0
+1,0.9299999999999999,8,0,0.0,0.0,0.004146046994719654,Improved Failure-Memory Diffusion,random_small,0
+0,-1.0,1,1,0.0,,2.5830231606960297e-06,Random Policy,easy,1
+0,-1.03,4,1,0.0,,1.125037670135498e-06,Random Policy,easy,1
+0,-1.0,1,1,0.0,,1.3329554349184036e-06,Random Policy,easy,1
+0,-1.02,3,1,0.0,,9.580204884211223e-07,Random Policy,easy,1
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,easy,1
+0,-1.19,20,1,0.0,,6.187823601067066e-07,Random Policy,easy,1
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,easy,1
+0,-1.0,1,1,0.0,,1.084059476852417e-06,Random Policy,easy,1
+0,-1.06,7,1,0.0,,7.978773542812892e-07,Random Policy,easy,1
+0,-1.0,1,1,0.0,,1.1248048394918442e-06,Random Policy,easy,1
+1,0.96,5,0,0.0,0.0,1.9995495676994323e-07,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0835938155651092e-07,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.4156103134155273e-07,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0016374289989471e-07,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0021030902862548e-07,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,9.974464774131774e-08,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,9.201467037200927e-08,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,9.131617844104767e-08,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0859221220016479e-07,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0826624929904938e-07,Value Iteration,easy,1
+1,0.96,5,0,0.0,0.0,2.0023435354232788e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.254025846719742e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.2470409274101258e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0826624929904938e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0859221220016479e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.000240445137024e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0817311704158783e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.084059476852417e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0835938155651092e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.0859221220016479e-07,Policy Iteration,easy,1
+1,0.96,5,0,0.0,0.0,1.3752374798059464e-06,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,9.168405085802079e-07,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,8.413568139076233e-07,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,8.080154657363892e-07,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,8.00006091594696e-07,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,7.748138159513474e-07,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,7.918104529380799e-07,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,8.000526577234268e-07,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,8.250121027231217e-07,Q-learning,easy,1
+1,0.96,5,0,0.0,0.0,8.08248296380043e-07,Q-learning,easy,1
+1,0.92,9,0,0.0,4.0,0.00046668056812551286,MCTS,easy,1
+0,-0.9900000000000002,50,0,0.0,,0.0004992049187421798,MCTS,easy,1
+1,0.6799999999999999,33,0,0.0,28.0,0.0004961881716030114,MCTS,easy,1
+0,-0.9900000000000002,50,0,0.0,,0.0005049116164445877,MCTS,easy,1
+1,0.84,17,0,0.0,12.0,0.00045852694550857823,MCTS,easy,1
+1,0.92,9,0,0.0,4.0,0.00039530110855897266,MCTS,easy,1
+0,-0.9900000000000002,50,0,0.0,,0.0004295491008087993,MCTS,easy,1
+1,0.7599999999999999,25,0,0.0,20.0,0.0004446666780859232,MCTS,easy,1
+0,-0.9900000000000002,50,0,0.0,,0.000482048224657774,MCTS,easy,1
+1,0.9,11,0,0.0,6.0,0.0004183980001305992,MCTS,easy,1
+1,0.92,9,0,0.0,4.0,0.001767412241962221,Standard Diffusion,easy,1
+1,0.88,13,0,0.0,8.0,0.0017571827898231836,Standard Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.0017756248292114054,Standard Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.0018056548932301147,Standard Diffusion,easy,1
+1,0.92,9,0,0.0,4.0,0.0018430553738855654,Standard Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.0018188217322209052,Standard Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.0018113835714757443,Standard Diffusion,easy,1
+1,0.92,9,0,0.0,4.0,0.00181131010564665,Standard Diffusion,easy,1
+1,0.9,11,0,0.0,6.0,0.0017971894703805447,Standard Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.0017748582642525435,Standard Diffusion,easy,1
+1,0.92,9,0,0.0,4.0,0.001986162219610479,Failure-Memory Diffusion,easy,1
+1,0.88,13,0,0.0,8.0,0.0019358267398694386,Failure-Memory Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.0019470656157604285,Failure-Memory Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.0019488870166242123,Failure-Memory Diffusion,easy,1
+1,0.92,9,0,0.0,4.0,0.0019356573466211557,Failure-Memory Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.001943731979866113,Failure-Memory Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.0020320000126957893,Failure-Memory Diffusion,easy,1
+1,0.92,9,0,0.0,4.0,0.002009008855869373,Failure-Memory Diffusion,easy,1
+1,0.9,11,0,0.0,6.0,0.0019873027816753497,Failure-Memory Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.001954791508615017,Failure-Memory Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.004161416785791516,Improved Failure-Memory Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.004030053503811359,Improved Failure-Memory Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.004117258591577411,Improved Failure-Memory Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.0041335497982800005,Improved Failure-Memory Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.0041669821034052545,Improved Failure-Memory Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.004125533206388354,Improved Failure-Memory Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.004339625160875065,Improved Failure-Memory Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.004436321423522064,Improved Failure-Memory Diffusion,easy,1
+1,0.94,7,0,0.0,2.0,0.004323499975726008,Improved Failure-Memory Diffusion,easy,1
+1,0.96,5,0,0.0,0.0,0.004171433346346021,Improved Failure-Memory Diffusion,easy,1
+0,-1.0,1,1,0.0,,2.874992787837982e-06,Random Policy,obstacle,1
+0,-1.03,4,1,0.0,,1.0105432011187077e-06,Random Policy,obstacle,1
+0,-1.0,1,1,0.0,,1.3329554349184036e-06,Random Policy,obstacle,1
+0,-1.02,3,1,0.0,,9.59029421210289e-07,Random Policy,obstacle,1
+0,-1.0,1,1,0.0,,1.3329554349184036e-06,Random Policy,obstacle,1
+0,-1.05,6,1,0.0,,8.265099798639616e-07,Random Policy,obstacle,1
+0,-1.0,1,1,0.0,,1.166015863418579e-06,Random Policy,obstacle,1
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,obstacle,1
+0,-1.03,4,1,0.0,,8.752103894948959e-07,Random Policy,obstacle,1
+0,-1.0,1,1,0.0,,1.125037670135498e-06,Random Policy,obstacle,1
+1,0.92,9,0,0.0,0.0,1.341104507446289e-07,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.0177286134825812e-07,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,9.721972876124912e-08,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.1602727075417836e-07,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,9.716798861821492e-08,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.065329545074039e-07,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.0645534429285262e-07,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,9.724559883276622e-08,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.0624838372071584e-07,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,9.292529688941107e-08,Value Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.6657739049858517e-07,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,9.711624847518073e-08,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.248489651415083e-07,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.203475726975335e-07,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.06558824578921e-07,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.3899989426136017e-07,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.0681752529409196e-07,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,9.264072610272302e-08,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.2055453326967029e-07,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,9.27442063887914e-08,Policy Iteration,obstacle,1
+1,0.92,9,0,0.0,0.0,1.0463667826520073e-06,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,8.056716372569402e-07,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,7.684187342723211e-07,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,7.3145040207439e-07,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,7.498440229230457e-07,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,7.639690819713804e-07,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,7.636327710416582e-07,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,7.591313785976834e-07,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,7.775508695178562e-07,Q-learning,obstacle,1
+1,0.92,9,0,0.0,0.0,7.3145040207439e-07,Q-learning,obstacle,1
+1,0.7,31,0,0.0,22.0,0.0008971182959935357,MCTS,obstacle,1
+1,0.7999999999999999,21,0,0.0,12.0,0.0009619960938358591,MCTS,obstacle,1
+1,0.92,9,0,0.0,0.0,0.0008102171899129947,MCTS,obstacle,1
+1,0.7599999999999999,25,0,0.0,16.0,0.0009876434598118068,MCTS,obstacle,1
+1,0.88,13,0,0.0,4.0,0.0008701122401712033,MCTS,obstacle,1
+1,0.74,27,0,0.0,18.0,0.0009826512627855496,MCTS,obstacle,1
+1,0.72,29,0,0.0,20.0,0.000996438128038727,MCTS,obstacle,1
+1,0.7799999999999999,23,0,0.0,14.0,0.0009491393423598746,MCTS,obstacle,1
+1,0.86,15,0,0.0,6.0,0.0009180943636844555,MCTS,obstacle,1
+1,0.9,11,0,0.0,2.0,0.0007719622543928298,MCTS,obstacle,1
+0,-1.02,3,1,0.0,,0.0017887780753274758,Standard Diffusion,obstacle,1
+1,0.92,9,0,0.0,0.0,0.001744180659039153,Standard Diffusion,obstacle,1
+0,-1.02,3,1,0.0,,0.0017389030350993078,Standard Diffusion,obstacle,1
+0,-1.02,3,1,0.0,,0.001736430296053489,Standard Diffusion,obstacle,1
+0,-1.04,5,1,0.0,,0.001730441814288497,Standard Diffusion,obstacle,1
+0,-1.02,3,1,0.0,,0.001741445002456506,Standard Diffusion,obstacle,1
+0,-1.02,3,1,0.0,,0.001731624671568473,Standard Diffusion,obstacle,1
+0,-1.02,3,1,0.0,,0.001727333680416147,Standard Diffusion,obstacle,1
+0,-1.02,3,1,0.0,,0.0017325279768556356,Standard Diffusion,obstacle,1
+0,-1.02,3,1,0.0,,0.001722527900710702,Standard Diffusion,obstacle,1
+0,-1.02,3,1,0.0,,0.0019108612711230915,Failure-Memory Diffusion,obstacle,1
+0,-1.01,2,1,1.0,,0.0019625830464065075,Failure-Memory Diffusion,obstacle,1
+0,-1.01,2,1,0.3333333333333333,,0.002051646006293595,Failure-Memory Diffusion,obstacle,1
+1,0.92,9,0,0.3,0.0,0.002027861282436384,Failure-Memory Diffusion,obstacle,1
+0,-1.05,6,1,0.7142857142857143,,0.0019532153382897377,Failure-Memory Diffusion,obstacle,1
+1,0.92,9,0,0.4,0.0,0.0019475834495905372,Failure-Memory Diffusion,obstacle,1
+1,0.92,9,0,0.4,0.0,0.0019490138058447177,Failure-Memory Diffusion,obstacle,1
+1,0.9,11,0,0.4166666666666667,2.0,0.0019509546585719693,Failure-Memory Diffusion,obstacle,1
+0,-1.02,3,1,1.0,,0.0019375970587134361,Failure-Memory Diffusion,obstacle,1
+0,-1.02,3,1,0.5,,0.0019448890816420317,Failure-Memory Diffusion,obstacle,1
+1,0.88,13,0,0.0,4.0,0.003814573811653715,Improved Failure-Memory Diffusion,obstacle,1
+1,0.9,11,0,0.0,2.0,0.0038406363349746575,Improved Failure-Memory Diffusion,obstacle,1
+1,0.92,9,0,0.0,0.0,0.0038763379108988577,Improved Failure-Memory Diffusion,obstacle,1
+1,0.9,11,0,0.0,2.0,0.003838215848769654,Improved Failure-Memory Diffusion,obstacle,1
+1,0.92,9,0,0.0,0.0,0.0038616760478665433,Improved Failure-Memory Diffusion,obstacle,1
+1,0.92,9,0,0.0,0.0,0.003839314760019382,Improved Failure-Memory Diffusion,obstacle,1
+1,0.86,15,0,0.0,6.0,0.003809563862159848,Improved Failure-Memory Diffusion,obstacle,1
+1,0.92,9,0,0.0,0.0,0.0038863057788047525,Improved Failure-Memory Diffusion,obstacle,1
+1,0.9,11,0,0.0,2.0,0.003821920476515185,Improved Failure-Memory Diffusion,obstacle,1
+1,0.9,11,0,0.0,2.0,0.0038238030816005034,Improved Failure-Memory Diffusion,obstacle,1
+0,-1.0,1,1,0.0,,2.00001522898674e-06,Random Policy,deceptive,1
+0,-1.03,4,1,0.0,,1.0312069207429886e-06,Random Policy,deceptive,1
+0,-1.0,1,1,0.0,,1.2919772416353226e-06,Random Policy,deceptive,1
+0,-1.02,3,1,0.0,,9.166542440652847e-07,Random Policy,deceptive,1
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,deceptive,1
+0,-1.05,6,1,0.0,,7.714067275325457e-07,Random Policy,deceptive,1
+0,-1.0,1,1,0.0,,1.0831281542778015e-06,Random Policy,deceptive,1
+0,-1.0,1,1,0.0,,1.0409858077764511e-06,Random Policy,deceptive,1
+0,-1.03,4,1,0.0,,8.122297003865242e-07,Random Policy,deceptive,1
+0,-1.0,1,1,0.0,,1.0828953236341476e-06,Random Policy,deceptive,1
+1,0.88,13,0,0.0,0.0,1.3788947119162634e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.1537653895524832e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.3454029193291297e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.0577675241690416e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.0246339325721448e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.1208108984507047e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.0583048256543967e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.1544817915329567e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,9.95082350877615e-08,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.1233183053823618e-07,Value Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.5705322416929098e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.1541235905427199e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.217166964824383e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.1226019034018883e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.2501214559261615e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.0592003281299884e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.09072201527082e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.0590212276348701e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.1213481999360599e-07,Policy Iteration,deceptive,1
+1,0.88,13,0,0.0,0.0,1.1553772940085484e-07,Policy Iteration,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.966572254896164e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.275344640016555e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.392039358615876e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.183795630931854e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.341421976685524e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.275484338402749e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.408523768186569e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.291037425398827e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.357580423355102e-07,Q-learning,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,6.183981895446777e-07,Q-learning,deceptive,1
+1,0.7999999999999999,21,0,0.0,8.0,0.0005819900515711023,MCTS,deceptive,1
+1,0.7799999999999999,23,0,0.0,10.0,0.0006676630886352581,MCTS,deceptive,1
+1,0.86,15,0,0.0,2.0,0.0006547331654777129,MCTS,deceptive,1
+1,0.5799999999999998,43,0,0.0,30.0,0.000723550388546184,MCTS,deceptive,1
+1,0.7,31,0,0.0,18.0,0.0006503844408378486,MCTS,deceptive,1
+1,0.86,15,0,0.0,2.0,0.0007582140155136585,MCTS,deceptive,1
+1,0.7799999999999999,23,0,0.0,10.0,0.0006594820373246204,MCTS,deceptive,1
+1,0.5999999999999999,41,0,0.0,28.0,0.0005193719322361597,MCTS,deceptive,1
+1,0.7599999999999999,25,0,0.0,12.0,0.0006684233248233795,MCTS,deceptive,1
+1,0.6799999999999999,33,0,0.0,20.0,0.0005833334218936436,MCTS,deceptive,1
+0,-1.03,4,1,0.0,,0.0017961561097763479,Standard Diffusion,deceptive,1
+0,-1.07,8,1,0.0,,0.001740968757076189,Standard Diffusion,deceptive,1
+0,-1.03,4,1,0.0,,0.0017489270539954305,Standard Diffusion,deceptive,1
+0,-1.03,4,1,0.0,,0.0017494477797299623,Standard Diffusion,deceptive,1
+0,-1.05,6,1,0.0,,0.001749506996323665,Standard Diffusion,deceptive,1
+0,-1.05,6,1,0.0,,0.0017278193263337016,Standard Diffusion,deceptive,1
+0,-1.03,4,1,0.0,,0.0017251879908144474,Standard Diffusion,deceptive,1
+0,-1.03,4,1,0.0,,0.0017305520013906062,Standard Diffusion,deceptive,1
+0,-1.03,4,1,0.0,,0.001731479074805975,Standard Diffusion,deceptive,1
+0,-1.03,4,1,0.0,,0.001730208401568234,Standard Diffusion,deceptive,1
+0,-1.03,4,1,0.0,,0.001909583224914968,Failure-Memory Diffusion,deceptive,1
+0,-1.01,2,1,0.3333333333333333,,0.0019458959577605128,Failure-Memory Diffusion,deceptive,1
+0,-1.04,5,1,0.6666666666666666,,0.0019653750117868186,Failure-Memory Diffusion,deceptive,1
+0,-1.02,3,1,1.0,,0.0019619023272146783,Failure-Memory Diffusion,deceptive,1
+0,-1.05,6,1,1.0,,0.0019594720021511116,Failure-Memory Diffusion,deceptive,1
+0,-1.1099999999999999,12,1,0.7692307692307693,,0.0019495173861893516,Failure-Memory Diffusion,deceptive,1
+0,-1.04,5,1,0.3333333333333333,,0.0019480917602777482,Failure-Memory Diffusion,deceptive,1
+0,-1.03,4,1,1.0,,0.0019475414301268756,Failure-Memory Diffusion,deceptive,1
+0,-1.2,21,1,1.0,,0.0019492796799611477,Failure-Memory Diffusion,deceptive,1
+0,-1.03,4,1,1.0,,0.0019549583084881306,Failure-Memory Diffusion,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,0.0038846983574330808,Improved Failure-Memory Diffusion,deceptive,1
+0,-0.9900000000000002,50,0,0.0,,0.0039060591300949456,Improved Failure-Memory Diffusion,deceptive,1
+0,-0.9900000000000002,50,0,0.0196078431372549,,0.00390921670012176,Improved Failure-Memory Diffusion,deceptive,1
+0,-0.9900000000000002,50,0,0.0392156862745098,,0.004021803373470903,Improved Failure-Memory Diffusion,deceptive,1
+1,0.88,13,0,0.21428571428571427,0.0,0.003939118522864122,Improved Failure-Memory Diffusion,deceptive,1
+1,0.86,15,0,0.1875,2.0,0.003880305495113134,Improved Failure-Memory Diffusion,deceptive,1
+1,0.88,13,0,0.21428571428571427,0.0,0.0038726603469023337,Improved Failure-Memory Diffusion,deceptive,1
+1,0.88,13,0,0.21428571428571427,0.0,0.003891480782140906,Improved Failure-Memory Diffusion,deceptive,1
+1,0.86,15,0,0.1875,2.0,0.003864530629167954,Improved Failure-Memory Diffusion,deceptive,1
+1,0.86,15,0,0.1875,2.0,0.0039797972266872724,Improved Failure-Memory Diffusion,deceptive,1
+0,-1.0,1,1,0.0,,3.708992153406143e-06,Random Policy,random_small,1
+0,-1.0,1,1,0.0,,2.00001522898674e-06,Random Policy,random_small,1
+0,-1.0,1,1,0.0,,1.6249250620603561e-06,Random Policy,random_small,1
+0,-1.02,3,1,0.0,,1.0416066894928615e-06,Random Policy,random_small,1
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,random_small,1
+0,-1.02,3,1,0.0,,8.192534248034159e-07,Random Policy,random_small,1
+0,-1.0,1,1,0.0,,1.125037670135498e-06,Random Policy,random_small,1
+0,-1.0,1,1,0.0,,1.0421499609947205e-06,Random Policy,random_small,1
+0,-1.06,7,1,0.0,,8.331345660345895e-07,Random Policy,random_small,1
+0,-1.0,1,1,0.0,,1.125037670135498e-06,Random Policy,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,2.2401218302547932e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.353910192847252e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.409207470715046e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.1446536518633366e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.458392944186926e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.1463998816907406e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.249427441507578e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.0934309102594852e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,9.898212738335133e-08,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.197622623294592e-07,Value Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.9278377294540405e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.5625846572220325e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.2505915947258472e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.3015232980251312e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.3536191545426846e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.3009412214159966e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.510197762399912e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.302105374634266e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.0413350537419319e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.0948861017823219e-07,Policy Iteration,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,1.1926458682864904e-06,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,8.647621143609285e-07,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,8.280330803245306e-07,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,8.176430128514767e-07,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,8.178176358342171e-07,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,8.072820492088795e-07,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,8.437200449407101e-07,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,7.968046702444553e-07,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,8.125207386910915e-07,Q-learning,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,7.552444003522396e-07,Q-learning,random_small,1
+0,-0.9900000000000002,50,0,0.0,,0.00056871572509408,MCTS,random_small,1
+1,0.5899999999999999,42,0,0.0,34.0,0.000537310544002269,MCTS,random_small,1
+0,-0.9900000000000002,50,0,0.0,,0.0005480941897258163,MCTS,random_small,1
+0,-0.9900000000000002,50,0,0.0,,0.0006425892654806375,MCTS,random_small,1
+1,0.87,14,0,0.0,6.0,0.0005898811588329929,MCTS,random_small,1
+0,-0.9900000000000002,50,0,0.0,,0.0005724391900002957,MCTS,random_small,1
+0,-0.9900000000000002,50,0,0.0,,0.0005250115972012282,MCTS,random_small,1
+0,-0.9900000000000002,50,0,0.0,,0.0006024425150826573,MCTS,random_small,1
+0,-0.9900000000000002,50,0,0.0,,0.0005693991063162685,MCTS,random_small,1
+1,0.7699999999999999,24,0,0.0,16.0,0.000617300325150912,MCTS,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.0018927813798654824,Standard Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.0018310417653992772,Standard Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.0017886302957776934,Standard Diffusion,random_small,1
+1,0.91,10,0,0.0,2.0,0.0017575833946466446,Standard Diffusion,random_small,1
+1,0.87,14,0,0.0,6.0,0.0017634375586307474,Standard Diffusion,random_small,1
+1,0.91,10,0,0.0,2.0,0.0017428667284548282,Standard Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.0017595938697922975,Standard Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.0017408230050932616,Standard Diffusion,random_small,1
+1,0.89,12,0,0.0,4.0,0.00180576037382707,Standard Diffusion,random_small,1
+1,0.85,16,0,0.0,8.0,0.0017975157388718799,Standard Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.001980791741516441,Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.001959255227120593,Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.001959146000444889,Failure-Memory Diffusion,random_small,1
+1,0.91,10,0,0.0,2.0,0.0019544210052117707,Failure-Memory Diffusion,random_small,1
+1,0.87,14,0,0.0,6.0,0.001966943232608693,Failure-Memory Diffusion,random_small,1
+1,0.91,10,0,0.0,2.0,0.0019421749748289585,Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.001957978995051235,Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.0019353434909135103,Failure-Memory Diffusion,random_small,1
+1,0.89,12,0,0.0,4.0,0.0019499895667346816,Failure-Memory Diffusion,random_small,1
+1,0.85,16,0,0.0,8.0,0.0019455417641438544,Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.004213494772557169,Improved Failure-Memory Diffusion,random_small,1
+1,0.91,10,0,0.0,2.0,0.004032683442346752,Improved Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.003975640778662637,Improved Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.004094687639735639,Improved Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.0039435362559743226,Improved Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.004102989740204066,Improved Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.004090083501068875,Improved Failure-Memory Diffusion,random_small,1
+1,0.87,14,0,0.0,6.0,0.004068458502713058,Improved Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.004071786330314353,Improved Failure-Memory Diffusion,random_small,1
+1,0.9299999999999999,8,0,0.0,0.0,0.0040566615061834455,Improved Failure-Memory Diffusion,random_small,1
+0,-1.0,1,1,0.0,,2.5418121367692947e-06,Random Policy,easy,2
+0,-1.0,1,1,0.0,,1.5830155462026596e-06,Random Policy,easy,2
+0,-1.02,3,1,0.0,,9.57710047562917e-07,Random Policy,easy,2
+0,-1.37,38,1,0.0,,6.764833080141168e-07,Random Policy,easy,2
+0,-1.0,1,1,0.0,,1.125037670135498e-06,Random Policy,easy,2
+0,-1.01,2,1,0.0,,9.584473446011543e-07,Random Policy,easy,2
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,easy,2
+0,-1.09,10,1,0.0,,6.832415238022804e-07,Random Policy,easy,2
+0,-1.0,1,1,0.0,,1.166015863418579e-06,Random Policy,easy,2
+0,-1.01,2,1,0.0,,8.749775588512421e-07,Random Policy,easy,2
+1,0.96,5,0,0.0,0.0,1.7508864402770996e-07,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.0021030902862548e-07,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,9.154900908470154e-08,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.1683441698551178e-07,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,9.993091225624084e-08,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,9.979121387004853e-08,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.1678785085678101e-07,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.1683441698551178e-07,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,9.140931069850922e-08,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,9.979121387004853e-08,Value Iteration,easy,2
+1,0.96,5,0,0.0,0.0,2.2496096789836885e-07,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.0863877832889557e-07,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,9.164214134216309e-08,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.0863877832889557e-07,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.0798685252666474e-07,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.1632218956947327e-07,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.0016374289989471e-07,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,9.997747838497161e-08,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,9.159557521343231e-08,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.1660158634185791e-07,Policy Iteration,easy,2
+1,0.96,5,0,0.0,0.0,1.2998003512620927e-06,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,8.748844265937805e-07,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,8.165836334228515e-07,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,8.162576705217362e-07,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,8.000992238521576e-07,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,7.749535143375397e-07,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,7.66664743423462e-07,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,7.831491529941559e-07,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,7.667578756809234e-07,Q-learning,easy,2
+1,0.96,5,0,0.0,0.0,8.083879947662354e-07,Q-learning,easy,2
+0,-0.9900000000000002,50,0,0.0,,0.0004804867319762707,MCTS,easy,2
+1,0.94,7,0,0.0,2.0,0.0004707140116287129,MCTS,easy,2
+0,-0.9900000000000002,50,0,0.0,,0.00048399250023066997,MCTS,easy,2
+1,0.7999999999999999,21,0,0.0,16.0,0.0004383273356195007,MCTS,easy,2
+0,-0.9900000000000002,50,0,0.0,,0.0004417716944590211,MCTS,easy,2
+1,0.5199999999999998,49,0,0.0,44.0,0.0004583656198668237,MCTS,easy,2
+1,0.5199999999999998,49,0,0.0,44.0,0.0004793996019859095,MCTS,easy,2
+1,0.84,17,0,0.0,12.0,0.00047855876276598256,MCTS,easy,2
+1,0.5599999999999998,45,0,0.0,40.0,0.0004912508599874046,MCTS,easy,2
+1,0.88,13,0,0.0,8.0,0.0004283621943054291,MCTS,easy,2
+1,0.9,11,0,0.0,6.0,0.0018018900035795841,Standard Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.001800279864775283,Standard Diffusion,easy,2
+1,0.86,15,0,0.0,10.0,0.0017971612668285766,Standard Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.0018035295818533217,Standard Diffusion,easy,2
+1,0.86,15,0,0.0,10.0,0.001794886061300834,Standard Diffusion,easy,2
+1,0.92,9,0,0.0,4.0,0.001797504619591766,Standard Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.0018046013013060605,Standard Diffusion,easy,2
+1,0.88,13,0,0.0,8.0,0.0017747659988414783,Standard Diffusion,easy,2
+1,0.92,9,0,0.0,4.0,0.0018706804710543817,Standard Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.0017890534031071834,Standard Diffusion,easy,2
+1,0.9,11,0,0.0,6.0,0.00202384097924964,Failure-Memory Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.0019463512913456985,Failure-Memory Diffusion,easy,2
+1,0.86,15,0,0.0,10.0,0.0019982528562347093,Failure-Memory Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.0019769108787711176,Failure-Memory Diffusion,easy,2
+1,0.86,15,0,0.0,10.0,0.001977897311250369,Failure-Memory Diffusion,easy,2
+1,0.92,9,0,0.0,4.0,0.0019909673784342078,Failure-Memory Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.0019926962974880424,Failure-Memory Diffusion,easy,2
+1,0.88,13,0,0.0,8.0,0.0019818716682493687,Failure-Memory Diffusion,easy,2
+1,0.92,9,0,0.0,4.0,0.0019586343163003526,Failure-Memory Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.001984899032062718,Failure-Memory Diffusion,easy,2
+1,0.96,5,0,0.0,0.0,0.004159457981586456,Improved Failure-Memory Diffusion,easy,2
+1,0.96,5,0,0.0,0.0,0.004205324780195951,Improved Failure-Memory Diffusion,easy,2
+1,0.92,9,0,0.0,4.0,0.004968888902415832,Improved Failure-Memory Diffusion,easy,2
+1,0.96,5,0,0.0,0.0,0.004319083457812667,Improved Failure-Memory Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.008824017929977604,Improved Failure-Memory Diffusion,easy,2
+1,0.9,11,0,0.0,6.0,0.004520753948864612,Improved Failure-Memory Diffusion,easy,2
+1,0.96,5,0,0.0,0.0,0.004252066928893327,Improved Failure-Memory Diffusion,easy,2
+1,0.96,5,0,0.0,0.0,0.004321908392012119,Improved Failure-Memory Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.004336089128628373,Improved Failure-Memory Diffusion,easy,2
+1,0.94,7,0,0.0,2.0,0.004219892634344953,Improved Failure-Memory Diffusion,easy,2
+0,-1.0,1,1,0.0,,3.0410010367631912e-06,Random Policy,obstacle,2
+0,-1.0,1,1,0.0,,2.084067091345787e-06,Random Policy,obstacle,2
+0,-1.02,3,1,0.0,,1.0970203826824825e-06,Random Policy,obstacle,2
+0,-1.01,2,1,0.0,,1.1459924280643463e-06,Random Policy,obstacle,2
+0,-1.0,1,1,0.0,,1.250067725777626e-06,Random Policy,obstacle,2
+0,-1.01,2,1,0.0,,9.790528565645218e-07,Random Policy,obstacle,2
+0,-1.0,1,1,0.0,,1.1248048394918442e-06,Random Policy,obstacle,2
+0,-1.01,2,1,0.0,,9.995419532060623e-07,Random Policy,obstacle,2
+0,-1.0,1,1,0.0,,1.250067725777626e-06,Random Policy,obstacle,2
+0,-1.01,2,1,0.0,,9.790528565645218e-07,Random Policy,obstacle,2
+1,0.92,9,0,0.0,0.0,1.9912194046709271e-07,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.1131891773806677e-07,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.0637773407830133e-07,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,9.27700764603085e-08,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.203734427690506e-07,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,9.721972876124912e-08,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.0169525113370683e-07,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,8.793237308661143e-08,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,9.26924662457572e-08,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.0187634163432651e-07,Value Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.8057309918933444e-07,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.0676578515105777e-07,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.203993128405677e-07,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.1111195716593001e-07,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,9.765951997703976e-08,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.342915412452486e-07,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.0642947422133551e-07,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.2024409241146512e-07,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,9.724559883276622e-08,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.064812143643697e-07,Policy Iteration,obstacle,2
+1,0.92,9,0,0.0,0.0,1.0788854625489976e-06,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,8.332232634226481e-07,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,7.730494770738813e-07,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,7.871227959791819e-07,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,7.637621213992437e-07,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,8.009374141693115e-07,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,7.45394370622105e-07,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,7.266644388437271e-07,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,7.315538823604584e-07,Q-learning,obstacle,2
+1,0.92,9,0,0.0,0.0,7.456013311942419e-07,Q-learning,obstacle,2
+1,0.7799999999999999,23,0,0.0,14.0,0.0009904132204373245,MCTS,obstacle,2
+1,0.82,19,0,0.0,10.0,0.0008590197509252711,MCTS,obstacle,2
+1,0.88,13,0,0.0,4.0,0.0008558813984004351,MCTS,obstacle,2
+1,0.7999999999999999,21,0,0.0,12.0,0.0009606012608855963,MCTS,obstacle,2
+1,0.5599999999999998,45,0,0.0,36.0,0.0010636250695420636,MCTS,obstacle,2
+1,0.6799999999999999,33,0,0.0,24.0,0.0008543294741574562,MCTS,obstacle,2
+1,0.84,17,0,0.0,8.0,0.0010081471135730252,MCTS,obstacle,2
+1,0.92,9,0,0.0,0.0,0.0007660785276028845,MCTS,obstacle,2
+1,0.88,13,0,0.0,4.0,0.0007132370418940599,MCTS,obstacle,2
+1,0.86,15,0,0.0,6.0,0.0009427777025848627,MCTS,obstacle,2
+1,0.9,11,0,0.0,2.0,0.0017777537419037385,Standard Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.0017411529552191496,Standard Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.001741500028098623,Standard Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.001738902957489093,Standard Diffusion,obstacle,2
+0,-1.04,5,1,0.0,,0.0017482916824519633,Standard Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.0017238336925705273,Standard Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.001718569624548157,Standard Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.001771069597452879,Standard Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.0017096529869983594,Standard Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.001717916379372279,Standard Diffusion,obstacle,2
+1,0.9,11,0,0.0,2.0,0.0018961781805211847,Failure-Memory Diffusion,obstacle,2
+0,-1.02,3,1,0.0,,0.0018851386072734992,Failure-Memory Diffusion,obstacle,2
+0,-1.05,6,1,0.5714285714285714,,0.0020059514014671245,Failure-Memory Diffusion,obstacle,2
+1,0.92,9,0,0.4,0.0,0.002042638888168666,Failure-Memory Diffusion,obstacle,2
+0,-1.03,4,1,1.0,,0.002023208129685372,Failure-Memory Diffusion,obstacle,2
+1,0.92,9,0,0.4,0.0,0.002000703683329953,Failure-Memory Diffusion,obstacle,2
+0,-1.01,2,1,0.3333333333333333,,0.0019638751400634646,Failure-Memory Diffusion,obstacle,2
+1,0.88,13,0,0.2857142857142857,4.0,0.002000951817115912,Failure-Memory Diffusion,obstacle,2
+1,0.9,11,0,0.16666666666666666,2.0,0.0020039163910868492,Failure-Memory Diffusion,obstacle,2
+1,0.92,9,0,0.4,0.0,0.001984967669058177,Failure-Memory Diffusion,obstacle,2
+1,0.86,15,0,0.0,6.0,0.0038373444074143964,Improved Failure-Memory Diffusion,obstacle,2
+1,0.92,9,0,0.0,0.0,0.0038441064664059216,Improved Failure-Memory Diffusion,obstacle,2
+1,0.9,11,0,0.0,2.0,0.0037914510096677327,Improved Failure-Memory Diffusion,obstacle,2
+1,0.9,11,0,0.0,2.0,0.0037989204495467925,Improved Failure-Memory Diffusion,obstacle,2
+1,0.9,11,0,0.0,2.0,0.0037857879969206724,Improved Failure-Memory Diffusion,obstacle,2
+1,0.88,13,0,0.0,4.0,0.0037924870311354217,Improved Failure-Memory Diffusion,obstacle,2
+1,0.92,9,0,0.0,0.0,0.003807629613826672,Improved Failure-Memory Diffusion,obstacle,2
+1,0.86,15,0,0.0,6.0,0.003765497449785471,Improved Failure-Memory Diffusion,obstacle,2
+1,0.92,9,0,0.0,0.0,0.0038377871840364402,Improved Failure-Memory Diffusion,obstacle,2
+1,0.82,19,0,0.0,10.0,0.0037628399869917254,Improved Failure-Memory Diffusion,obstacle,2
+0,-1.0,1,1,0.0,,2.5830231606960297e-06,Random Policy,deceptive,2
+0,-1.0,1,1,0.0,,1.500127837061882e-06,Random Policy,deceptive,2
+0,-1.02,3,1,0.0,,1.0412962486346562e-06,Random Policy,deceptive,2
+0,-1.01,2,1,0.0,,9.59029421210289e-07,Random Policy,deceptive,2
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,deceptive,2
+0,-1.01,2,1,0.0,,1.0209623724222183e-06,Random Policy,deceptive,2
+0,-1.0,1,1,0.0,,1.125037670135498e-06,Random Policy,deceptive,2
+0,-1.01,2,1,0.0,,8.335337042808533e-07,Random Policy,deceptive,2
+0,-1.0,1,1,0.0,,1.2079253792762756e-06,Random Policy,deceptive,2
+0,-1.01,2,1,0.0,,1.00000761449337e-06,Random Policy,deceptive,2
+1,0.88,13,0,0.0,0.0,1.4439081916442285e-07,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.2814640425718747e-07,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.219137070270685e-07,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.0898265127952283e-07,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.0568720216934497e-07,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.0583048256543967e-07,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,9.639188647270203e-08,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.0264249375233284e-07,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,9.952614513727335e-08,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.0566929211983314e-07,Value Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.5717859451587384e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.2494050539456882e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.2494050539456882e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.2814640425718747e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.2839714495035318e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.0891101108147548e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.1220646019165332e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.0891101108147548e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.056513820703213e-07,Policy Iteration,deceptive,2
+1,0.88,13,0,0.0,0.0,1.0592003281299884e-07,Policy Iteration,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.899191066622734e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.275065243244171e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.174156442284585e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.093038246035576e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.251735612750053e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.175367161631585e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.207870319485665e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.190966814756393e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.266869604587555e-07,Q-learning,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,6.191059947013855e-07,Q-learning,deceptive,2
+1,0.7799999999999999,23,0,0.0,10.0,0.0006532789531933224,MCTS,deceptive,2
+1,0.7,31,0,0.0,18.0,0.0008819113004832498,MCTS,deceptive,2
+1,0.7799999999999999,23,0,0.0,10.0,0.0007124293555060159,MCTS,deceptive,2
+1,0.86,15,0,0.0,2.0,0.0006709944612036149,MCTS,deceptive,2
+1,0.7799999999999999,23,0,0.0,10.0,0.0008789365301313608,MCTS,deceptive,2
+1,0.7999999999999999,21,0,0.0,8.0,0.0007339999900155124,MCTS,deceptive,2
+1,0.6199999999999999,39,0,0.0,26.0,0.00055115792948084,MCTS,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,0.001069579110480845,MCTS,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,0.00045690675731748344,MCTS,deceptive,2
+1,0.7999999999999999,21,0,0.0,8.0,0.0006961487566253968,MCTS,deceptive,2
+0,-1.03,4,1,0.0,,0.001767812471371144,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.00175084377406165,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.0017340835183858871,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.0017374687595292926,Standard Diffusion,deceptive,2
+0,-1.05,6,1,0.0,,0.0017417635923872392,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.001736750011332333,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.0017355935997329652,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.001735447789542377,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.001735062280204147,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.0017401144723407924,Standard Diffusion,deceptive,2
+0,-1.03,4,1,0.0,,0.0019158960203640163,Failure-Memory Diffusion,deceptive,2
+0,-1.06,7,1,0.625,,0.001971642786104764,Failure-Memory Diffusion,deceptive,2
+0,-1.02,3,1,1.0,,0.0019782500651975474,Failure-Memory Diffusion,deceptive,2
+0,-1.05,6,1,0.7142857142857143,,0.001975270609060923,Failure-Memory Diffusion,deceptive,2
+0,-1.08,9,1,0.4,,0.0019668889387200275,Failure-Memory Diffusion,deceptive,2
+0,-1.03,4,1,1.0,,0.0019669270841404796,Failure-Memory Diffusion,deceptive,2
+0,-1.01,2,1,1.0,,0.0019761875737458467,Failure-Memory Diffusion,deceptive,2
+0,-1.06,7,1,1.0,,0.0019767737082604852,Failure-Memory Diffusion,deceptive,2
+0,-1.03,4,1,1.0,,0.001974896003957838,Failure-Memory Diffusion,deceptive,2
+0,-1.15,16,1,1.0,,0.002212476363638416,Failure-Memory Diffusion,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,0.004489514976739883,Improved Failure-Memory Diffusion,deceptive,2
+0,-0.9900000000000002,50,0,0.0,,0.0038344791578128934,Improved Failure-Memory Diffusion,deceptive,2
+0,-0.9900000000000002,50,0,0.0196078431372549,,0.00379293330013752,Improved Failure-Memory Diffusion,deceptive,2
+0,-0.9900000000000002,50,0,0.0196078431372549,,0.004052652530372142,Improved Failure-Memory Diffusion,deceptive,2
+0,-0.9900000000000002,50,0,0.0196078431372549,,0.004050694201141596,Improved Failure-Memory Diffusion,deceptive,2
+0,-0.9900000000000002,50,0,1.0,,0.0038142358278855683,Improved Failure-Memory Diffusion,deceptive,2
+1,0.82,19,0,0.25,6.0,0.003949100960438189,Improved Failure-Memory Diffusion,deceptive,2
+1,0.84,17,0,0.3888888888888889,4.0,0.003924813642002204,Improved Failure-Memory Diffusion,deceptive,2
+1,0.88,13,0,0.21428571428571427,0.0,0.003899801397123016,Improved Failure-Memory Diffusion,deceptive,2
+1,0.88,13,0,0.21428571428571427,0.0,0.003952666651457548,Improved Failure-Memory Diffusion,deceptive,2
+0,-1.0,1,1,0.0,,4.041008651256561e-06,Random Policy,random_small,2
+0,-1.0,1,1,0.0,,1.8749851733446121e-06,Random Policy,random_small,2
+0,-1.0,1,1,0.0,,1.5408731997013092e-06,Random Policy,random_small,2
+0,-1.0,1,1,0.0,,1.291045919060707e-06,Random Policy,random_small,2
+0,-1.0,1,1,0.0,,1.6668345779180527e-06,Random Policy,random_small,2
+0,-1.01,2,1,0.0,,1.062522642314434e-06,Random Policy,random_small,2
+0,-1.0,1,1,0.0,,1.2919772416353226e-06,Random Policy,random_small,2
+0,-1.02,3,1,0.0,,9.58718980352084e-07,Random Policy,random_small,2
+0,-1.0,1,1,0.0,,1.1669471859931946e-06,Random Policy,random_small,2
+0,-1.0,1,1,0.0,,1.375097781419754e-06,Random Policy,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,2.916203811764717e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.7174170352518559e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.3026874512434006e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.3041426427662373e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.3550743460655212e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.457519829273224e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.251173671334982e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.0925577953457832e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.249427441507578e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.0948861017823219e-07,Value Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,2.759043127298355e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.404841896146536e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.2505915947258472e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.35303707793355e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.1990778148174286e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.0387157090008259e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.1990778148174286e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,9.901123121380806e-08,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.1452357284724712e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.1475640349090099e-07,Policy Iteration,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,1.1511147022247314e-06,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,8.178467396646738e-07,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,7.812632247805595e-07,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,9.115028660744429e-07,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,7.655471563339233e-07,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,9.896175470203161e-07,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,8.020433597266674e-07,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,7.604830898344517e-07,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,7.864146027714014e-07,Q-learning,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,8.072820492088795e-07,Q-learning,random_small,2
+0,-0.9900000000000002,50,0,0.0,,0.0006125058140605688,MCTS,random_small,2
+0,-0.9900000000000002,50,0,0.0,,0.0005961100757122039,MCTS,random_small,2
+0,-0.9900000000000002,50,0,0.0,,0.0005668049165979028,MCTS,random_small,2
+0,-0.9900000000000002,50,0,0.0,,0.0005589308077469468,MCTS,random_small,2
+1,0.7899999999999999,22,0,0.0,14.0,0.0005854753967882557,MCTS,random_small,2
+0,-0.9900000000000002,50,0,0.0,,0.0006425183778628707,MCTS,random_small,2
+1,0.73,28,0,0.0,20.0,0.0006157901370897889,MCTS,random_small,2
+0,-0.9900000000000002,50,0,0.0,,0.0005695157917216421,MCTS,random_small,2
+0,-0.9900000000000002,50,0,0.0,,0.0005666242027655244,MCTS,random_small,2
+0,-0.9900000000000002,50,0,0.0,,0.0005714132962748408,MCTS,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.0018520310404710472,Standard Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.001778416510205716,Standard Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.0017719636380206794,Standard Diffusion,random_small,2
+1,0.89,12,0,0.0,4.0,0.0017828576383180916,Standard Diffusion,random_small,2
+1,0.89,12,0,0.0,4.0,0.0017697881946029763,Standard Diffusion,random_small,2
+1,0.91,10,0,0.0,2.0,0.0017725792014971376,Standard Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.001773062627762556,Standard Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.001778124860720709,Standard Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.0017753281281329691,Standard Diffusion,random_small,2
+1,0.87,14,0,0.0,6.0,0.0017998155505795563,Standard Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.002009760297369212,Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.0019632345356512815,Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.0019540000066626817,Failure-Memory Diffusion,random_small,2
+1,0.89,12,0,0.0,4.0,0.001967906292217473,Failure-Memory Diffusion,random_small,2
+1,0.89,12,0,0.0,4.0,0.0019483229455848534,Failure-Memory Diffusion,random_small,2
+1,0.91,10,0,0.0,2.0,0.0019489834550768137,Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.0019498335022944957,Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.001954390638275072,Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.0019509061239659786,Failure-Memory Diffusion,random_small,2
+1,0.87,14,0,0.0,6.0,0.001959146017075649,Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.004156338633038104,Improved Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.004085687280166894,Improved Failure-Memory Diffusion,random_small,2
+1,0.89,12,0,0.0,4.0,0.0040505103340062005,Improved Failure-Memory Diffusion,random_small,2
+1,0.91,10,0,0.0,2.0,0.004123733262531459,Improved Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.004044025903567672,Improved Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.004043302033096552,Improved Failure-Memory Diffusion,random_small,2
+1,0.91,10,0,0.0,2.0,0.004082666686736047,Improved Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.004072145675309002,Improved Failure-Memory Diffusion,random_small,2
+1,0.91,10,0,0.0,2.0,0.004030608292669058,Improved Failure-Memory Diffusion,random_small,2
+1,0.9299999999999999,8,0,0.0,0.0,0.0040424739418085665,Improved Failure-Memory Diffusion,random_small,2
