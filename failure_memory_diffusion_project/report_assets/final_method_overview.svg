@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#f7f3ea"/>
+  <text x="60" y="80" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1f2933">
+    Final Enhanced Failure-Memory Diffusion Planner
+  </text>
+  <text x="60" y="118" font-family="Georgia, serif" font-size="18" fill="#44515c">
+    Combined exploration variant used as the final proposed method
+  </text>
+
+  <rect x="60" y="170" rx="20" ry="20" width="240" height="150" fill="#dceefb" stroke="#2f6b8a" stroke-width="3"/>
+  <text x="180" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#16384d">1. Diffusion Model</text>
+  <text x="180" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#16384d">Generate K x 3 raw</text>
+  <text x="180" y="282" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#16384d">action-sequence candidates</text>
+
+  <rect x="360" y="170" rx="20" ry="20" width="260" height="150" fill="#ffe3c2" stroke="#b96a20" stroke-width="3"/>
+  <text x="490" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#5e3411">2. Diverse Candidates</text>
+  <text x="490" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#5e3411">Keep candidates from</text>
+  <text x="490" y="282" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#5e3411">different valid first actions</text>
+
+  <rect x="680" y="170" rx="20" ry="20" width="260" height="150" fill="#eadbf7" stroke="#7a4da1" stroke-width="3"/>
+  <text x="810" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#45235c">3. Dead-End Memory</text>
+  <text x="810" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#45235c">Update memory using only</text>
+  <text x="810" y="282" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#45235c">the last tail_k failed states</text>
+
+  <rect x="980" y="170" rx="20" ry="20" width="240" height="150" fill="#d8f0d2" stroke="#3a7a2d" stroke-width="3"/>
+  <text x="1100" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#22481a">4. Adaptive Weights</text>
+  <text x="1100" y="255" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#22481a">Decrease lambda_distance</text>
+  <text x="1100" y="282" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#22481a">Increase lambda_failure</text>
+
+  <path d="M300 245 L360 245" stroke="#1f2933" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M620 245 L680 245" stroke="#1f2933" stroke-width="4" marker-end="url(#arrow)"/>
+  <path d="M940 245 L980 245" stroke="#1f2933" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="170" y="420" rx="24" ry="24" width="940" height="220" fill="#ffffff" stroke="#1f2933" stroke-width="3"/>
+  <text x="640" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="28" font-weight="700" fill="#1f2933">
+    Final Scoring Rule
+  </text>
+  <text x="640" y="525" text-anchor="middle" font-family="Courier New, monospace" font-size="26" fill="#1f2933">
+    Score(tau) = R(tau) - lambda_distance_current * D(final, goal)
+  </text>
+  <text x="640" y="565" text-anchor="middle" font-family="Courier New, monospace" font-size="26" fill="#1f2933">
+    - lambda_failure_current * F_dead(tau) - lambda_loop * LoopPenalty(tau)
+  </text>
+  <text x="640" y="615" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#44515c">
+    Final action = first action of the highest-scoring candidate trajectory
+  </text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1f2933"/>
+    </marker>
+  </defs>
+</svg>

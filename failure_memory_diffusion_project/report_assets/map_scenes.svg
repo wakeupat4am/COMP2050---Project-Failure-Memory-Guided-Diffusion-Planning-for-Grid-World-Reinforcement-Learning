@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#fbfaf7"/>
+  <text x="60" y="70" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#1f2933">GridWorld Scene Setup</text>
+  <text x="60" y="108" font-family="Georgia, serif" font-size="18" fill="#4b5563">S = start, G = goal, X = obstacle, . = free cell</text>
+
+  <g transform="translate(60,160)">
+    <text x="0" y="-20" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1f2933">Easy Map (3 x 6)</text>
+    <rect x="0" y="0" width="420" height="210" fill="#ffffff" stroke="#1f2933" stroke-width="2"/>
+    <g font-family="Courier New, monospace" font-size="30" fill="#1f2933">
+      <text x="30" y="60">S . . . . G</text>
+      <text x="30" y="120">. . . . . .</text>
+      <text x="30" y="180">. . . . . .</text>
+    </g>
+    <text x="0" y="255" font-family="Georgia, serif" font-size="18" fill="#4b5563">Shortest path is straight rightward motion.</text>
+  </g>
+
+  <g transform="translate(520,160)">
+    <text x="0" y="-20" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1f2933">Obstacle Map (4 x 6)</text>
+    <rect x="0" y="0" width="420" height="250" fill="#ffffff" stroke="#1f2933" stroke-width="2"/>
+    <g font-family="Courier New, monospace" font-size="28" fill="#1f2933">
+      <text x="24" y="55">S . . X . G</text>
+      <text x="24" y="110">. X . X . .</text>
+      <text x="24" y="165">. X . . . .</text>
+      <text x="24" y="220">. . . X . .</text>
+    </g>
+    <text x="0" y="295" font-family="Georgia, serif" font-size="18" fill="#4b5563">Requires routing around blocked columns.</text>
+  </g>
+
+  <g transform="translate(980,160)">
+    <text x="0" y="-20" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1f2933">Deceptive Map (5 x 6)</text>
+    <rect x="0" y="0" width="360" height="290" fill="#ffffff" stroke="#1f2933" stroke-width="2"/>
+    <g font-family="Courier New, monospace" font-size="25" fill="#1f2933">
+      <text x="20" y="52">S . . . X G</text>
+      <text x="20" y="102">. X X . X .</text>
+      <text x="20" y="152">. . . . X .</text>
+      <text x="20" y="202">. X X X X .</text>
+      <text x="20" y="252">. . . . . .</text>
+    </g>
+    <text x="0" y="335" font-family="Georgia, serif" font-size="18" fill="#4b5563">Looks close to goal, but needs a long detour.</text>
+  </g>
+
+  <g transform="translate(60,560)">
+    <text x="0" y="-20" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#1f2933">Random Small Map (5 x 5)</text>
+    <rect x="0" y="0" width="520" height="180" fill="#ffffff" stroke="#1f2933" stroke-width="2"/>
+    <text x="24" y="58" font-family="Georgia, serif" font-size="20" fill="#4b5563">Generated with obstacle density = 0.2</text>
+    <text x="24" y="94" font-family="Georgia, serif" font-size="20" fill="#4b5563">Only retained when BFS confirms a valid path</text>
+    <text x="24" y="130" font-family="Georgia, serif" font-size="20" fill="#4b5563">Used to test mild generalization beyond hand-designed scenes</text>
+  </g>
+
+  <g transform="translate(650,560)">
+    <rect x="0" y="0" width="690" height="200" rx="18" ry="18" fill="#eef6ff" stroke="#2f6b8a" stroke-width="2.5"/>
+    <text x="30" y="48" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#16384d">Why the deceptive scene matters</text>
+    <text x="30" y="92" font-family="Georgia, serif" font-size="19" fill="#16384d">1. Manhattan-distance bias points toward the blocked goal corridor.</text>
+    <text x="30" y="126" font-family="Georgia, serif" font-size="19" fill="#16384d">2. Standard diffusion tends to repeat similar “move closer first” candidates.</text>
+    <text x="30" y="160" font-family="Georgia, serif" font-size="19" fill="#16384d">3. The enhanced method improves by diversifying trajectories and remembering dead ends.</text>
+  </g>
+</svg>
