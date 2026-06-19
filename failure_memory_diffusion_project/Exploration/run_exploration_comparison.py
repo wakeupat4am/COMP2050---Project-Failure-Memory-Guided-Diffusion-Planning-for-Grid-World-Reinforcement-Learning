@@ -13,7 +13,7 @@ if PROJECT_ROOT not in sys.path:
 from envs import GridWorldEnv
 from planners import DiffusionActionModel, FailureMemoryDiffusionPlanner
 from planners.diffusion_planner import build_diffusion_training_data
-from utils import evaluate_planner, set_global_seed, shortest_path_length
+from utils import aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
 from utils.plotting import create_exploration_plots
 
 from Exploration import (
@@ -26,25 +26,8 @@ from experiments.run_comparison import _build_maps
 
 
 def _aggregate_results(raw_df: pd.DataFrame) -> pd.DataFrame:
-    rows = []
-    for (algorithm, map_name), group in raw_df.groupby(["Algorithm", "Map"]):
-        rows.append(
-            {
-                "Algorithm": algorithm,
-                "Map": map_name,
-                "Success Rate Mean": group["success"].mean(),
-                "Success Rate Std": group["success"].std(ddof=0),
-                "Average Return Mean": group["total_return"].mean(),
-                "Average Return Std": group["total_return"].std(ddof=0),
-                "Path Length Mean": group["path_length"].mean(),
-                "Path Length Std": group["path_length"].std(ddof=0),
-                "Collision Rate Mean": group["collision"].mean(),
-                "Optimality Gap Mean": group["optimality_gap"].mean(skipna=True),
-                "Repeated Failure Rate Mean": group["repeated_failure_rate"].mean(),
-                "Inference Time Mean": group["inference_time_per_action"].mean(),
-            }
-        )
-    return pd.DataFrame(rows).sort_values(["Map", "Algorithm"]).reset_index(drop=True)
+    _, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["Algorithm", "Map"])
+    return summary_df.sort_values(["Map", "Algorithm"]).reset_index(drop=True)
 
 
 def run_exploration_comparison(
@@ -129,10 +112,12 @@ def run_exploration_comparison(
                 episode_records.append(metrics_df)
 
     raw_df = pd.concat(episode_records, ignore_index=True)
-    summary_df = _aggregate_results(raw_df)
+    per_seed_df, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["Algorithm", "Map"])
     summary_csv_path = os.path.join(tables_dir, "exploration_comparison.csv")
+    per_seed_csv_path = os.path.join(tables_dir, "exploration_comparison_per_seed.csv")
     raw_csv_path = os.path.join(tables_dir, "exploration_comparison_raw.csv")
     summary_df.to_csv(summary_csv_path, index=False)
+    per_seed_df.to_csv(per_seed_csv_path, index=False)
     raw_df.to_csv(raw_csv_path, index=False)
     create_exploration_plots(summary_df, figures_dir)
     return summary_df, summary_csv_path, raw_csv_path

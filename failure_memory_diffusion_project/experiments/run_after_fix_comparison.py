@@ -22,7 +22,7 @@ from planners import (
     ValueIterationPlanner,
 )
 from planners.diffusion_planner import build_diffusion_training_data
-from utils import evaluate_planner, set_global_seed, shortest_path_length
+from utils import aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
 from utils.plotting import compare_best_diffusion_variants, create_all_plots
 
 from experiments.run_comparison import _aggregate_results, _build_maps
@@ -115,11 +115,13 @@ def run_after_fix_comparison(
                 episode_records.append(metrics_df)
 
     raw_df = pd.concat(episode_records, ignore_index=True)
-    summary_df = _aggregate_results(raw_df)
+    per_seed_df, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["Algorithm", "Map"])
 
     summary_csv_path = os.path.join(tables_dir, "after_fix_efficiency_comparison.csv")
+    per_seed_csv_path = os.path.join(tables_dir, "after_fix_efficiency_comparison_per_seed.csv")
     raw_csv_path = os.path.join(tables_dir, "after_fix_efficiency_comparison_raw.csv")
     summary_df.to_csv(summary_csv_path, index=False)
+    per_seed_df.to_csv(per_seed_csv_path, index=False)
     raw_df.to_csv(raw_csv_path, index=False)
 
     create_all_plots(summary_df, figures_dir)

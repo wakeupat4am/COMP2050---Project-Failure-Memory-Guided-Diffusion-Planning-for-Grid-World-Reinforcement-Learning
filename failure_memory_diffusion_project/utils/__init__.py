@@ -7,6 +7,7 @@ from .map_generator import (
 )
 from .metrics import evaluate_planner
 from .seed import set_global_seed
+from .statistics import aggregate_raw_to_seed_summary, format_mean_ci, format_mean_std
 
 __all__ = [
     "bfs_shortest_path",
@@ -18,4 +19,7 @@ __all__ = [
     "generate_random_valid_maps",
     "evaluate_planner",
     "set_global_seed",
+    "aggregate_raw_to_seed_summary",
+    "format_mean_ci",
+    "format_mean_std",
 ]

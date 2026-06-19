@@ -22,6 +22,7 @@ ALGORITHM_ORDER = [
     "MCTS",
     "Standard Diffusion",
     "Failure-Memory Diffusion",
+    "Improved Failure-Memory Diffusion",
 ]
 
 ALGORITHM_COLORS = {
@@ -46,7 +47,7 @@ def _ordered_algorithms(df: pd.DataFrame) -> list[str]:
 def _plot_grouped_bars(
     df: pd.DataFrame,
     value_col: str,
-    std_col: str | None,
+    error_col: str | None,
     ylabel: str,
     title: str,
     output_path: str,
@@ -65,7 +66,7 @@ def _plot_grouped_bars(
             .reindex(maps)
         )
         offsets = x + (idx - (len(algorithms) - 1) / 2.0) * width
-        errors = subset[std_col].to_numpy() if std_col is not None else None
+        errors = subset[error_col].to_numpy() if error_col is not None and error_col in subset.columns else None
         ax.bar(
             offsets,
             subset[value_col].to_numpy(),
@@ -95,7 +96,7 @@ def plot_success_rate_table(df: pd.DataFrame, output_dir: str) -> None:
     _plot_grouped_bars(
         df=df,
         value_col="Success Rate Mean",
-        std_col="Success Rate Std",
+        error_col="Success Rate CI Halfwidth",
         ylabel="Success Rate",
         title="Success Rate by Algorithm and Map",
         output_path=os.path.join(output_dir, "success_rate_comparison.png"),
@@ -107,7 +108,7 @@ def plot_average_return_table(df: pd.DataFrame, output_dir: str) -> None:
     _plot_grouped_bars(
         df=df,
         value_col="Average Return Mean",
-        std_col="Average Return Std",
+        error_col="Average Return CI Halfwidth",
         ylabel="Average Return",
         title="Average Return by Algorithm and Map",
         output_path=os.path.join(output_dir, "average_return_comparison.png"),
@@ -118,7 +119,7 @@ def plot_collision_rate_table(df: pd.DataFrame, output_dir: str) -> None:
     _plot_grouped_bars(
         df=df,
         value_col="Collision Rate Mean",
-        std_col=None,
+        error_col="Collision Rate CI Halfwidth",
         ylabel="Collision Rate",
         title="Collision Rate by Algorithm and Map",
         output_path=os.path.join(output_dir, "collision_rate_comparison.png"),
@@ -130,7 +131,7 @@ def plot_inference_time_table(df: pd.DataFrame, output_dir: str) -> None:
     _plot_grouped_bars(
         df=df,
         value_col="Inference Time Mean",
-        std_col=None,
+        error_col="Inference Time CI Halfwidth",
         ylabel="Seconds per Action",
         title="Inference Time per Action by Algorithm and Map",
         output_path=os.path.join(output_dir, "inference_time_comparison.png"),
@@ -162,7 +163,16 @@ def plot_metric_heatmap(df: pd.DataFrame, output_dir: str, metric: str, filename
 
 
 def plot_diffusion_focus(df: pd.DataFrame, output_dir: str) -> None:
-    focus = df[df["Algorithm"].isin(["Standard Diffusion", "Failure-Memory Diffusion"])].copy()
+    focus_algorithms = [
+        name
+        for name in [
+            "Standard Diffusion",
+            "Failure-Memory Diffusion",
+            "Improved Failure-Memory Diffusion",
+        ]
+        if name in set(df["Algorithm"])
+    ]
+    focus = df[df["Algorithm"].isin(focus_algorithms)].copy()
     maps = list(df["Map"].drop_duplicates())
     metrics = [
         ("Success Rate Mean", "Success Rate"),
@@ -175,15 +185,18 @@ def plot_diffusion_focus(df: pd.DataFrame, output_dir: str) -> None:
     axes = axes.flatten()
 
     for ax, (metric_col, title) in zip(axes, metrics):
-        for algorithm in ["Standard Diffusion", "Failure-Memory Diffusion"]:
+        error_col = metric_col.replace("Mean", "CI Halfwidth")
+        for algorithm in focus_algorithms:
             subset = focus[focus["Algorithm"] == algorithm].set_index("Map").reindex(maps)
-            ax.plot(
+            ax.errorbar(
                 maps,
                 subset[metric_col].to_numpy(),
+                yerr=subset[error_col].to_numpy() if error_col in subset.columns else None,
                 marker="o",
                 linewidth=2.2,
                 label=algorithm,
                 color=ALGORITHM_COLORS[algorithm],
+                capsize=3,
             )
         ax.set_title(title)
         ax.grid(True, linestyle="--", alpha=0.35)
@@ -193,7 +206,7 @@ def plot_diffusion_focus(df: pd.DataFrame, output_dir: str) -> None:
     axes[2].set_ylim(0.0, 1.05)
     handles, labels = axes[0].get_legend_handles_labels()
     fig.legend(handles, labels, loc="upper center", ncol=2, frameon=False)
-    fig.suptitle("Standard Diffusion vs Failure-Memory Diffusion", y=0.98)
+    fig.suptitle("Diffusion-Family Comparison with 95% CIs", y=0.98)
     plt.tight_layout(rect=(0, 0, 1, 0.95))
     plt.savefig(os.path.join(output_dir, "diffusion_focus_comparison.png"), dpi=220, bbox_inches="tight")
     plt.close(fig)
@@ -226,18 +239,19 @@ def plot_lambda_failure_ablation(df: pd.DataFrame, output_dir: str) -> None:
     os.makedirs(output_dir, exist_ok=True)
     x = df["lambda_F"].to_numpy()
     metrics = [
-        ("Success Rate", "Success Rate", "#2ca02c"),
-        ("Collision Rate", "Collision Rate", "#d62728"),
-        ("Repeated Failure Rate", "Repeated Failure Rate", "#9467bd"),
+        ("Success Rate Mean", "Success Rate", "#2ca02c"),
+        ("Collision Rate Mean", "Collision Rate", "#d62728"),
+        ("Repeated Failure Rate Mean", "Repeated Failure Rate", "#9467bd"),
     ]
 
     fig, axes = plt.subplots(1, 3, figsize=(14, 4.5))
     for ax, (column, title, color) in zip(axes, metrics):
-        ax.plot(x, df[column].to_numpy(), marker="o", linewidth=2.2, color=color)
+        error_col = column.replace("Mean", "CI Halfwidth")
+        ax.errorbar(x, df[column].to_numpy(), yerr=df[error_col].to_numpy(), marker="o", linewidth=2.2, color=color, capsize=3)
         ax.set_title(title)
         ax.set_xlabel(r"$\lambda_F$")
         ax.grid(True, linestyle="--", alpha=0.35)
-        if "Rate" in column:
+        if "Rate" in title:
             ax.set_ylim(0.0, 1.05)
 
     axes[0].set_ylabel("Metric Value")
@@ -251,20 +265,21 @@ def plot_k_ablation(df: pd.DataFrame, output_dir: str) -> None:
     os.makedirs(output_dir, exist_ok=True)
     x = df["K"].to_numpy()
     metrics = [
-        ("Success Rate", "Success Rate", "#2ca02c"),
-        ("Collision Rate", "Collision Rate", "#d62728"),
-        ("Repeated Failure Rate", "Repeated Failure Rate", "#9467bd"),
-        ("Average Return", "Average Return", "#1f77b4"),
+        ("Success Rate Mean", "Success Rate", "#2ca02c"),
+        ("Collision Rate Mean", "Collision Rate", "#d62728"),
+        ("Repeated Failure Rate Mean", "Repeated Failure Rate", "#9467bd"),
+        ("Average Return Mean", "Average Return", "#1f77b4"),
     ]
 
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
     axes = axes.flatten()
     for ax, (column, title, color) in zip(axes, metrics):
-        ax.plot(x, df[column].to_numpy(), marker="o", linewidth=2.2, color=color)
+        error_col = column.replace("Mean", "CI Halfwidth")
+        ax.errorbar(x, df[column].to_numpy(), yerr=df[error_col].to_numpy(), marker="o", linewidth=2.2, color=color, capsize=3)
         ax.set_title(title)
         ax.set_xlabel("K")
         ax.grid(True, linestyle="--", alpha=0.35)
-        if "Rate" in column:
+        if "Rate" in title:
             ax.set_ylim(0.0, 1.05)
 
     axes[0].set_ylabel("Metric Value")
@@ -280,18 +295,19 @@ def plot_standard_lambda_ablation(df: pd.DataFrame, output_dir: str) -> None:
     os.makedirs(output_dir, exist_ok=True)
     x = df["lambda_D"].to_numpy()
     metrics = [
-        ("Success Rate", "Success Rate", "#2ca02c"),
-        ("Collision Rate", "Collision Rate", "#d62728"),
-        ("Average Return", "Average Return", "#1f77b4"),
+        ("Success Rate Mean", "Success Rate", "#2ca02c"),
+        ("Collision Rate Mean", "Collision Rate", "#d62728"),
+        ("Average Return Mean", "Average Return", "#1f77b4"),
     ]
 
     fig, axes = plt.subplots(1, 3, figsize=(14, 4.5))
     for ax, (column, title, color) in zip(axes, metrics):
-        ax.plot(x, df[column].to_numpy(), marker="o", linewidth=2.2, color=color)
+        error_col = column.replace("Mean", "CI Halfwidth")
+        ax.errorbar(x, df[column].to_numpy(), yerr=df[error_col].to_numpy(), marker="o", linewidth=2.2, color=color, capsize=3)
         ax.set_title(title)
         ax.set_xlabel(r"$\lambda_D$")
         ax.grid(True, linestyle="--", alpha=0.35)
-        if "Rate" in column:
+        if "Rate" in title:
             ax.set_ylim(0.0, 1.05)
 
     axes[0].set_ylabel("Metric Value")
@@ -305,20 +321,22 @@ def plot_standard_k_ablation(df: pd.DataFrame, output_dir: str) -> None:
     os.makedirs(output_dir, exist_ok=True)
     x = df["K"].to_numpy()
     metrics = [
-        ("Success Rate", "Success Rate", "#2ca02c"),
-        ("Collision Rate", "Collision Rate", "#d62728"),
-        ("Average Return", "Average Return", "#1f77b4"),
+        ("Success Rate Mean", "Success Rate", "#2ca02c"),
+        ("Collision Rate Mean", "Collision Rate", "#d62728"),
+        ("Average Return Mean", "Average Return", "#1f77b4"),
         ("Inference Time Mean", "Inference Time", "#ff7f0e"),
     ]
 
     fig, axes = plt.subplots(2, 2, figsize=(12, 8))
     axes = axes.flatten()
     for ax, (column, title, color) in zip(axes, metrics):
-        ax.plot(x, df[column].to_numpy(), marker="o", linewidth=2.2, color=color)
+        error_col = column.replace("Mean", "CI Halfwidth")
+        yerr = df[error_col].to_numpy() if error_col in df.columns else None
+        ax.errorbar(x, df[column].to_numpy(), yerr=yerr, marker="o", linewidth=2.2, color=color, capsize=3)
         ax.set_title(title)
         ax.set_xlabel("K")
         ax.grid(True, linestyle="--", alpha=0.35)
-        if "Rate" in column:
+        if "Rate" in title:
             ax.set_ylim(0.0, 1.05)
 
     axes[0].set_ylabel("Metric Value")
@@ -375,11 +393,14 @@ def create_exploration_plots(df: pd.DataFrame, output_dir: str) -> None:
         for idx, algorithm in enumerate(algorithms):
             subset = df[df["Algorithm"] == algorithm].set_index("Map").reindex(maps)
             offsets = x + (idx - (len(algorithms) - 1) / 2.0) * width
+            error_col = value_col.replace("Mean", "CI Halfwidth")
             ax.bar(
                 offsets,
                 subset[value_col].to_numpy(),
                 width=width,
                 label=algorithm,
+                yerr=subset[error_col].to_numpy() if error_col in subset.columns else None,
+                capsize=3 if error_col in subset.columns else 0,
                 edgecolor="black",
                 linewidth=0.4,
             )
@@ -391,6 +412,49 @@ def create_exploration_plots(df: pd.DataFrame, output_dir: str) -> None:
             ax.set_ylim(*ylim)
         ax.grid(axis="y", linestyle="--", alpha=0.35)
         ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=3, frameon=False)
+        plt.tight_layout()
+        plt.savefig(os.path.join(output_dir, filename), dpi=220, bbox_inches="tight")
+        plt.close(fig)
+
+
+def create_component_ablation_plots(df: pd.DataFrame, output_dir: str) -> None:
+    os.makedirs(output_dir, exist_ok=True)
+    metric_specs = [
+        ("Success Rate Mean", "Success Rate", "component_ablation_success_rate.png", (0.0, 1.05)),
+        ("Average Return Mean", "Average Return", "component_ablation_average_return.png", None),
+        ("Collision Rate Mean", "Collision Rate", "component_ablation_collision_rate.png", (0.0, 1.05)),
+        ("Repeated Failure Rate Mean", "Repeated Failure Rate", "component_ablation_repeated_failure_rate.png", (0.0, 1.05)),
+    ]
+
+    maps = list(df["Map"].drop_duplicates())
+    variants = list(df["Algorithm"].drop_duplicates())
+    x = np.arange(len(maps))
+    width = 0.15 if len(variants) <= 5 else 0.12
+
+    for value_col, ylabel, filename, ylim in metric_specs:
+        fig, ax = plt.subplots(figsize=(13, 6.5))
+        for idx, variant in enumerate(variants):
+            subset = df[df["Algorithm"] == variant].set_index("Map").reindex(maps)
+            offsets = x + (idx - (len(variants) - 1) / 2.0) * width
+            error_col = value_col.replace("Mean", "CI Halfwidth")
+            ax.bar(
+                offsets,
+                subset[value_col].to_numpy(),
+                width=width,
+                label=variant,
+                yerr=subset[error_col].to_numpy() if error_col in subset.columns else None,
+                capsize=3 if error_col in subset.columns else 0,
+                edgecolor="black",
+                linewidth=0.4,
+            )
+        ax.set_xticks(x)
+        ax.set_xticklabels([name.replace("_", "\n") for name in maps])
+        ax.set_ylabel(ylabel)
+        ax.set_title(f"{ylabel} for Remove-One Component Ablation")
+        if ylim is not None:
+            ax.set_ylim(*ylim)
+        ax.grid(axis="y", linestyle="--", alpha=0.35)
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2, frameon=False)
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, filename), dpi=220, bbox_inches="tight")
         plt.close(fig)

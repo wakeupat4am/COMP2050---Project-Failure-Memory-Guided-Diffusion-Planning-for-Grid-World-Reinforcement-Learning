@@ -13,7 +13,7 @@ if PROJECT_ROOT not in sys.path:
 from envs import GridWorldEnv
 from planners import DiffusionActionModel, StandardDiffusionPlanner
 from planners.diffusion_planner import build_diffusion_training_data
-from utils import evaluate_planner, set_global_seed, shortest_path_length
+from utils import aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
 from utils.plotting import compare_best_diffusion_variants, plot_standard_k_ablation
 
 from diffusion_planner.run_lambda_ablation import (
@@ -25,22 +25,8 @@ from failure_diffusion_planner.run_k_ablation import run_k_ablation as run_failu
 
 
 def _aggregate_k_results(raw_df: pd.DataFrame) -> pd.DataFrame:
-    rows = []
-    for candidate_k, group in raw_df.groupby("K"):
-        rows.append(
-            {
-                "K": int(candidate_k),
-                "lambda_D": float(group["lambda_D"].iloc[0]),
-                "Success Rate": group["success"].mean(),
-                "Collision Rate": group["collision"].mean(),
-                "Repeated Failure Rate": group["repeated_failure_rate"].mean(),
-                "Average Return": group["total_return"].mean(),
-                "Path Length": group["path_length"].mean(),
-                "Optimality Gap": group["optimality_gap"].mean(skipna=True),
-                "Inference Time Mean": group["inference_time_per_action"].mean(),
-            }
-        )
-    return pd.DataFrame(rows).sort_values("K").reset_index(drop=True)
+    _, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["K", "lambda_D"])
+    return summary_df.sort_values("K").reset_index(drop=True)
 
 
 def run_k_ablation(
@@ -110,11 +96,13 @@ def run_k_ablation(
                 episode_records.append(metrics_df)
 
     raw_df = pd.concat(episode_records, ignore_index=True)
-    summary_df = _aggregate_k_results(raw_df)
+    per_seed_df, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["K", "lambda_D"])
 
     raw_csv_path = os.path.join(tables_dir, "standard_diffusion_k_ablation_raw.csv")
+    per_seed_csv_path = os.path.join(tables_dir, "standard_diffusion_k_ablation_per_seed.csv")
     summary_csv_path = os.path.join(tables_dir, "standard_diffusion_k_ablation.csv")
     raw_df.to_csv(raw_csv_path, index=False)
+    per_seed_df.to_csv(per_seed_csv_path, index=False)
     summary_df.to_csv(summary_csv_path, index=False)
     plot_standard_k_ablation(summary_df, figures_dir)
     return summary_df, summary_csv_path, raw_csv_path, float(lambda_value)
@@ -128,11 +116,11 @@ def run_best_variant_comparison():
     failure_df = pd.read_csv(os.path.join(tables_dir, "failure_memory_k_ablation.csv"))
 
     standard_best = standard_df.sort_values(
-        by=["Success Rate", "Collision Rate", "Average Return", "Inference Time Mean"],
+        by=["Success Rate Mean", "Collision Rate Mean", "Average Return Mean", "Inference Time Mean"],
         ascending=[False, True, False, True],
     ).iloc[0]
     failure_best = failure_df.sort_values(
-        by=["Success Rate", "Collision Rate", "Average Return", "Repeated Failure Rate", "Inference Time Mean"],
+        by=["Success Rate Mean", "Collision Rate Mean", "Average Return Mean", "Repeated Failure Rate Mean", "Inference Time Mean"],
         ascending=[False, True, False, True, True],
     ).iloc[0]
 
@@ -142,22 +130,22 @@ def run_best_variant_comparison():
                 "Planner": "Standard Diffusion",
                 "Best Lambda": float(standard_best["lambda_D"]),
                 "Best K": int(standard_best["K"]),
-                "Success Rate": float(standard_best["Success Rate"]),
-                "Collision Rate": float(standard_best["Collision Rate"]),
-                "Repeated Failure Rate": float(standard_best["Repeated Failure Rate"]),
-                "Average Return": float(standard_best["Average Return"]),
-                "Optimality Gap": float(standard_best["Optimality Gap"]),
+                "Success Rate": float(standard_best["Success Rate Mean"]),
+                "Collision Rate": float(standard_best["Collision Rate Mean"]),
+                "Repeated Failure Rate": float(standard_best["Repeated Failure Rate Mean"]),
+                "Average Return": float(standard_best["Average Return Mean"]),
+                "Optimality Gap": float(standard_best["Optimality Gap Mean"]),
                 "Inference Time Mean": float(standard_best["Inference Time Mean"]),
             },
             {
                 "Planner": "Failure-Memory Diffusion",
                 "Best Lambda": float(failure_best["lambda_F"]),
                 "Best K": int(failure_best["K"]),
-                "Success Rate": float(failure_best["Success Rate"]),
-                "Collision Rate": float(failure_best["Collision Rate"]),
-                "Repeated Failure Rate": float(failure_best["Repeated Failure Rate"]),
-                "Average Return": float(failure_best["Average Return"]),
-                "Optimality Gap": float(failure_best["Optimality Gap"]),
+                "Success Rate": float(failure_best["Success Rate Mean"]),
+                "Collision Rate": float(failure_best["Collision Rate Mean"]),
+                "Repeated Failure Rate": float(failure_best["Repeated Failure Rate Mean"]),
+                "Average Return": float(failure_best["Average Return Mean"]),
+                "Optimality Gap": float(failure_best["Optimality Gap Mean"]),
                 "Inference Time Mean": float(failure_best["Inference Time Mean"]),
             },
         ]

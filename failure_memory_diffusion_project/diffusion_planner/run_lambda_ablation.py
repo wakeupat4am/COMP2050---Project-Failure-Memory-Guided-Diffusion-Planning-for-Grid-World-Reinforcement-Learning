@@ -14,6 +14,7 @@ from envs import GridWorldEnv
 from planners import DiffusionActionModel, StandardDiffusionPlanner
 from planners.diffusion_planner import build_diffusion_training_data
 from utils import (
+    aggregate_raw_to_seed_summary,
     create_deceptive_map,
     create_easy_map,
     create_obstacle_map,
@@ -41,29 +42,16 @@ def build_ablation_maps():
 
 
 def _aggregate_lambda_results(raw_df: pd.DataFrame) -> pd.DataFrame:
-    rows = []
-    for lambda_value, group in raw_df.groupby("lambda_D"):
-        rows.append(
-            {
-                "lambda_D": float(lambda_value),
-                "Success Rate": group["success"].mean(),
-                "Collision Rate": group["collision"].mean(),
-                "Repeated Failure Rate": group["repeated_failure_rate"].mean(),
-                "Average Return": group["total_return"].mean(),
-                "Path Length": group["path_length"].mean(),
-                "Optimality Gap": group["optimality_gap"].mean(skipna=True),
-                "Inference Time Mean": group["inference_time_per_action"].mean(),
-            }
-        )
-    return pd.DataFrame(rows).sort_values("lambda_D").reset_index(drop=True)
+    _, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["lambda_D"])
+    return summary_df.sort_values("lambda_D").reset_index(drop=True)
 
 
 def choose_best_lambda_distance(summary_df: pd.DataFrame) -> float:
     ranked = summary_df.sort_values(
         by=[
-            "Success Rate",
-            "Collision Rate",
-            "Average Return",
+            "Success Rate Mean",
+            "Collision Rate Mean",
+            "Average Return Mean",
             "Inference Time Mean",
         ],
         ascending=[False, True, False, True],
@@ -124,11 +112,13 @@ def run_lambda_ablation(
                 episode_records.append(metrics_df)
 
     raw_df = pd.concat(episode_records, ignore_index=True)
-    summary_df = _aggregate_lambda_results(raw_df)
+    per_seed_df, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["lambda_D"])
 
     raw_csv_path = os.path.join(tables_dir, "standard_diffusion_lambda_ablation_raw.csv")
+    per_seed_csv_path = os.path.join(tables_dir, "standard_diffusion_lambda_ablation_per_seed.csv")
     summary_csv_path = os.path.join(tables_dir, "standard_diffusion_lambda_ablation.csv")
     raw_df.to_csv(raw_csv_path, index=False)
+    per_seed_df.to_csv(per_seed_csv_path, index=False)
     summary_df.to_csv(summary_csv_path, index=False)
     plot_standard_lambda_ablation(summary_df, figures_dir)
     return summary_df, summary_csv_path, raw_csv_path

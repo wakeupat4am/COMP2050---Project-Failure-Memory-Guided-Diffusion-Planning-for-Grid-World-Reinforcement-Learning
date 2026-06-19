@@ -13,7 +13,7 @@ if PROJECT_ROOT not in sys.path:
 from envs import GridWorldEnv
 from planners import DiffusionActionModel, FailureMemoryDiffusionPlanner
 from planners.diffusion_planner import build_diffusion_training_data
-from utils import evaluate_planner, set_global_seed, shortest_path_length
+from utils import aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
 from utils.plotting import plot_k_ablation
 
 from failure_diffusion_planner.run_lambda_ablation import (
@@ -24,22 +24,8 @@ from failure_diffusion_planner.run_lambda_ablation import (
 
 
 def _aggregate_k_results(raw_df: pd.DataFrame) -> pd.DataFrame:
-    rows = []
-    for candidate_k, group in raw_df.groupby("K"):
-        rows.append(
-            {
-                "K": int(candidate_k),
-                "lambda_F": float(group["lambda_F"].iloc[0]),
-                "Success Rate": group["success"].mean(),
-                "Collision Rate": group["collision"].mean(),
-                "Repeated Failure Rate": group["repeated_failure_rate"].mean(),
-                "Average Return": group["total_return"].mean(),
-                "Path Length": group["path_length"].mean(),
-                "Optimality Gap": group["optimality_gap"].mean(skipna=True),
-                "Inference Time Mean": group["inference_time_per_action"].mean(),
-            }
-        )
-    return pd.DataFrame(rows).sort_values("K").reset_index(drop=True)
+    _, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["K", "lambda_F"])
+    return summary_df.sort_values("K").reset_index(drop=True)
 
 
 def run_k_ablation(
@@ -111,11 +97,13 @@ def run_k_ablation(
                 episode_records.append(metrics_df)
 
     raw_df = pd.concat(episode_records, ignore_index=True)
-    summary_df = _aggregate_k_results(raw_df)
+    per_seed_df, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["K", "lambda_F"])
 
     raw_csv_path = os.path.join(tables_dir, "failure_memory_k_ablation_raw.csv")
+    per_seed_csv_path = os.path.join(tables_dir, "failure_memory_k_ablation_per_seed.csv")
     summary_csv_path = os.path.join(tables_dir, "failure_memory_k_ablation.csv")
     raw_df.to_csv(raw_csv_path, index=False)
+    per_seed_df.to_csv(per_seed_csv_path, index=False)
     summary_df.to_csv(summary_csv_path, index=False)
 
     plot_k_ablation(summary_df, figures_dir)
