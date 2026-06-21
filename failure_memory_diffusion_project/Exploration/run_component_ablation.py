@@ -13,7 +13,7 @@ if PROJECT_ROOT not in sys.path:
 from envs import GridWorldEnv
 from planners import DiffusionActionModel
 from planners.diffusion_planner import build_diffusion_training_data
-from utils import aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
+from utils import DEFAULT_SEEDS, aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
 from utils.plotting import create_component_ablation_plots
 
 from Exploration import (
@@ -35,7 +35,7 @@ def run_component_ablation(
     tuned_k: int = 40,
 ):
     if seeds is None:
-        seeds = [0, 1, 2]
+        seeds = list(DEFAULT_SEEDS)
 
     output_dir = os.path.join(PROJECT_ROOT, "Exploration", "component_ablation_results")
     tables_dir = os.path.join(output_dir, "tables")

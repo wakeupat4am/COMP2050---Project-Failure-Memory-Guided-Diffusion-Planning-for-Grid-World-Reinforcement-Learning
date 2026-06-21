@@ -3,6 +3,8 @@ import random
 import numpy as np
 import torch
 
+DEFAULT_SEEDS = list(range(10))
+
 
 def set_global_seed(seed: int) -> None:
     random.seed(seed)

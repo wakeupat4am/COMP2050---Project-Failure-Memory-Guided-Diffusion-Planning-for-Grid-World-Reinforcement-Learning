@@ -22,7 +22,7 @@ from planners import (
     ValueIterationPlanner,
 )
 from planners.diffusion_planner import build_diffusion_training_data
-from utils import aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
+from utils import DEFAULT_SEEDS, aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
 from utils.plotting import compare_best_diffusion_variants, create_all_plots
 
 from experiments.run_comparison import _aggregate_results, _build_maps
@@ -41,7 +41,7 @@ def run_after_fix_comparison(
     failure_k: int = 40,
 ):
     if seeds is None:
-        seeds = [0, 1, 2]
+        seeds = list(DEFAULT_SEEDS)
 
     output_dir = os.path.join(PROJECT_ROOT, "After-fix results")
     tables_dir = os.path.join(output_dir, "tables")

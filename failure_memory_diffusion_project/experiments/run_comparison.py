@@ -18,6 +18,7 @@ from planners import (
 )
 from planners.diffusion_planner import build_diffusion_training_data
 from utils import (
+    DEFAULT_SEEDS,
     aggregate_raw_to_seed_summary,
     create_deceptive_map,
     create_easy_map,
@@ -56,7 +57,7 @@ def run_comparison(
     mcts_simulations: int = 25,
 ):
     if seeds is None:
-        seeds = [0, 1, 2]
+        seeds = list(DEFAULT_SEEDS)
 
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     tables_dir = os.path.join(base_dir, "results", "tables")

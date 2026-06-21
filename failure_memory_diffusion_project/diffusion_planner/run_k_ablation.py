@@ -13,7 +13,7 @@ if PROJECT_ROOT not in sys.path:
 from envs import GridWorldEnv
 from planners import DiffusionActionModel, StandardDiffusionPlanner
 from planners.diffusion_planner import build_diffusion_training_data
-from utils import aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
+from utils import DEFAULT_SEEDS, aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
 from utils.plotting import compare_best_diffusion_variants, plot_standard_k_ablation
 
 from diffusion_planner.run_lambda_ablation import (
@@ -40,7 +40,7 @@ def run_k_ablation(
     if k_values is None:
         k_values = [5, 10, 20, 30, 40]
     if seeds is None:
-        seeds = [0, 1, 2]
+        seeds = list(DEFAULT_SEEDS)
 
     tables_dir = os.path.join(PROJECT_ROOT, "results", "tables")
     figures_dir = os.path.join(PROJECT_ROOT, "results", "figures")

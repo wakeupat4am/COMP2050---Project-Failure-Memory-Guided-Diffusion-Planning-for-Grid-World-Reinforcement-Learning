@@ -54,6 +54,7 @@ def build_report() -> str:
     component = pd.read_csv(BASE_DIR / "Exploration" / "component_ablation_results" / "tables" / "component_ablation.csv")
     lambda_f = pd.read_csv(BASE_DIR / "results" / "tables" / "failure_memory_lambda_ablation.csv")
     k_f = pd.read_csv(BASE_DIR / "results" / "tables" / "failure_memory_k_ablation.csv")
+    seed_count = int(benchmark["Seed Count"].max())
 
     difficult_maps = benchmark[
         benchmark["Algorithm"].isin(
@@ -85,6 +86,7 @@ def build_report() -> str:
         benchmark_seed["Algorithm"].isin(["Failure-Memory Diffusion", "Improved Failure-Memory Diffusion"])
         & (benchmark_seed["Map"] == "deceptive")
     ]
+    deceptive_seed_ids = sorted(int(seed) for seed in deceptive_seed["Seed"].unique())
     seed_rows = []
     for algorithm in ["Failure-Memory Diffusion", "Improved Failure-Memory Diffusion"]:
         subset = deceptive_seed[deceptive_seed["Algorithm"] == algorithm].sort_values("Seed")
@@ -94,9 +96,10 @@ def build_report() -> str:
         seed_rows.append(
             [
                 algorithm,
-                fmt(success_values[0]),
-                fmt(success_values[1]),
-                fmt(success_values[2]),
+                ", ".join(
+                    f"s{seed_id}={fmt(success_value)}"
+                    for seed_id, success_value in zip(deceptive_seed_ids, success_values)
+                ),
                 f"{fmt(sum(success_values) / len(success_values))} +- {fmt(pd.Series(success_values).std(ddof=1))}",
                 f"{fmt(sum(collision_values) / len(collision_values))} +- {fmt(pd.Series(collision_values).std(ddof=1))}",
                 f"{fmt(sum(repeat_values) / len(repeat_values))} +- {fmt(pd.Series(repeat_values).std(ddof=1))}",
@@ -105,9 +108,7 @@ def build_report() -> str:
     seed_table = markdown_table(
         [
             "Planner",
-            "Seed 0",
-            "Seed 1",
-            "Seed 2",
+            "Per-seed success values",
             "Success Mean +- SD",
             "Collision Mean +- SD",
             "Repeat Mean +- SD",
@@ -223,6 +224,36 @@ def build_report() -> str:
     without_tail = component[
         (component["Algorithm"] == "Without Tail Memory") & (component["Map"] == "deceptive")
     ].iloc[0]
+    obstacle_improved_seed = benchmark_seed[
+        (benchmark_seed["Algorithm"] == "Improved Failure-Memory Diffusion") & (benchmark_seed["Map"] == "obstacle")
+    ].sort_values("Seed")
+    improved_deceptive_seed = deceptive_seed[deceptive_seed["Algorithm"] == "Improved Failure-Memory Diffusion"].sort_values("Seed")
+    failure_deceptive_seed = deceptive_seed[deceptive_seed["Algorithm"] == "Failure-Memory Diffusion"].sort_values("Seed")
+    per_seed_success_improvement = (
+        improved_deceptive_seed["Success Rate"].to_numpy() - failure_deceptive_seed["Success Rate"].to_numpy()
+    )
+    improvement_seed_wins = int((per_seed_success_improvement > 0).sum())
+    improvement_seed_non_losses = int((per_seed_success_improvement >= 0).sum())
+    success_consistency_phrase = (
+        f"was consistent across all {seed_count} seeds"
+        if improvement_seed_wins == seed_count
+        else f"appeared in {improvement_seed_wins} of {seed_count} seeds"
+    )
+    per_seed_comparison_phrase = (
+        f"was strictly better in all {seed_count} seeds"
+        if improvement_seed_wins == seed_count
+        else f"matched or exceeded the original failure-memory planner in all {improvement_seed_non_losses} seeds, with strict improvement in {improvement_seed_wins} of {seed_count}"
+    )
+    zero_collision_all_difficult = bool(
+        (improved_deceptive_seed["Collision Rate"] == 0).all() and (obstacle_improved_seed["Collision Rate"] == 0).all()
+    )
+    zero_collision_phrase = (
+        f"collision dropped to zero across all {seed_count} seeds"
+        if zero_collision_all_difficult
+        else "collision was reduced strongly, though not to zero in every seed"
+    )
+    k5_row = k_f.loc[k_f["K"] == 5].iloc[0]
+    k40_row = k_f.loc[k_f["K"] == 40].iloc[0]
 
     report = f"""# Improving Diffusion-Based GridWorld Planning with Online Failure Memory
 
@@ -233,10 +264,10 @@ def build_report() -> str:
 ## Abstract
 This revised report studies diffusion-based planning in a deterministic GridWorld and focuses on a more defensible evaluation protocol than the earlier draft. The diffusion model is trained on BFS shortest-path demonstrations and then used online to propose candidate trajectories. The main research question is whether online failure memory can improve candidate ranking without retraining the generator.
 
-The key methodological upgrades in this version are: seed-level reporting, 95% confidence intervals over seed means in the figures, numeric parameter sweeps for `lambda_F` and `K`, and a new remove-one-component ablation for the final planner. Under the refreshed benchmark, Improved Failure-Memory Diffusion reached `success = {fmt(improved_obstacle['Success Rate Mean'])} +- {fmt(improved_obstacle['Success Rate Std'])}` with zero collision on the obstacle map and `success = {fmt(improved_deceptive['Success Rate Mean'])} +- {fmt(improved_deceptive['Success Rate Std'])}` with zero collision on the deceptive map. The deceptive-map gain over the original failure-memory planner was consistent across all three seeds.
+The key methodological upgrades in this version are: seed-level reporting, 95% confidence intervals over seed means in the figures, numeric parameter sweeps for `lambda_F` and `K`, and a new remove-one-component ablation for the final planner. Under the refreshed benchmark, Improved Failure-Memory Diffusion reached `success = {fmt(improved_obstacle['Success Rate Mean'])} +- {fmt(improved_obstacle['Success Rate Std'])}` with zero collision on the obstacle map and `success = {fmt(improved_deceptive['Success Rate Mean'])} +- {fmt(improved_deceptive['Success Rate Std'])}` with zero collision on the deceptive map. The deceptive-map gain over the original failure-memory planner {success_consistency_phrase}.
 
 ## What Changed Relative to the Earlier Draft
-1. All main reported metrics are now aggregated per seed first and summarized as `mean +- SD` across the three seed means.
+1. All main reported metrics are now aggregated per seed first and summarized as `mean +- SD` across the {seed_count} seed means.
 2. Main comparison and ablation figures now show 95% confidence intervals over seed means.
 3. The qualitative candidate-budget summary was replaced with a numeric `K` sweep.
 4. The `lambda_F` tuning discussion is now tied to an explicit sweep table and figure.
@@ -288,12 +319,12 @@ The earlier large box-diagram figures were not reused in this package because th
 {implementation_table}
 
 ## Evaluation Protocol and Statistical Reporting
-- Seeds: `0, 1, 2`
+- Seeds: `{", ".join(str(seed) for seed in sorted(benchmark_seed["Seed"].unique()))}`
 - Evaluation episodes per seed: `10`
-- Main benchmark total per algorithm-map combination: `30` episodes
+- Main benchmark total per algorithm-map combination: `{seed_count * 10}` episodes
 - Reported tables: seed means summarized as `mean +- SD`
-- Figures: error bars show 95% confidence intervals over the three seed means
-- Because only three seeds are available, the report emphasizes uncertainty and effect direction rather than strong significance claims
+- Figures: error bars show 95% confidence intervals over the {seed_count} seed means
+- Even with {seed_count} seeds, the report emphasizes uncertainty and effect direction rather than overstating significance
 
 Raw, per-seed, and summary CSV files were regenerated for the benchmark, exploration study, `lambda_F` sweep, `K` sweep, and component ablation. These refreshed outputs now live in:
 - `Exploration/benchmark_results/tables/`
@@ -306,7 +337,7 @@ The strongest evidence for the improved planner comes from the two difficult map
 
 {diffusion_table}
 
-The deceptive-map improvement is not a single pooled proportion hiding seed instability. The per-seed summary below shows that the improved planner outperformed the original failure-memory planner on every seed:
+The deceptive-map improvement is not a single pooled proportion hiding seed instability. The per-seed summary below shows that the improved planner {per_seed_comparison_phrase}:
 
 {seed_table}
 
@@ -320,7 +351,7 @@ The deceptive-map improvement is not a single pooled proportion hiding seed inst
 
 ![Collision-rate comparison](figures/05_collision_rate_comparison.png)
 
-*Figure note.* The main robustness gain from the improved planner is collision suppression: on both obstacle and deceptive maps, collision dropped to zero in all three seeds.
+*Figure note.* The main robustness gain from the improved planner is collision suppression: on both obstacle and deceptive maps, {zero_collision_phrase}.
 
 ![Inference-time comparison](figures/06_inference_time_comparison.png)
 
@@ -380,7 +411,7 @@ The earlier qualitative discussion of `lambda_F` and `K` is now replaced by nume
 
 ![Candidate-budget sweep](figures/11_k_ablation_failure_memory.png)
 
-*Figure note.* Increasing `K` improves success and lowers collision and repeated-failure rate, but it also increases action-selection time from roughly `1.139 ms` at `K=5` to `1.891 ms` at `K=40`.
+*Figure note.* Increasing `K` improves success and lowers collision and repeated-failure rate, but it also increases action-selection time from roughly `{fmt(k5_row['Inference Time Mean'] * 1000, 3)} ms` at `K=5` to `{fmt(k40_row['Inference Time Mean'] * 1000, 3)} ms` at `K=40`.
 
 ### Sweep Interpretation
 The numeric sweeps support a more careful claim than the earlier draft:
@@ -392,14 +423,14 @@ The numeric sweeps support a more careful claim than the earlier draft:
 2. The diffusion model is retrained separately for each seed and each map.
 3. Training demonstrations come from BFS with full map knowledge.
 4. Online scoring uses the exact simulator, so the diffusion-family planners are model-based at inference time.
-5. Only three seeds are available, so uncertainty is visible but statistical power remains limited.
+5. Even with {seed_count} seeds, statistical power remains moderate compared with a much larger experimental study.
 6. The new ablation indicates that some earlier mechanism-level claims were too strong.
 
 ## Conclusion
 The revised evidence supports a stronger and more honest report because it now answers the research questions directly.
 
 1. Research Question 1 asked how a diffusion-based planner behaves in deterministic GridWorlds when trained on BFS demonstrations. The results show that standard diffusion planning is workable on simple maps but unreliable on deceptive geometry, where it frequently collapses into collision-heavy behavior driven by local goal-distance bias.
-2. Research Question 2 asked whether online failure memory improves robustness without retraining the generator. The answer is yes. Relative to the original failure-memory planner, the improved planner consistently increased success on the deceptive and obstacle maps and reduced collision to zero across all three seeds on those two difficult maps.
+2. Research Question 2 asked whether online failure memory improves robustness without retraining the generator. The answer is yes. Relative to the original failure-memory planner, the improved planner consistently increased success on the deceptive and obstacle maps and {zero_collision_phrase} on those two difficult maps.
 3. Research Question 3 asked which components matter most. The new ablation shows that adaptive weighting is the most critical mechanism in the final design. Diversity and the loop penalty were not individually decisive under the current budget, and tail-only memory should be described as a cleaner credit-assignment choice rather than a universally stronger empirical variant.
 4. Research Question 4 asked how `K` and `lambda_F` control the trade-off between robustness and cost. The sweeps show that `lambda_F = 0.5` was the strongest value among the tested settings in this study, while larger `K` improved success and reduced collision at the cost of slower action selection. The gain from increasing `K` is real but diminishing.
 

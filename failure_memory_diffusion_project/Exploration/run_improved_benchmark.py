@@ -22,7 +22,7 @@ from planners import (
     ValueIterationPlanner,
 )
 from planners.diffusion_planner import build_diffusion_training_data
-from utils import aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
+from utils import DEFAULT_SEEDS, aggregate_raw_to_seed_summary, evaluate_planner, set_global_seed, shortest_path_length
 from utils.plotting import create_all_plots
 
 from Exploration.combined_exploration_planner import CombinedExplorationFailureMemoryPlanner
@@ -44,7 +44,7 @@ def run_improved_benchmark(
     improved_k: int = 40,
 ):
     if seeds is None:
-        seeds = [0, 1, 2]
+        seeds = list(DEFAULT_SEEDS)
 
     output_dir = os.path.join(PROJECT_ROOT, "Exploration", "benchmark_results")
     tables_dir = os.path.join(output_dir, "tables")

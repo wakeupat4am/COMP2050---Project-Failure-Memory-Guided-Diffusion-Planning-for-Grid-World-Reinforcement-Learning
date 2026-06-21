@@ -7,10 +7,10 @@
 ## Abstract
 This revised report studies diffusion-based planning in a deterministic GridWorld and focuses on a more defensible evaluation protocol than the earlier draft. The diffusion model is trained on BFS shortest-path demonstrations and then used online to propose candidate trajectories. The main research question is whether online failure memory can improve candidate ranking without retraining the generator.
 
-The key methodological upgrades in this version are: seed-level reporting, 95% confidence intervals over seed means in the figures, numeric parameter sweeps for `lambda_F` and `K`, and a new remove-one-component ablation for the final planner. Under the refreshed benchmark, Improved Failure-Memory Diffusion reached `success = 1.000 +- 0.000` with zero collision on the obstacle map and `success = 0.500 +- 0.100` with zero collision on the deceptive map. The deceptive-map gain over the original failure-memory planner was consistent across all three seeds.
+The key methodological upgrades in this version are: seed-level reporting, 95% confidence intervals over seed means in the figures, numeric parameter sweeps for `lambda_F` and `K`, and a new remove-one-component ablation for the final planner. Under the refreshed benchmark, Improved Failure-Memory Diffusion reached `success = 1.000 +- 0.000` with zero collision on the obstacle map and `success = 0.500 +- 0.189` with zero collision on the deceptive map. The deceptive-map gain over the original failure-memory planner appeared in 9 of 10 seeds.
 
 ## What Changed Relative to the Earlier Draft
-1. All main reported metrics are now aggregated per seed first and summarized as `mean +- SD` across the three seed means.
+1. All main reported metrics are now aggregated per seed first and summarized as `mean +- SD` across the 10 seed means.
 2. Main comparison and ablation figures now show 95% confidence intervals over seed means.
 3. The qualitative candidate-budget summary was replaced with a numeric `K` sweep.
 4. The `lambda_F` tuning discussion is now tied to an explicit sweep table and figure.
@@ -85,12 +85,12 @@ The earlier large box-diagram figures were not reused in this package because th
 | Timing hardware | Apple M4 MacBook Air, 10-core CPU, 16 GB RAM, torch 2.9.0 CPU-only |
 
 ## Evaluation Protocol and Statistical Reporting
-- Seeds: `0, 1, 2`
+- Seeds: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`
 - Evaluation episodes per seed: `10`
-- Main benchmark total per algorithm-map combination: `30` episodes
+- Main benchmark total per algorithm-map combination: `100` episodes
 - Reported tables: seed means summarized as `mean +- SD`
-- Figures: error bars show 95% confidence intervals over the three seed means
-- Because only three seeds are available, the report emphasizes uncertainty and effect direction rather than strong significance claims
+- Figures: error bars show 95% confidence intervals over the 10 seed means
+- Even with 10 seeds, the report emphasizes uncertainty and effect direction rather than overstating significance
 
 Raw, per-seed, and summary CSV files were regenerated for the benchmark, exploration study, `lambda_F` sweep, `K` sweep, and component ablation. These refreshed outputs now live in:
 - `Exploration/benchmark_results/tables/`
@@ -103,19 +103,19 @@ The strongest evidence for the improved planner comes from the two difficult map
 
 | Planner | Map | Success Rate | Collision Rate | Average Return |
 | --- | --- | --- | --- | --- |
-| Failure-Memory Diffusion | deceptive | 0.033 +- 0.058 | 0.967 +- 0.058 | -1.001 +- 0.091 |
-| Improved Failure-Memory Diffusion | deceptive | 0.500 +- 0.100 | 0.000 +- 0.000 | -0.060 +- 0.189 |
-| Standard Diffusion | deceptive | 0.000 +- 0.000 | 1.000 +- 0.000 | -1.034 +- 0.003 |
-| Failure-Memory Diffusion | obstacle | 0.533 +- 0.115 | 0.467 +- 0.115 | 0.010 +- 0.222 |
-| Improved Failure-Memory Diffusion | obstacle | 1.000 +- 0.000 | 0.000 +- 0.000 | 0.894 +- 0.007 |
-| Standard Diffusion | obstacle | 0.067 +- 0.058 | 0.933 +- 0.058 | -0.893 +- 0.111 |
+| Failure-Memory Diffusion | deceptive | 0.020 +- 0.042 | 0.970 +- 0.048 | -1.020 +- 0.076 |
+| Improved Failure-Memory Diffusion | deceptive | 0.500 +- 0.189 | 0.000 +- 0.000 | -0.065 +- 0.349 |
+| Standard Diffusion | deceptive | 0.000 +- 0.000 | 1.000 +- 0.000 | -1.032 +- 0.003 |
+| Failure-Memory Diffusion | obstacle | 0.510 +- 0.088 | 0.490 +- 0.088 | -0.035 +- 0.170 |
+| Improved Failure-Memory Diffusion | obstacle | 1.000 +- 0.000 | 0.000 +- 0.000 | 0.883 +- 0.012 |
+| Standard Diffusion | obstacle | 0.030 +- 0.048 | 0.970 +- 0.048 | -0.965 +- 0.094 |
 
-The deceptive-map improvement is not a single pooled proportion hiding seed instability. The per-seed summary below shows that the improved planner outperformed the original failure-memory planner on every seed:
+The deceptive-map improvement is not a single pooled proportion hiding seed instability. The per-seed summary below shows that the improved planner matched or exceeded the original failure-memory planner in all 10 seeds, with strict improvement in 9 of 10:
 
-| Planner | Seed 0 | Seed 1 | Seed 2 | Success Mean +- SD | Collision Mean +- SD | Repeat Mean +- SD |
-| --- | --- | --- | --- | --- | --- | --- |
-| Failure-Memory Diffusion | 0.100 | 0.000 | 0.000 | 0.033 +- 0.058 | 0.967 +- 0.058 | 0.697 +- 0.085 |
-| Improved Failure-Memory Diffusion | 0.500 | 0.600 | 0.400 | 0.500 +- 0.100 | 0.000 +- 0.000 | 0.185 +- 0.050 |
+| Planner | Per-seed success values | Success Mean +- SD | Collision Mean +- SD | Repeat Mean +- SD |
+| --- | --- | --- | --- | --- |
+| Failure-Memory Diffusion | s0=0.100, s1=0.000, s2=0.000, s3=0.000, s4=0.000, s5=0.000, s6=0.100, s7=0.000, s8=0.000, s9=0.000 | 0.020 +- 0.042 | 0.970 +- 0.048 | 0.734 +- 0.053 |
+| Improved Failure-Memory Diffusion | s0=0.500, s1=0.600, s2=0.400, s3=0.600, s4=0.000, s5=0.500, s6=0.600, s7=0.600, s8=0.600, s9=0.600 | 0.500 +- 0.189 | 0.000 +- 0.000 | 0.194 +- 0.071 |
 
 ![Success-rate comparison](figures/03_success_rate_comparison.png)
 
@@ -127,7 +127,7 @@ The deceptive-map improvement is not a single pooled proportion hiding seed inst
 
 ![Collision-rate comparison](figures/05_collision_rate_comparison.png)
 
-*Figure note.* The main robustness gain from the improved planner is collision suppression: on both obstacle and deceptive maps, collision dropped to zero in all three seeds.
+*Figure note.* The main robustness gain from the improved planner is collision suppression: on both obstacle and deceptive maps, collision dropped to zero across all 10 seeds.
 
 ![Inference-time comparison](figures/06_inference_time_comparison.png)
 
@@ -140,7 +140,7 @@ The deceptive-map improvement is not a single pooled proportion hiding seed inst
 ### Main Benchmark Interpretation
 The revised benchmark supports three careful conclusions:
 
-1. The improved planner clearly dominates the original failure-memory planner on the deceptive map. Its success rate increased from `0.033 +- 0.058` to `0.500 +- 0.100`, and collision fell from `0.967 +- 0.058` to zero.
+1. The improved planner clearly dominates the original failure-memory planner on the deceptive map. Its success rate increased from `0.020 +- 0.042` to `0.500 +- 0.189`, and collision fell from `0.970 +- 0.048` to zero.
 2. The obstacle map result is even stronger: the improved planner reached perfect success with zero collision across all seeds.
 3. Exact planners still outperform the diffusion-family methods on path efficiency and computational cost, so the contribution is best framed as a within-family improvement rather than a universal planner replacement.
 
@@ -149,11 +149,11 @@ The earlier exploration study remains useful because it separates the larger des
 
 | Variant | Success Rate | Collision Rate | Average Return | Repeated Failure Rate |
 | --- | --- | --- | --- | --- |
-| Adaptive Failure | 0.300 +- 0.100 | 0.700 +- 0.100 | -0.458 +- 0.191 | 0.493 +- 0.075 |
-| Combined Exploration | 0.500 +- 0.100 | 0.000 +- 0.000 | -0.060 +- 0.189 | 0.185 +- 0.050 |
-| Dead-End Memory | 0.033 +- 0.058 | 0.933 +- 0.058 | -1.009 +- 0.121 | 0.714 +- 0.049 |
-| Diverse Candidates | 0.100 +- 0.000 | 0.000 +- 0.000 | -0.820 +- 0.011 | 0.766 +- 0.029 |
-| Failure-Memory Baseline | 0.033 +- 0.058 | 0.967 +- 0.058 | -1.001 +- 0.091 | 0.697 +- 0.085 |
+| Adaptive Failure | 0.250 +- 0.085 | 0.750 +- 0.085 | -0.555 +- 0.162 | 0.548 +- 0.058 |
+| Combined Exploration | 0.500 +- 0.189 | 0.000 +- 0.000 | -0.065 +- 0.349 | 0.194 +- 0.071 |
+| Dead-End Memory | 0.010 +- 0.032 | 0.970 +- 0.048 | -1.059 +- 0.071 | 0.720 +- 0.026 |
+| Diverse Candidates | 0.090 +- 0.074 | 0.000 +- 0.000 | -0.832 +- 0.132 | 0.775 +- 0.043 |
+| Failure-Memory Baseline | 0.020 +- 0.042 | 0.970 +- 0.048 | -1.020 +- 0.076 | 0.734 +- 0.053 |
 
 ![Exploration success-rate comparison](figures/08_exploration_success_rate.png)
 
@@ -167,11 +167,11 @@ The refreshed report now includes the ablation that was missing in the earlier d
 
 | Variant | Success Rate | Collision Rate | Average Return | Repeated Failure Rate |
 | --- | --- | --- | --- | --- |
-| Full Method | 0.500 +- 0.100 | 0.000 +- 0.000 | -0.060 +- 0.189 | 0.185 +- 0.050 |
-| Without Adaptive Weights | 0.000 +- 0.000 | 0.000 +- 0.000 | -0.990 +- 0.000 | 0.678 +- 0.016 |
-| Without Diversity | 0.500 +- 0.100 | 0.000 +- 0.000 | -0.060 +- 0.186 | 0.224 +- 0.093 |
-| Without Loop Penalty | 0.500 +- 0.100 | 0.000 +- 0.000 | -0.062 +- 0.188 | 0.182 +- 0.053 |
-| Without Tail Memory | 0.633 +- 0.058 | 0.000 +- 0.000 | 0.156 +- 0.106 | 0.398 +- 0.056 |
+| Full Method | 0.490 +- 0.185 | 0.000 +- 0.000 | -0.081 +- 0.343 | 0.197 +- 0.069 |
+| Without Adaptive Weights | 0.000 +- 0.000 | 0.000 +- 0.000 | -0.990 +- 0.000 | 0.678 +- 0.034 |
+| Without Diversity | 0.480 +- 0.181 | 0.000 +- 0.000 | -0.098 +- 0.337 | 0.200 +- 0.090 |
+| Without Loop Penalty | 0.490 +- 0.185 | 0.000 +- 0.000 | -0.081 +- 0.344 | 0.190 +- 0.073 |
+| Without Tail Memory | 0.660 +- 0.052 | 0.000 +- 0.000 | 0.194 +- 0.077 | 0.448 +- 0.109 |
 
 ![Component ablation success rates](figures/09_component_ablation_success_rate.png)
 
@@ -180,9 +180,9 @@ The refreshed report now includes the ablation that was missing in the earlier d
 ### Component Interpretation
 This ablation changes the earlier story in an important way:
 
-1. Removing adaptive weights caused the deceptive-map success rate to collapse from `0.500 +- 0.100` to `0.000 +- 0.000`. Adaptive weighting is therefore the most critical component in the final planner.
+1. Removing adaptive weights caused the deceptive-map success rate to collapse from `0.500 +- 0.189` to `0.000 +- 0.000`. Adaptive weighting is therefore the most critical component in the final planner.
 2. Removing diversity or the loop penalty had little effect under the current budget on the deceptive map. These mechanisms may still help stability, but this rerun does not justify strong claims that they are individually decisive.
-3. Removing tail-only memory unexpectedly increased deceptive-map success to `0.633 +- 0.058` while also increasing the repeated-failure rate from `0.185 +- 0.050` to `0.398 +- 0.056`. The revised report should therefore present tail-only memory as a cleaner credit-assignment choice, not as an unconditional empirical improvement.
+3. Removing tail-only memory unexpectedly increased deceptive-map success to `0.660 +- 0.052` while also increasing the repeated-failure rate from `0.194 +- 0.071` to `0.448 +- 0.109`. The revised report should therefore present tail-only memory as a cleaner credit-assignment choice, not as an unconditional empirical improvement.
 
 ## Parameter Sweeps
 The earlier qualitative discussion of `lambda_F` and `K` is now replaced by numeric tables.
@@ -190,12 +190,12 @@ The earlier qualitative discussion of `lambda_F` and `K` is now replaced by nume
 ### Failure-Memory Weight Sweep
 | lambda_F | Success Rate | Collision Rate | Average Return |
 | --- | --- | --- | --- |
-| 0.0 | 0.158 +- 0.014 | 0.842 +- 0.014 | -0.715 +- 0.028 |
-| 0.1 | 0.175 +- 0.025 | 0.825 +- 0.025 | -0.685 +- 0.051 |
-| 0.5 | 0.225 +- 0.025 | 0.775 +- 0.025 | -0.596 +- 0.052 |
-| 1.0 | 0.200 +- 0.025 | 0.800 +- 0.025 | -0.643 +- 0.045 |
-| 2.0 | 0.200 +- 0.000 | 0.800 +- 0.000 | -0.643 +- 0.004 |
-| 5.0 | 0.200 +- 0.025 | 0.800 +- 0.025 | -0.642 +- 0.052 |
+| 0.0 | 0.168 +- 0.044 | 0.832 +- 0.044 | -0.698 +- 0.087 |
+| 0.1 | 0.185 +- 0.058 | 0.815 +- 0.058 | -0.666 +- 0.115 |
+| 0.5 | 0.227 +- 0.036 | 0.773 +- 0.036 | -0.590 +- 0.071 |
+| 1.0 | 0.207 +- 0.035 | 0.792 +- 0.035 | -0.628 +- 0.070 |
+| 2.0 | 0.217 +- 0.047 | 0.783 +- 0.047 | -0.607 +- 0.092 |
+| 5.0 | 0.202 +- 0.040 | 0.798 +- 0.040 | -0.637 +- 0.079 |
 
 ![Failure-memory strength sweep](figures/10_lambda_failure_ablation.png)
 
@@ -204,15 +204,15 @@ The earlier qualitative discussion of `lambda_F` and `K` is now replaced by nume
 ### Candidate-Budget Sweep
 | K | Success Rate | Collision Rate | Repeated Failure Rate | Inference Time |
 | --- | --- | --- | --- | --- |
-| 5 | 0.192 +- 0.038 | 0.808 +- 0.038 | 0.586 +- 0.063 | 1.139 ms +- 0.012 ms |
-| 10 | 0.375 +- 0.025 | 0.625 +- 0.025 | 0.494 +- 0.063 | 1.232 ms +- 0.007 ms |
-| 20 | 0.592 +- 0.029 | 0.408 +- 0.029 | 0.319 +- 0.016 | 1.479 ms +- 0.006 ms |
-| 30 | 0.617 +- 0.014 | 0.383 +- 0.014 | 0.322 +- 0.019 | 1.676 ms +- 0.005 ms |
-| 40 | 0.642 +- 0.014 | 0.358 +- 0.014 | 0.311 +- 0.026 | 1.891 ms +- 0.019 ms |
+| 5 | 0.150 +- 0.060 | 0.850 +- 0.060 | 0.625 +- 0.055 | 1.144 ms +- 0.013 ms |
+| 10 | 0.415 +- 0.073 | 0.585 +- 0.073 | 0.461 +- 0.081 | 1.238 ms +- 0.014 ms |
+| 20 | 0.578 +- 0.025 | 0.422 +- 0.025 | 0.335 +- 0.020 | 1.457 ms +- 0.012 ms |
+| 30 | 0.628 +- 0.014 | 0.372 +- 0.014 | 0.300 +- 0.019 | 1.687 ms +- 0.025 ms |
+| 40 | 0.625 +- 0.020 | 0.375 +- 0.020 | 0.305 +- 0.015 | 1.911 ms +- 0.020 ms |
 
 ![Candidate-budget sweep](figures/11_k_ablation_failure_memory.png)
 
-*Figure note.* Increasing `K` improves success and lowers collision and repeated-failure rate, but it also increases action-selection time from roughly `1.139 ms` at `K=5` to `1.891 ms` at `K=40`.
+*Figure note.* Increasing `K` improves success and lowers collision and repeated-failure rate, but it also increases action-selection time from roughly `1.144 ms` at `K=5` to `1.911 ms` at `K=40`.
 
 ### Sweep Interpretation
 The numeric sweeps support a more careful claim than the earlier draft:
@@ -224,14 +224,14 @@ The numeric sweeps support a more careful claim than the earlier draft:
 2. The diffusion model is retrained separately for each seed and each map.
 3. Training demonstrations come from BFS with full map knowledge.
 4. Online scoring uses the exact simulator, so the diffusion-family planners are model-based at inference time.
-5. Only three seeds are available, so uncertainty is visible but statistical power remains limited.
+5. Even with 10 seeds, statistical power remains moderate compared with a much larger experimental study.
 6. The new ablation indicates that some earlier mechanism-level claims were too strong.
 
 ## Conclusion
 The revised evidence supports a stronger and more honest report because it now answers the research questions directly.
 
 1. Research Question 1 asked how a diffusion-based planner behaves in deterministic GridWorlds when trained on BFS demonstrations. The results show that standard diffusion planning is workable on simple maps but unreliable on deceptive geometry, where it frequently collapses into collision-heavy behavior driven by local goal-distance bias.
-2. Research Question 2 asked whether online failure memory improves robustness without retraining the generator. The answer is yes. Relative to the original failure-memory planner, the improved planner consistently increased success on the deceptive and obstacle maps and reduced collision to zero across all three seeds on those two difficult maps.
+2. Research Question 2 asked whether online failure memory improves robustness without retraining the generator. The answer is yes. Relative to the original failure-memory planner, the improved planner consistently increased success on the deceptive and obstacle maps and collision dropped to zero across all 10 seeds on those two difficult maps.
 3. Research Question 3 asked which components matter most. The new ablation shows that adaptive weighting is the most critical mechanism in the final design. Diversity and the loop penalty were not individually decisive under the current budget, and tail-only memory should be described as a cleaner credit-assignment choice rather than a universally stronger empirical variant.
 4. Research Question 4 asked how `K` and `lambda_F` control the trade-off between robustness and cost. The sweeps show that `lambda_F = 0.5` was the strongest value among the tested settings in this study, while larger `K` improved success and reduced collision at the cost of slower action selection. The gain from increasing `K` is real but diminishing.
 

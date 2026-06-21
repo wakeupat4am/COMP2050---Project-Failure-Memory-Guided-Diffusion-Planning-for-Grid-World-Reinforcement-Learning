@@ -41,6 +41,7 @@ Its fixed settings in the final benchmark are:
 The main benchmark output is:
 
 - [Exploration/benchmark_results/tables/improved_benchmark_comparison.csv](Exploration/benchmark_results/tables/improved_benchmark_comparison.csv)
+- [Exploration/benchmark_results/tables/improved_benchmark_comparison_per_seed.csv](Exploration/benchmark_results/tables/improved_benchmark_comparison_per_seed.csv)
 
 The main figures are:
 
@@ -53,6 +54,8 @@ The main figures are:
 
 ![Final Benchmark Average Return](Exploration/benchmark_results/figures/average_return_comparison.png)
 
+The refreshed benchmark uses `10` random seeds and `10` evaluation episodes per seed. Summary values below are reported as mean `+-` standard deviation across seed means.
+
 ### Headline Result
 
 Among the diffusion-family methods:
@@ -64,18 +67,18 @@ Among the diffusion-family methods:
 ### Key Benchmark Interpretation
 
 - On the **deceptive** map:
-  - Standard Diffusion: success `0.00`, collision `1.00`
-  - Failure-Memory Diffusion: success `0.033`, collision `0.967`
-  - Improved Failure-Memory Diffusion: success `0.50`, collision `0.00`
-  - MCTS: success `0.90`
-  - Value Iteration / Policy Iteration: success `1.00`
+  - Standard Diffusion: success `0.000 +- 0.000`, collision `1.000 +- 0.000`
+  - Failure-Memory Diffusion: success `0.020 +- 0.042`, collision `0.970 +- 0.048`
+  - Improved Failure-Memory Diffusion: success `0.500 +- 0.189`, collision `0.000 +- 0.000`
+  - MCTS: success `0.890 +- 0.088`
+  - Value Iteration / Policy Iteration: success `1.000 +- 0.000`
 
 - On the **obstacle** map:
-  - Standard Diffusion: success `0.067`, collision `0.933`
-  - Failure-Memory Diffusion: success `0.533`, collision `0.467`
-  - Improved Failure-Memory Diffusion: success `1.00`, collision `0.00`
-  - MCTS: success `1.00`
-  - Value Iteration / Policy Iteration / Q-learning: success `1.00`
+  - Standard Diffusion: success `0.030 +- 0.048`, collision `0.970 +- 0.048`
+  - Failure-Memory Diffusion: success `0.510 +- 0.088`, collision `0.490 +- 0.088`
+  - Improved Failure-Memory Diffusion: success `1.000 +- 0.000`, collision `0.000 +- 0.000`
+  - MCTS: success `0.990 +- 0.032`
+  - Value Iteration / Policy Iteration / Q-learning: success `1.000 +- 0.000`
 
 - On the **easy** and **random_small** maps:
   - all strong planners eventually succeed,
@@ -316,7 +319,7 @@ Typical failure:
 
 Example interpretation:
 
-- In the deceptive map benchmark, Q-learning had success `0.00`, showing that local trial-and-error learning did not discover the correct route under the current budget.
+- In the deceptive map benchmark, Q-learning had success `0.100 +- 0.316`, showing that local trial-and-error learning only occasionally discovered the correct route under the current budget.
 
 ### Standard Diffusion failure
 
@@ -328,7 +331,7 @@ Typical failure:
 
 Example interpretation:
 
-- On the deceptive map, Standard Diffusion had success `0.00` and collision `1.00`, meaning its goal-distance-biased sampling was not enough to escape the misleading corridor.
+- On the deceptive map, Standard Diffusion had success `0.000 +- 0.000` and collision `1.000 +- 0.000`, meaning its goal-distance-biased sampling was not enough to escape the misleading corridor.
 
 ### Failure-Memory Diffusion failure
 
@@ -363,7 +366,7 @@ Typical failure mode:
 
 Example interpretation:
 
-- On the deceptive map, the improved method reaches `0.50` success with zero collision, which is a big safety improvement, but still not as strong as MCTS or oracle planning.
+- On the deceptive map, the improved method reaches `0.500 +- 0.189` success with zero collision, which is a big safety improvement, but it is still not as strong as MCTS or oracle planning.
 
 ## Why the Improved Method Helps
 
