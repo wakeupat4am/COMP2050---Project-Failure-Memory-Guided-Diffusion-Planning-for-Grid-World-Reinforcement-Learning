@@ -1,0 +1,31 @@
+{
+  "grid_size": [
+    6,
+    6
+  ],
+  "num_training_maps": 18,
+  "goals_per_map": 3,
+  "num_holdout_tasks": 10,
+  "eval_episodes_per_task": 5,
+  "diffusion_epochs": 18,
+  "diffusion_horizon": 16,
+  "diffusion_candidates": 12,
+  "diffusion_hidden_dim": 128,
+  "mcts_simulations": 35,
+  "q_learning_episodes": 400,
+  "map_seed": 31415,
+  "holdout_seed": 27182,
+  "model_seeds": [
+    0,
+    1,
+    2
+  ],
+  "train_obstacle_density_range": [
+    0.15,
+    0.32
+  ],
+  "holdout_obstacle_density_range": [
+    0.15,
+    0.32
+  ]
+}

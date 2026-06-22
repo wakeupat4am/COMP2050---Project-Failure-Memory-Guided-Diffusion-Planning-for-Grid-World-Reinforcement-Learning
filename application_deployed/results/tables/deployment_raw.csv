@@ -1,0 +1,1201 @@
+success,total_return,path_length,collision,repeated_failure_rate,optimality_gap,inference_time_per_action,Algorithm,Seed,Task
+0,-1.0,1,1,0.0,,2.625005436129868e-06,Random Policy,0,task_00
+0,-1.0,1,1,0.0,,1.8749997252598405e-06,Random Policy,0,task_00
+0,-1.0,1,1,0.0,,1.4169927453622222e-06,Random Policy,0,task_00
+0,-1.0,1,1,0.0,,1.2499949662014842e-06,Random Policy,0,task_00
+0,-1.02,3,1,0.0,,9.443319868296385e-07,Random Policy,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,3.906243364326656e-07,Value Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1975134839303792e-07,Value Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1987503967247903e-07,Value Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.2500095181167126e-07,Value Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1450174497440457e-07,Value Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,2.654996933415532e-07,Policy Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.356256689177826e-07,Policy Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.0399708116892725e-07,Policy Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,8.887582225725055e-08,Policy Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.0449912224430591e-07,Policy Iteration,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.4528777683153749e-06,Q-learning,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,8.386232366319746e-07,Q-learning,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.552498573204502e-07,Q-learning,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.502494554501027e-07,Q-learning,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.341259333770722e-07,Q-learning,0,task_00
+1,0.89,12,0,0.0,4.0,0.002045996500479911,MCTS,0,task_00
+1,0.91,10,0,0.0,2.0,0.0020516416014288554,MCTS,0,task_00
+1,0.83,18,0,0.0,10.0,0.0022485786119230194,MCTS,0,task_00
+1,0.85,16,0,0.0,8.0,0.002239487062979606,MCTS,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,0.0019479374986985931,MCTS,0,task_00
+0,-1.02,3,1,0.0,,0.001494166664391135,Map-Conditioned Standard Diffusion,0,task_00
+0,-1.06,7,1,0.0,,0.0013934467133367434,Map-Conditioned Standard Diffusion,0,task_00
+0,-1.02,3,1,0.0,,0.0013042503317895655,Map-Conditioned Standard Diffusion,0,task_00
+0,-1.1199999999999999,13,1,0.0,,0.0012967950012982609,Map-Conditioned Standard Diffusion,0,task_00
+0,-1.02,3,1,0.0,,0.0012990690011065453,Map-Conditioned Standard Diffusion,0,task_00
+0,-1.02,3,1,0.0,,0.0014803469966864213,Map-Conditioned Failure-Memory Diffusion,0,task_00
+0,-1.06,7,1,0.125,,0.001385589429576482,Map-Conditioned Failure-Memory Diffusion,0,task_00
+0,-1.08,9,1,0.3,,0.0013885786659860362,Map-Conditioned Failure-Memory Diffusion,0,task_00
+0,-1.06,7,1,1.0,,0.0014316667178978346,Map-Conditioned Failure-Memory Diffusion,0,task_00
+0,-1.02,3,1,1.0,,0.0014203609995699178,Map-Conditioned Failure-Memory Diffusion,0,task_00
+1,0.89,12,0,0.0,4.0,0.0019775241695848913,Map-Conditioned Improved Failure-Memory Diffusion,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,0.002002666748012416,Map-Conditioned Improved Failure-Memory Diffusion,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,0.0019963073755207006,Map-Conditioned Improved Failure-Memory Diffusion,0,task_00
+1,0.9299999999999999,8,0,0.0,0.0,0.0019607341255323263,Map-Conditioned Improved Failure-Memory Diffusion,0,task_00
+1,0.89,12,0,0.0,4.0,0.0019715103323202734,Map-Conditioned Improved Failure-Memory Diffusion,0,task_00
+0,-1.0,1,1,0.0,,1.7499987734481692e-06,Random Policy,0,task_01
+0,-1.0,1,1,0.0,,1.6250123735517263e-06,Random Policy,0,task_01
+0,-1.0,1,1,0.0,,1.45800004247576e-06,Random Policy,0,task_01
+0,-1.02,3,1,0.0,,1.0693329386413097e-06,Random Policy,0,task_01
+0,-1.0,1,1,0.0,,1.167005393654108e-06,Random Policy,0,task_01
+1,0.95,6,0,0.0,0.0,1.7383232867966095e-07,Value Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.108322370176514e-07,Value Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.180014805868268e-07,Value Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.180014805868268e-07,Value Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.0400011281793316e-07,Value Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.6683770809322596e-07,Policy Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.180014805868268e-07,Policy Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.1116693106790383e-07,Policy Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.5283391500512758e-07,Policy Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.1116450574869911e-07,Policy Iteration,0,task_01
+1,0.95,6,0,0.0,0.0,1.0348351982732613e-06,Q-learning,0,task_01
+1,0.95,6,0,0.0,0.0,8.60998018955191e-07,Q-learning,0,task_01
+1,0.95,6,0,0.0,0.0,8.054994395934045e-07,Q-learning,0,task_01
+1,0.95,6,0,0.0,0.0,7.706670051751038e-07,Q-learning,0,task_01
+1,0.95,6,0,0.0,0.0,7.704996581499776e-07,Q-learning,0,task_01
+1,0.95,6,0,0.0,0.0,0.0011353821707113336,MCTS,0,task_01
+1,0.91,10,0,0.0,4.0,0.0014939042972400784,MCTS,0,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.001452078000511392,MCTS,0,task_01
+1,0.95,6,0,0.0,0.0,0.0011018121658707969,MCTS,0,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.001319937622611178,MCTS,0,task_01
+0,-1.0,1,1,0.0,,0.0013892080023651943,Map-Conditioned Standard Diffusion,0,task_01
+0,-1.0,1,1,0.0,,0.001311667001573369,Map-Conditioned Standard Diffusion,0,task_01
+0,-1.0,1,1,0.0,,0.001309333005337976,Map-Conditioned Standard Diffusion,0,task_01
+0,-1.02,3,1,0.0,,0.0013433193331972386,Map-Conditioned Standard Diffusion,0,task_01
+0,-1.0,1,1,0.0,,0.0014757919998373836,Map-Conditioned Standard Diffusion,0,task_01
+0,-1.0,1,1,0.0,,0.0014625839976361021,Map-Conditioned Failure-Memory Diffusion,0,task_01
+1,0.9299999999999999,8,0,0.1111111111111111,2.0,0.0013839584971719887,Map-Conditioned Failure-Memory Diffusion,0,task_01
+0,-1.02,3,1,0.25,,0.0013975000038044527,Map-Conditioned Failure-Memory Diffusion,0,task_01
+0,-1.01,2,1,1.0,,0.0013805420021526515,Map-Conditioned Failure-Memory Diffusion,0,task_01
+1,0.91,10,0,0.36363636363636365,4.0,0.0014109333002124912,Map-Conditioned Failure-Memory Diffusion,0,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.0019675311232276727,Map-Conditioned Improved Failure-Memory Diffusion,0,task_01
+1,0.95,6,0,0.0,0.0,0.001913402496332613,Map-Conditioned Improved Failure-Memory Diffusion,0,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.0019248177468398353,Map-Conditioned Improved Failure-Memory Diffusion,0,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.0018961978694278514,Map-Conditioned Improved Failure-Memory Diffusion,0,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.001935932499691262,Map-Conditioned Improved Failure-Memory Diffusion,0,task_01
+0,-1.0,1,1,0.0,,1.5420082490891218e-06,Random Policy,0,task_02
+0,-1.0,1,1,0.0,,1.3750104699283838e-06,Random Policy,0,task_02
+0,-1.01,2,1,0.0,,1.0625008144415915e-06,Random Policy,0,task_02
+0,-1.09,10,1,0.0,,7.331997039727866e-07,Random Policy,0,task_02
+0,-1.0,1,1,0.0,,1.0420044418424368e-06,Random Policy,0,task_02
+1,0.96,5,0,0.0,0.0,2.00001522898674e-07,Value Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.4179968275129795e-07,Value Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,9.980285540223121e-08,Value Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.3339740689843893e-07,Value Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.1680240277200938e-07,Value Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.752021489664912e-07,Policy Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.0840012691915035e-07,Policy Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.666019670665264e-07,Policy Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.6659905668348074e-07,Policy Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.0840303730219602e-07,Policy Iteration,0,task_02
+1,0.96,5,0,0.0,0.0,1.1165975593030453e-06,Q-learning,0,task_02
+1,0.96,5,0,0.0,0.0,8.74800025485456e-07,Q-learning,0,task_02
+1,0.96,5,0,0.0,0.0,8.666043868288398e-07,Q-learning,0,task_02
+1,0.96,5,0,0.0,0.0,7.834023563191295e-07,Q-learning,0,task_02
+1,0.96,5,0,0.0,0.0,7.585971616208554e-07,Q-learning,0,task_02
+1,0.96,5,0,0.0,0.0,0.0015405834012199194,MCTS,0,task_02
+1,0.92,9,0,0.0,4.0,0.0018626852203548576,MCTS,0,task_02
+1,0.94,7,0,0.0,2.0,0.0016784582860834365,MCTS,0,task_02
+1,0.88,13,0,0.0,8.0,0.0020537950779096438,MCTS,0,task_02
+1,0.94,7,0,0.0,2.0,0.0015257977190360958,MCTS,0,task_02
+0,-1.01,2,1,0.0,,0.0013983745011501014,Map-Conditioned Standard Diffusion,0,task_02
+0,-1.01,2,1,0.0,,0.0013219379980000667,Map-Conditioned Standard Diffusion,0,task_02
+0,-1.01,2,1,0.0,,0.0013321040023583919,Map-Conditioned Standard Diffusion,0,task_02
+0,-1.01,2,1,0.0,,0.00146881250111619,Map-Conditioned Standard Diffusion,0,task_02
+0,-1.01,2,1,0.0,,0.0015078340074978769,Map-Conditioned Standard Diffusion,0,task_02
+0,-1.01,2,1,0.0,,0.0014188540080795065,Map-Conditioned Failure-Memory Diffusion,0,task_02
+1,0.96,5,0,0.3333333333333333,0.0,0.0013702913973247632,Map-Conditioned Failure-Memory Diffusion,0,task_02
+1,0.9,11,0,0.08333333333333333,6.0,0.0014352994555586272,Map-Conditioned Failure-Memory Diffusion,0,task_02
+0,-1.03,4,1,0.2,,0.0014643017493654042,Map-Conditioned Failure-Memory Diffusion,0,task_02
+1,0.96,5,0,0.6666666666666666,0.0,0.001400708398432471,Map-Conditioned Failure-Memory Diffusion,0,task_02
+1,0.96,5,0,0.0,0.0,0.001994483600719832,Map-Conditioned Improved Failure-Memory Diffusion,0,task_02
+1,0.92,9,0,0.0,4.0,0.0019841804476325503,Map-Conditioned Improved Failure-Memory Diffusion,0,task_02
+1,0.96,5,0,0.0,0.0,0.0019375584000954405,Map-Conditioned Improved Failure-Memory Diffusion,0,task_02
+1,0.94,7,0,0.0,2.0,0.0019614944321801886,Map-Conditioned Improved Failure-Memory Diffusion,0,task_02
+1,0.96,5,0,0.0,0.0,0.001980858200113289,Map-Conditioned Improved Failure-Memory Diffusion,0,task_02
+0,-1.0,1,1,0.0,,1.4999968698248267e-06,Random Policy,0,task_03
+0,-1.0,1,1,0.0,,1.4999968698248267e-06,Random Policy,0,task_03
+0,-1.0,1,1,0.0,,1.2909877113997936e-06,Random Policy,0,task_03
+0,-1.0,1,1,0.0,,1.1660013115033507e-06,Random Policy,0,task_03
+0,-1.0,1,1,0.0,,1.2089876690879464e-06,Random Policy,0,task_03
+1,0.94,7,0,0.0,0.0,2.2599955887666772e-07,Value Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.308570582685726e-07,Value Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.2485959034945283e-07,Value Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.1914276650973729e-07,Value Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,9.528801976037877e-08,Value Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.4314303241137948e-07,Policy Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.488577774060624e-07,Policy Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.1900140504751886e-07,Policy Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.0713951529136726e-07,Policy Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.0128756652453116e-07,Policy Iteration,0,task_03
+1,0.94,7,0,0.0,0.0,1.0178565779434784e-06,Q-learning,0,task_03
+1,0.94,7,0,0.0,0.0,8.392900261761887e-07,Q-learning,0,task_03
+1,0.94,7,0,0.0,0.0,7.915701384523086e-07,Q-learning,0,task_03
+1,0.94,7,0,0.0,0.0,7.798579255385058e-07,Q-learning,0,task_03
+1,0.94,7,0,0.0,0.0,8.09572936434831e-07,Q-learning,0,task_03
+0,-0.9900000000000002,50,0,0.0,,0.001696693280537147,MCTS,0,task_03
+0,-0.9900000000000002,50,0,0.0,,0.000714856639096979,MCTS,0,task_03
+1,0.5999999999999999,41,0,0.0,34.0,0.0007278129984425926,MCTS,0,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007390808605123311,MCTS,0,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007279233398730867,MCTS,0,task_03
+0,-1.04,5,1,0.0,,0.0013555000041378662,Map-Conditioned Standard Diffusion,0,task_03
+1,0.94,7,0,0.0,0.0,0.0012972319985107919,Map-Conditioned Standard Diffusion,0,task_03
+0,-1.02,3,1,0.0,,0.0013110136690859993,Map-Conditioned Standard Diffusion,0,task_03
+0,-1.02,3,1,0.0,,0.0012927916638242702,Map-Conditioned Standard Diffusion,0,task_03
+0,-1.01,2,1,0.0,,0.0013094790047034621,Map-Conditioned Standard Diffusion,0,task_03
+0,-1.04,5,1,0.0,,0.0013782583962893113,Map-Conditioned Failure-Memory Diffusion,0,task_03
+1,0.94,7,0,0.25,0.0,0.0013680298538279853,Map-Conditioned Failure-Memory Diffusion,0,task_03
+0,-1.02,3,1,0.5,,0.001499569329704779,Map-Conditioned Failure-Memory Diffusion,0,task_03
+1,0.94,7,0,0.375,0.0,0.0014387441437325574,Map-Conditioned Failure-Memory Diffusion,0,task_03
+1,0.94,7,0,0.375,0.0,0.0014129405733131404,Map-Conditioned Failure-Memory Diffusion,0,task_03
+1,0.86,15,0,0.0,8.0,0.0019773918009983998,Map-Conditioned Improved Failure-Memory Diffusion,0,task_03
+1,0.88,13,0,0.0,6.0,0.0019745448460945715,Map-Conditioned Improved Failure-Memory Diffusion,0,task_03
+1,0.94,7,0,0.0,0.0,0.0019897975746841568,Map-Conditioned Improved Failure-Memory Diffusion,0,task_03
+1,0.94,7,0,0.0,0.0,0.001976249716660407,Map-Conditioned Improved Failure-Memory Diffusion,0,task_03
+1,0.92,9,0,0.0,2.0,0.0019587872229749337,Map-Conditioned Improved Failure-Memory Diffusion,0,task_03
+0,-1.05,6,1,0.0,,9.515012303988138e-07,Random Policy,0,task_04
+0,-1.01,2,1,0.0,,1.0829971870407462e-06,Random Policy,0,task_04
+0,-1.0,1,1,0.0,,1.1669908417388797e-06,Random Policy,0,task_04
+0,-1.0,1,1,0.0,,1.167005393654108e-06,Random Policy,0,task_04
+0,-1.01,2,1,0.0,,9.380019037052989e-07,Random Policy,0,task_04
+1,0.94,7,0,0.0,0.0,1.607113517820835e-07,Value Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,1.3100049857582364e-07,Value Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,8.943191330347742e-08,Value Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,1.0100068591002907e-07,Value Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,1.1299977943833386e-07,Value Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,1.5485524532518218e-07,Policy Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,1.0100068591002907e-07,Policy Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,1.0714159413639988e-07,Policy Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,9.528801976037877e-08,Policy Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,1.0114412621728011e-07,Policy Iteration,0,task_04
+1,0.94,7,0,0.0,0.0,1.005998845877392e-06,Q-learning,0,task_04
+1,0.94,7,0,0.0,0.0,8.69285681151918e-07,Q-learning,0,task_04
+1,0.94,7,0,0.0,0.0,7.972848834469914e-07,Q-learning,0,task_04
+1,0.94,7,0,0.0,0.0,7.739976613915392e-07,Q-learning,0,task_04
+1,0.94,7,0,0.0,0.0,7.797124063862222e-07,Q-learning,0,task_04
+1,0.94,7,0,0.0,0.0,0.001749416854831257,MCTS,0,task_04
+1,0.94,7,0,0.0,0.0,0.001678595138530779,MCTS,0,task_04
+1,0.92,9,0,0.0,2.0,0.0015416064448395951,MCTS,0,task_04
+1,0.92,9,0,0.0,2.0,0.0017599488880174856,MCTS,0,task_04
+1,0.86,15,0,0.0,8.0,0.0016970972676062957,MCTS,0,task_04
+0,-1.01,2,1,0.0,,0.0013623755003209226,Map-Conditioned Standard Diffusion,0,task_04
+0,-1.01,2,1,0.0,,0.0013257290047477,Map-Conditioned Standard Diffusion,0,task_04
+1,0.92,9,0,0.0,2.0,0.0013484630002898888,Map-Conditioned Standard Diffusion,0,task_04
+0,-1.01,2,1,0.0,,0.0013241669948911294,Map-Conditioned Standard Diffusion,0,task_04
+0,-1.01,2,1,0.0,,0.0013488959957612678,Map-Conditioned Standard Diffusion,0,task_04
+0,-1.01,2,1,0.0,,0.0015480625006603077,Map-Conditioned Failure-Memory Diffusion,0,task_04
+0,-1.03,4,1,0.4,,0.0014521667544613592,Map-Conditioned Failure-Memory Diffusion,0,task_04
+1,0.92,9,0,0.2,2.0,0.0014457128903207679,Map-Conditioned Failure-Memory Diffusion,0,task_04
+1,0.94,7,0,0.25,0.0,0.001379684715565028,Map-Conditioned Failure-Memory Diffusion,0,task_04
+0,-1.05,6,1,0.2857142857142857,,0.0013835551629502636,Map-Conditioned Failure-Memory Diffusion,0,task_04
+1,0.9,11,0,0.0,4.0,0.0019762047264851967,Map-Conditioned Improved Failure-Memory Diffusion,0,task_04
+1,0.94,7,0,0.0,0.0,0.0019355358589174493,Map-Conditioned Improved Failure-Memory Diffusion,0,task_04
+1,0.9,11,0,0.0,4.0,0.001949795454327779,Map-Conditioned Improved Failure-Memory Diffusion,0,task_04
+1,0.92,9,0,0.0,2.0,0.0019835647771186712,Map-Conditioned Improved Failure-Memory Diffusion,0,task_04
+1,0.88,13,0,0.0,6.0,0.0019483269973604295,Map-Conditioned Improved Failure-Memory Diffusion,0,task_04
+0,-1.03,4,1,0.0,,1.0939984349533916e-06,Random Policy,0,task_05
+0,-1.01,2,1,0.0,,1.124994014389813e-06,Random Policy,0,task_05
+0,-1.03,4,1,0.0,,8.747447282075882e-07,Random Policy,0,task_05
+0,-1.01,2,1,0.0,,9.170034900307655e-07,Random Policy,0,task_05
+0,-1.01,2,1,0.0,,9.795039659366012e-07,Random Policy,0,task_05
+1,0.96,5,0,0.0,0.0,2.918008249253035e-07,Value Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.3359822332859038e-07,Value Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.2519885785877705e-07,Value Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.1660158634185791e-07,Value Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.1660158634185791e-07,Value Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.8339778762310743e-07,Policy Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.0859803296625614e-07,Policy Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.7500133253633976e-07,Policy Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.167994923889637e-07,Policy Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.0879884939640761e-07,Policy Iteration,0,task_05
+1,0.96,5,0,0.0,0.0,1.2086034985259176e-06,Q-learning,0,task_05
+1,0.96,5,0,0.0,0.0,9.248004062101245e-07,Q-learning,0,task_05
+1,0.96,5,0,0.0,0.0,8.583941962569952e-07,Q-learning,0,task_05
+1,0.96,5,0,0.0,0.0,8.077971870079637e-07,Q-learning,0,task_05
+1,0.96,5,0,0.0,0.0,8.49796924740076e-07,Q-learning,0,task_05
+1,0.96,5,0,0.0,0.0,0.0008085419947747141,MCTS,0,task_05
+1,0.94,7,0,0.0,2.0,0.0008513451424992777,MCTS,0,task_05
+1,0.96,5,0,0.0,0.0,0.0007805500004906208,MCTS,0,task_05
+1,0.92,9,0,0.0,4.0,0.0007815184443542319,MCTS,0,task_05
+1,0.96,5,0,0.0,0.0,0.0008465999999316409,MCTS,0,task_05
+0,-1.01,2,1,0.0,,0.0014931869955034927,Map-Conditioned Standard Diffusion,0,task_05
+0,-1.01,2,1,0.0,,0.0013656045048264787,Map-Conditioned Standard Diffusion,0,task_05
+1,0.96,5,0,0.0,0.0,0.001321108196862042,Map-Conditioned Standard Diffusion,0,task_05
+0,-1.03,4,1,0.0,,0.0013077605035505258,Map-Conditioned Standard Diffusion,0,task_05
+0,-1.01,2,1,0.0,,0.0013047709944657981,Map-Conditioned Standard Diffusion,0,task_05
+0,-1.01,2,1,0.0,,0.0013843330016243272,Map-Conditioned Failure-Memory Diffusion,0,task_05
+0,-1.01,2,1,0.3333333333333333,,0.0014951045013731346,Map-Conditioned Failure-Memory Diffusion,0,task_05
+1,0.96,5,0,0.3333333333333333,0.0,0.0014600833965232596,Map-Conditioned Failure-Memory Diffusion,0,task_05
+0,-1.01,2,1,0.3333333333333333,,0.00141387549956562,Map-Conditioned Failure-Memory Diffusion,0,task_05
+0,-1.03,4,1,0.4,,0.001412021003488917,Map-Conditioned Failure-Memory Diffusion,0,task_05
+1,0.96,5,0,0.0,0.0,0.0019873168028425427,Map-Conditioned Improved Failure-Memory Diffusion,0,task_05
+1,0.9,11,0,0.0,6.0,0.0019618371800540694,Map-Conditioned Improved Failure-Memory Diffusion,0,task_05
+1,0.92,9,0,0.0,4.0,0.0019949767754749497,Map-Conditioned Improved Failure-Memory Diffusion,0,task_05
+1,0.92,9,0,0.0,4.0,0.0020062083365499144,Map-Conditioned Improved Failure-Memory Diffusion,0,task_05
+1,0.94,7,0,0.0,2.0,0.002074160856344471,Map-Conditioned Improved Failure-Memory Diffusion,0,task_05
+0,-1.0,1,1,0.0,,2.1659943740814924e-06,Random Policy,0,task_06
+0,-1.0,1,1,0.0,,1.624997821636498e-06,Random Policy,0,task_06
+0,-1.02,3,1,0.0,,1.0553339961916208e-06,Random Policy,0,task_06
+0,-1.0,1,1,0.0,,1.3749959180131555e-06,Random Policy,0,task_06
+0,-1.0,1,1,0.0,,1.2920063454657793e-06,Random Policy,0,task_06
+1,0.94,7,0,0.0,0.0,2.3199702679578748e-07,Value Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.4285615179687738e-07,Value Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.369979664949434e-07,Value Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.1328873889786856e-07,Value Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.4271686917969158e-07,Value Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,2.740000906799521e-07,Policy Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.5499660678740058e-07,Policy Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.1899932620248624e-07,Policy Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.1928620681698832e-07,Policy Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.2500095181167126e-07,Policy Iteration,0,task_06
+1,0.94,7,0,0.0,0.0,1.273997310948159e-06,Q-learning,0,task_06
+1,0.94,7,0,0.0,0.0,8.69142240844667e-07,Q-learning,0,task_06
+1,0.94,7,0,0.0,0.0,8.514263234766466e-07,Q-learning,0,task_06
+1,0.94,7,0,0.0,0.0,8.034299493634275e-07,Q-learning,0,task_06
+1,0.94,7,0,0.0,0.0,8.214285896558846e-07,Q-learning,0,task_06
+1,0.84,17,0,0.0,10.0,0.0007977868243709535,MCTS,0,task_06
+1,0.7999999999999999,21,0,0.0,14.0,0.0006926110952571478,MCTS,0,task_06
+1,0.84,17,0,0.0,10.0,0.0006128382922136499,MCTS,0,task_06
+1,0.86,15,0,0.0,8.0,0.0006372223326858754,MCTS,0,task_06
+1,0.94,7,0,0.0,0.0,0.0005725120032106393,MCTS,0,task_06
+1,0.92,9,0,0.0,2.0,0.001403727002778194,Map-Conditioned Standard Diffusion,0,task_06
+1,0.9,11,0,0.0,4.0,0.0013695190004496412,Map-Conditioned Standard Diffusion,0,task_06
+0,-1.1199999999999999,13,1,0.0,,0.0013311123083650062,Map-Conditioned Standard Diffusion,0,task_06
+1,0.92,9,0,0.0,2.0,0.0013402079979035382,Map-Conditioned Standard Diffusion,0,task_06
+1,0.9,11,0,0.0,4.0,0.0013159546374068173,Map-Conditioned Standard Diffusion,0,task_06
+1,0.92,9,0,0.0,2.0,0.001389240664947364,Map-Conditioned Failure-Memory Diffusion,0,task_06
+1,0.9,11,0,0.0,4.0,0.001399534274241887,Map-Conditioned Failure-Memory Diffusion,0,task_06
+0,-1.1199999999999999,13,1,0.0,,0.0013915994618750678,Map-Conditioned Failure-Memory Diffusion,0,task_06
+0,-1.05,6,1,1.0,,0.0014682848341180943,Map-Conditioned Failure-Memory Diffusion,0,task_06
+0,-1.02,3,1,0.25,,0.0015850973383445914,Map-Conditioned Failure-Memory Diffusion,0,task_06
+1,0.94,7,0,0.0,0.0,0.00378461299780091,Map-Conditioned Improved Failure-Memory Diffusion,0,task_06
+1,0.88,13,0,0.0,6.0,0.0039892243042301675,Map-Conditioned Improved Failure-Memory Diffusion,0,task_06
+1,0.94,7,0,0.0,0.0,0.0021874999989190008,Map-Conditioned Improved Failure-Memory Diffusion,0,task_06
+1,0.94,7,0,0.0,0.0,0.00208686914577681,Map-Conditioned Improved Failure-Memory Diffusion,0,task_06
+1,0.94,7,0,0.0,0.0,0.0021150180005601476,Map-Conditioned Improved Failure-Memory Diffusion,0,task_06
+0,-1.0,1,1,0.0,,6.040994776412845e-06,Random Policy,0,task_07
+0,-1.0,1,1,0.0,,2.2080057533457875e-06,Random Policy,0,task_07
+0,-1.07,8,1,0.0,,8.227470971178263e-07,Random Policy,0,task_07
+0,-1.03,4,1,0.0,,8.959941624198109e-07,Random Policy,0,task_07
+0,-1.05,6,1,0.0,,7.776640510807434e-07,Random Policy,0,task_07
+1,0.92,9,0,0.0,0.0,1.9444754191984734e-07,Value Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.2500256869114108e-07,Value Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.064456430160337e-07,Value Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.248910040077236e-07,Value Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,9.699498251494434e-08,Value Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.806652613191141e-07,Policy Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.2944575347420243e-07,Policy Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.1566670663240883e-07,Policy Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.1122190496987767e-07,Policy Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.1600301756213109e-07,Policy Iteration,0,task_07
+1,0.92,9,0,0.0,0.0,1.1806680251740747e-06,Q-learning,0,task_07
+1,0.92,9,0,0.0,0.0,7.730009706897868e-07,Q-learning,0,task_07
+1,0.92,9,0,0.0,0.0,7.776624342012736e-07,Q-learning,0,task_07
+1,0.92,9,0,0.0,0.0,7.313339867525631e-07,Q-learning,0,task_07
+1,0.92,9,0,0.0,0.0,7.314439345565107e-07,Q-learning,0,task_07
+1,0.84,17,0,0.0,8.0,0.0021710294702857293,MCTS,0,task_07
+1,0.7799999999999999,23,0,0.0,14.0,0.003429621306207517,MCTS,0,task_07
+1,0.7999999999999999,21,0,0.0,12.0,0.0027147341440598083,MCTS,0,task_07
+1,0.86,15,0,0.0,6.0,0.0024414887341360253,MCTS,0,task_07
+1,0.9,11,0,0.0,2.0,0.0023960644572401757,MCTS,0,task_07
+0,-1.01,2,1,0.0,,0.0014611669976147823,Map-Conditioned Standard Diffusion,0,task_07
+0,-1.05,6,1,0.0,,0.0013065761644005154,Map-Conditioned Standard Diffusion,0,task_07
+0,-1.05,6,1,0.0,,0.0013714304974807117,Map-Conditioned Standard Diffusion,0,task_07
+0,-1.13,14,1,0.0,,0.0013176487825278724,Map-Conditioned Standard Diffusion,0,task_07
+0,-1.1199999999999999,13,1,0.0,,0.0013094520008263106,Map-Conditioned Standard Diffusion,0,task_07
+0,-1.01,2,1,0.0,,0.001376041502226144,Map-Conditioned Failure-Memory Diffusion,0,task_07
+0,-1.05,6,1,0.14285714285714285,,0.0014529235001342993,Map-Conditioned Failure-Memory Diffusion,0,task_07
+1,0.9,11,0,0.5833333333333334,2.0,0.001407144093801352,Map-Conditioned Failure-Memory Diffusion,0,task_07
+0,-1.03,4,1,0.4,,0.0013885415028198622,Map-Conditioned Failure-Memory Diffusion,0,task_07
+0,-1.1199999999999999,13,1,0.5,,0.0014542086148419632,Map-Conditioned Failure-Memory Diffusion,0,task_07
+1,0.92,9,0,0.0,0.0,0.0019802266663949317,Map-Conditioned Improved Failure-Memory Diffusion,0,task_07
+1,0.86,15,0,0.0,6.0,0.0019589806004660206,Map-Conditioned Improved Failure-Memory Diffusion,0,task_07
+1,0.86,15,0,0.0,6.0,0.001997208399310087,Map-Conditioned Improved Failure-Memory Diffusion,0,task_07
+1,0.9,11,0,0.0,2.0,0.0019488334536700595,Map-Conditioned Improved Failure-Memory Diffusion,0,task_07
+1,0.84,17,0,0.0,8.0,0.001954156766741482,Map-Conditioned Improved Failure-Memory Diffusion,0,task_07
+0,-1.01,2,1,0.0,,1.3959943316876888e-06,Random Policy,0,task_08
+0,-1.0,1,1,0.0,,1.3749959180131555e-06,Random Policy,0,task_08
+0,-1.01,2,1,0.0,,1.0415024007670581e-06,Random Policy,0,task_08
+0,-1.01,2,1,0.0,,9.584982763044536e-07,Random Policy,0,task_08
+0,-1.0,1,1,0.0,,1.0410003596916795e-06,Random Policy,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,2.7599708118941635e-07,Value Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.3012686395086348e-07,Value Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,9.375071385875344e-08,Value Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.0425173968542367e-07,Value Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.4062607078813016e-07,Value Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,2.396245690761134e-07,Policy Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,8.361894288100302e-08,Policy Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.0412077244836837e-07,Policy Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,9.362702257931232e-08,Policy Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,9.37488948693499e-08,Policy Iteration,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.036500179907307e-06,Q-learning,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,8.125043677864596e-07,Q-learning,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.813760021235794e-07,Q-learning,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.76126398704946e-07,Q-learning,0,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.657490641577169e-07,Q-learning,0,task_08
+1,0.85,16,0,0.0,8.0,0.000880577939824434,MCTS,0,task_08
+1,0.91,10,0,0.0,2.0,0.0012487667016102932,MCTS,0,task_08
+1,0.91,10,0,0.0,2.0,0.001022149900381919,MCTS,0,task_08
+1,0.7699999999999999,24,0,0.0,16.0,0.0008349323331155271,MCTS,0,task_08
+1,0.85,16,0,0.0,8.0,0.0008858724395395257,MCTS,0,task_08
+0,-1.03,4,1,0.0,,0.0013536770020436961,Map-Conditioned Standard Diffusion,0,task_08
+0,-1.03,4,1,0.0,,0.001445364749088185,Map-Conditioned Standard Diffusion,0,task_08
+0,-1.03,4,1,0.0,,0.0013184897470637225,Map-Conditioned Standard Diffusion,0,task_08
+0,-1.03,4,1,0.0,,0.0013098334966343828,Map-Conditioned Standard Diffusion,0,task_08
+0,-1.05,6,1,0.0,,0.0013558123391703703,Map-Conditioned Standard Diffusion,0,task_08
+0,-1.03,4,1,0.0,,0.0013750835023529362,Map-Conditioned Failure-Memory Diffusion,0,task_08
+0,-1.03,4,1,0.4,,0.0015060832520248368,Map-Conditioned Failure-Memory Diffusion,0,task_08
+0,-1.03,4,1,0.6,,0.001407541745720664,Map-Conditioned Failure-Memory Diffusion,0,task_08
+0,-1.02,3,1,1.0,,0.0013995000044815242,Map-Conditioned Failure-Memory Diffusion,0,task_08
+0,-1.05,6,1,1.0,,0.0014529301624861546,Map-Conditioned Failure-Memory Diffusion,0,task_08
+1,0.91,10,0,0.0,2.0,0.0019582413980970157,Map-Conditioned Improved Failure-Memory Diffusion,0,task_08
+1,0.8099999999999999,20,0,0.0,12.0,0.00191880420097732,Map-Conditioned Improved Failure-Memory Diffusion,0,task_08
+1,0.89,12,0,0.0,4.0,0.0020012082471415247,Map-Conditioned Improved Failure-Memory Diffusion,0,task_08
+1,0.83,18,0,0.0,10.0,0.0019815138334201444,Map-Conditioned Improved Failure-Memory Diffusion,0,task_08
+1,0.83,18,0,0.0,10.0,0.001950129554542299,Map-Conditioned Improved Failure-Memory Diffusion,0,task_08
+0,-1.06,7,1,0.0,,9.107149838070785e-07,Random Policy,0,task_09
+0,-1.03,4,1,0.0,,8.647475624457002e-07,Random Policy,0,task_09
+0,-1.02,3,1,0.0,,8.60998018955191e-07,Random Policy,0,task_09
+0,-1.0,1,1,0.0,,1.124994014389813e-06,Random Policy,0,task_09
+0,-1.0,1,1,0.0,,1.0840012691915035e-06,Random Policy,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.6662306734360754e-07,Value Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.3537464838009328e-07,Value Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.1962583812419325e-07,Value Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,9.925133781507611e-08,Value Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.3550197763834149e-07,Value Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.9799699657596648e-07,Policy Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.2487362255342305e-07,Policy Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,9.887298801913857e-08,Policy Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.0412622941657901e-07,Policy Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.0387702786829323e-07,Policy Iteration,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,9.531249816063792e-07,Q-learning,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,8.020033419597894e-07,Q-learning,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.50123945181258e-07,Q-learning,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.238741090986878e-07,Q-learning,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.291255315067247e-07,Q-learning,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,0.0018478386245988077,MCTS,0,task_09
+1,0.9299999999999999,8,0,0.0,0.0,0.00174785399758548,MCTS,0,task_09
+1,0.8099999999999999,20,0,0.0,12.0,0.002273845949821407,MCTS,0,task_09
+1,0.87,14,0,0.0,6.0,0.0021878035705802695,MCTS,0,task_09
+1,0.89,12,0,0.0,4.0,0.0019052084171562456,MCTS,0,task_09
+0,-1.03,4,1,0.0,,0.001442677003069548,Map-Conditioned Standard Diffusion,0,task_09
+0,-1.01,2,1,0.0,,0.0013414369968813844,Map-Conditioned Standard Diffusion,0,task_09
+0,-1.01,2,1,0.0,,0.001335749497229699,Map-Conditioned Standard Diffusion,0,task_09
+0,-1.03,4,1,0.0,,0.0013328127533895895,Map-Conditioned Standard Diffusion,0,task_09
+0,-1.01,2,1,0.0,,0.001333936997980345,Map-Conditioned Standard Diffusion,0,task_09
+0,-1.03,4,1,0.0,,0.0014498854980047327,Map-Conditioned Failure-Memory Diffusion,0,task_09
+0,-1.03,4,1,0.4,,0.0014067397496546619,Map-Conditioned Failure-Memory Diffusion,0,task_09
+0,-1.07,8,1,0.4444444444444444,,0.001441895999960252,Map-Conditioned Failure-Memory Diffusion,0,task_09
+0,-1.02,3,1,0.5,,0.0013973193320756157,Map-Conditioned Failure-Memory Diffusion,0,task_09
+1,0.9299999999999999,8,0,0.4444444444444444,0.0,0.0014475835014309268,Map-Conditioned Failure-Memory Diffusion,0,task_09
+1,0.6699999999999999,34,0,0.0,26.0,0.0019646813251550637,Map-Conditioned Improved Failure-Memory Diffusion,0,task_09
+1,0.8099999999999999,20,0,0.0,12.0,0.0019978145486675204,Map-Conditioned Improved Failure-Memory Diffusion,0,task_09
+1,0.75,26,0,0.0,18.0,0.001994972577309594,Map-Conditioned Improved Failure-Memory Diffusion,0,task_09
+1,0.89,12,0,0.0,4.0,0.001964666668451779,Map-Conditioned Improved Failure-Memory Diffusion,0,task_09
+1,0.69,32,0,0.0,24.0,0.0019592759986153396,Map-Conditioned Improved Failure-Memory Diffusion,0,task_09
+0,-1.01,2,1,0.0,,2.166496415156871e-06,Random Policy,1,task_00
+0,-1.0,1,1,0.0,,1.791995600797236e-06,Random Policy,1,task_00
+0,-1.01,2,1,0.0,,1.1040028766728938e-06,Random Policy,1,task_00
+0,-1.06,7,1,0.0,,8.154290428917323e-07,Random Policy,1,task_00
+0,-1.0,1,1,0.0,,1.1659867595881224e-06,Random Policy,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.9262188288848847e-07,Value Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1437623470555991e-07,Value Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1987140169367194e-07,Value Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.0437361197546124e-07,Value Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.2512646208051592e-07,Value Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,2.1887353796046227e-07,Policy Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1462543625384569e-07,Policy Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1449992598500103e-07,Policy Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.0925032256636769e-07,Policy Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.2487362255342305e-07,Policy Iteration,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.0107505659107119e-06,Q-learning,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,8.332481229444966e-07,Q-learning,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.915004971437156e-07,Q-learning,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.396229193545878e-07,Q-learning,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.552498573204502e-07,Q-learning,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,0.002002244871619041,MCTS,1,task_00
+1,0.8099999999999999,20,0,0.0,12.0,0.002377297802013345,MCTS,1,task_00
+1,0.71,30,0,0.0,22.0,0.002454716801973215,MCTS,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,0.0018860573745769216,MCTS,1,task_00
+1,0.89,12,0,0.0,4.0,0.0020728958346201884,MCTS,1,task_00
+0,-1.02,3,1,0.0,,0.0013713193378256012,Map-Conditioned Standard Diffusion,1,task_00
+0,-1.1,11,1,0.0,,0.001342621272091161,Map-Conditioned Standard Diffusion,1,task_00
+0,-1.02,3,1,0.0,,0.0013446250037911038,Map-Conditioned Standard Diffusion,1,task_00
+0,-1.04,5,1,0.0,,0.0013313747942447663,Map-Conditioned Standard Diffusion,1,task_00
+0,-1.02,3,1,0.0,,0.001383180662135904,Map-Conditioned Standard Diffusion,1,task_00
+0,-1.02,3,1,0.0,,0.0014346386742545292,Map-Conditioned Failure-Memory Diffusion,1,task_00
+1,0.9299999999999999,8,0,0.1111111111111111,0.0,0.0014279634997365065,Map-Conditioned Failure-Memory Diffusion,1,task_00
+0,-1.02,3,1,0.25,,0.001418527666828595,Map-Conditioned Failure-Memory Diffusion,1,task_00
+0,-1.08,9,1,0.5,,0.0014118145578928913,Map-Conditioned Failure-Memory Diffusion,1,task_00
+0,-1.02,3,1,0.5,,0.0014185416609204065,Map-Conditioned Failure-Memory Diffusion,1,task_00
+1,0.9299999999999999,8,0,0.0,0.0,0.00198783849918982,Map-Conditioned Improved Failure-Memory Diffusion,1,task_00
+1,0.89,12,0,0.0,4.0,0.001984218746656552,Map-Conditioned Improved Failure-Memory Diffusion,1,task_00
+1,0.91,10,0,0.0,2.0,0.001989458400930744,Map-Conditioned Improved Failure-Memory Diffusion,1,task_00
+1,0.91,10,0,0.0,2.0,0.0019773959036683665,Map-Conditioned Improved Failure-Memory Diffusion,1,task_00
+1,0.87,14,0,0.0,6.0,0.0019847767876594196,Map-Conditioned Improved Failure-Memory Diffusion,1,task_00
+0,-1.01,2,1,0.0,,1.2710006558336318e-06,Random Policy,1,task_01
+0,-1.02,3,1,0.0,,9.99997913216551e-07,Random Policy,1,task_01
+0,-1.0,1,1,0.0,,1.3749959180131555e-06,Random Policy,1,task_01
+0,-1.0,1,1,0.0,,1.2920063454657793e-06,Random Policy,1,task_01
+0,-1.0,1,1,0.0,,1.291002263315022e-06,Random Policy,1,task_01
+1,0.95,6,0,0.0,0.0,1.7366740697373947e-07,Value Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,1.1133185277382533e-07,Value Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,1.0416745984305938e-07,Value Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,1.043348068681856e-07,Value Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,9.733533564334114e-08,Value Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,2.5716629655410844e-07,Policy Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,1.1116693106790383e-07,Policy Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,1.321653447424372e-07,Policy Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,1.460042161246141e-07,Policy Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,1.0416018388544519e-07,Policy Iteration,1,task_01
+1,0.95,6,0,0.0,0.0,1.1111672696036596e-06,Q-learning,1,task_01
+1,0.95,6,0,0.0,0.0,8.403342993309101e-07,Q-learning,1,task_01
+1,0.95,6,0,0.0,0.0,7.918351911939681e-07,Q-learning,1,task_01
+1,0.95,6,0,0.0,0.0,7.568378350697458e-07,Q-learning,1,task_01
+1,0.95,6,0,0.0,0.0,7.498335132064918e-07,Q-learning,1,task_01
+1,0.95,6,0,0.0,0.0,0.0011951668299540568,MCTS,1,task_01
+1,0.95,6,0,0.0,0.0,0.0011318195004908678,MCTS,1,task_01
+1,0.95,6,0,0.0,0.0,0.0011283748341763082,MCTS,1,task_01
+1,0.95,6,0,0.0,0.0,0.0011898751690750942,MCTS,1,task_01
+1,0.95,6,0,0.0,0.0,0.0012038195006122503,MCTS,1,task_01
+0,-1.0,1,1,0.0,,0.0014288750098785385,Map-Conditioned Standard Diffusion,1,task_01
+0,-1.0,1,1,0.0,,0.001344417003565468,Map-Conditioned Standard Diffusion,1,task_01
+0,-1.0,1,1,0.0,,0.0013240830012364313,Map-Conditioned Standard Diffusion,1,task_01
+0,-1.0,1,1,0.0,,0.0013351250090636313,Map-Conditioned Standard Diffusion,1,task_01
+0,-1.0,1,1,0.0,,0.001327667006989941,Map-Conditioned Standard Diffusion,1,task_01
+0,-1.0,1,1,0.0,,0.001411874996847473,Map-Conditioned Failure-Memory Diffusion,1,task_01
+1,0.95,6,0,0.14285714285714285,0.0,0.0014457570020264636,Map-Conditioned Failure-Memory Diffusion,1,task_01
+0,-1.01,2,1,0.3333333333333333,,0.0014168964989949018,Map-Conditioned Failure-Memory Diffusion,1,task_01
+0,-1.04,5,1,0.3333333333333333,,0.0014372665988048538,Map-Conditioned Failure-Memory Diffusion,1,task_01
+1,0.95,6,0,0.5714285714285714,0.0,0.0014128958306779775,Map-Conditioned Failure-Memory Diffusion,1,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.0019303282497276086,Map-Conditioned Improved Failure-Memory Diffusion,1,task_01
+1,0.95,6,0,0.0,0.0,0.001963298835714037,Map-Conditioned Improved Failure-Memory Diffusion,1,task_01
+1,0.95,6,0,0.0,0.0,0.0019170903324265964,Map-Conditioned Improved Failure-Memory Diffusion,1,task_01
+1,0.95,6,0,0.0,0.0,0.0019419931632000953,Map-Conditioned Improved Failure-Memory Diffusion,1,task_01
+1,0.95,6,0,0.0,0.0,0.0019563541621513045,Map-Conditioned Improved Failure-Memory Diffusion,1,task_01
+0,-1.0,1,1,0.0,,1.4159886632114649e-06,Random Policy,1,task_02
+0,-1.03,4,1,0.0,,9.165014489553869e-07,Random Policy,1,task_02
+0,-1.07,8,1,0.0,,7.811231625964865e-07,Random Policy,1,task_02
+0,-1.0,1,1,0.0,,1.124994014389813e-06,Random Policy,1,task_02
+0,-1.0,1,1,0.0,,1.124994014389813e-06,Random Policy,1,task_02
+1,0.96,5,0,0.0,0.0,1.8339487724006175e-07,Value Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,9.160430636256933e-08,Value Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.4159304555505515e-07,Value Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.2479722499847412e-07,Value Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.0799849405884743e-07,Value Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.8339778762310743e-07,Policy Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.4160177670419215e-07,Policy Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.4980032574385406e-07,Policy Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.1660158634185791e-07,Policy Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.001986674964428e-07,Policy Iteration,1,task_02
+1,0.96,5,0,0.0,0.0,1.0918010957539082e-06,Q-learning,1,task_02
+1,0.96,5,0,0.0,0.0,8.500035619363189e-07,Q-learning,1,task_02
+1,0.96,5,0,0.0,0.0,8.495990186929703e-07,Q-learning,1,task_02
+1,0.96,5,0,0.0,0.0,7.830007234588266e-07,Q-learning,1,task_02
+1,0.96,5,0,0.0,0.0,8.001981768757104e-07,Q-learning,1,task_02
+1,0.96,5,0,0.0,0.0,0.0014490747969830408,MCTS,1,task_02
+1,0.96,5,0,0.0,0.0,0.0015488083998207002,MCTS,1,task_02
+1,0.96,5,0,0.0,0.0,0.0014652916026534513,MCTS,1,task_02
+1,0.96,5,0,0.0,0.0,0.001352766595664434,MCTS,1,task_02
+1,0.96,5,0,0.0,0.0,0.0013942918012617156,MCTS,1,task_02
+0,-1.01,2,1,0.0,,0.001386416501190979,Map-Conditioned Standard Diffusion,1,task_02
+0,-1.03,4,1,0.0,,0.001405322749633342,Map-Conditioned Standard Diffusion,1,task_02
+0,-1.0,1,1,0.0,,0.0013203330017859116,Map-Conditioned Standard Diffusion,1,task_02
+0,-1.05,6,1,0.0,,0.001314222330014066,Map-Conditioned Standard Diffusion,1,task_02
+0,-1.03,4,1,0.0,,0.001359239497105591,Map-Conditioned Standard Diffusion,1,task_02
+0,-1.01,2,1,0.0,,0.0013960210053483024,Map-Conditioned Failure-Memory Diffusion,1,task_02
+0,-1.03,4,1,0.2,,0.0014101770029810723,Map-Conditioned Failure-Memory Diffusion,1,task_02
+0,-1.1099999999999999,12,1,0.46153846153846156,,0.0014273018326396898,Map-Conditioned Failure-Memory Diffusion,1,task_02
+0,-1.05,6,1,1.0,,0.0014132914996783559,Map-Conditioned Failure-Memory Diffusion,1,task_02
+1,0.96,5,0,0.6666666666666666,0.0,0.0014080416032811627,Map-Conditioned Failure-Memory Diffusion,1,task_02
+1,0.9,11,0,0.0,6.0,0.001974155450377359,Map-Conditioned Improved Failure-Memory Diffusion,1,task_02
+1,0.96,5,0,0.0,0.0,0.0019615080032963305,Map-Conditioned Improved Failure-Memory Diffusion,1,task_02
+1,0.88,13,0,0.0,8.0,0.0019666059244907675,Map-Conditioned Improved Failure-Memory Diffusion,1,task_02
+1,0.92,9,0,0.0,4.0,0.001954245444115562,Map-Conditioned Improved Failure-Memory Diffusion,1,task_02
+1,0.88,13,0,0.0,8.0,0.0019276123840917046,Map-Conditioned Improved Failure-Memory Diffusion,1,task_02
+0,-1.0,1,1,0.0,,1.624997821636498e-06,Random Policy,1,task_03
+0,-1.0,1,1,0.0,,1.4999968698248267e-06,Random Policy,1,task_03
+0,-1.0,1,1,0.0,,1.291991793550551e-06,Random Policy,1,task_03
+0,-1.03,4,1,0.0,,8.650022209621966e-07,Random Policy,1,task_03
+0,-1.07,8,1,0.0,,7.2900002123788e-07,Random Policy,1,task_03
+1,0.94,7,0,0.0,0.0,1.7856863061232226e-07,Value Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.2500095181167126e-07,Value Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.1300185828336648e-07,Value Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.1299977943833386e-07,Value Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.1299977943833386e-07,Value Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.8442889475928886e-07,Policy Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.1871244558798416e-07,Policy Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.6057414800993035e-07,Policy Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.5471596270799637e-07,Policy Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.2471199235213654e-07,Policy Iteration,1,task_03
+1,0.94,7,0,0.0,0.0,1.1191399867779443e-06,Q-learning,1,task_03
+1,0.94,7,0,0.0,0.0,8.452833364052432e-07,Q-learning,1,task_03
+1,0.94,7,0,0.0,0.0,7.795668872339385e-07,Q-learning,1,task_03
+1,0.94,7,0,0.0,0.0,8.154311217367649e-07,Q-learning,1,task_03
+1,0.94,7,0,0.0,0.0,7.974304025992751e-07,Q-learning,1,task_03
+1,0.5199999999999998,49,0,0.0,42.0,0.0007795994888696515,MCTS,1,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007929441801388748,MCTS,1,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007965224207146093,MCTS,1,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007653250207658857,MCTS,1,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007509767200099305,MCTS,1,task_03
+0,-1.0,1,1,0.0,,0.0017285000067204237,Map-Conditioned Standard Diffusion,1,task_03
+0,-1.02,3,1,0.0,,0.0013900413371933003,Map-Conditioned Standard Diffusion,1,task_03
+0,-1.02,3,1,0.0,,0.0013308473377643775,Map-Conditioned Standard Diffusion,1,task_03
+0,-1.06,7,1,0.0,,0.0013211188592582143,Map-Conditioned Standard Diffusion,1,task_03
+1,0.94,7,0,0.0,0.0,0.0013114227185724303,Map-Conditioned Standard Diffusion,1,task_03
+0,-1.0,1,1,0.0,,0.0014015420019859448,Map-Conditioned Failure-Memory Diffusion,1,task_03
+0,-1.02,3,1,0.25,,0.001385221999953501,Map-Conditioned Failure-Memory Diffusion,1,task_03
+0,-1.04,5,1,0.16666666666666666,,0.0013877082034014165,Map-Conditioned Failure-Memory Diffusion,1,task_03
+1,0.86,15,0,0.375,8.0,0.0013892639991051206,Map-Conditioned Failure-Memory Diffusion,1,task_03
+1,0.94,7,0,0.625,0.0,0.0013914641416964255,Map-Conditioned Failure-Memory Diffusion,1,task_03
+1,0.92,9,0,0.0,2.0,0.0019728473352087247,Map-Conditioned Improved Failure-Memory Diffusion,1,task_03
+1,0.92,9,0,0.0,2.0,0.0019724399979976523,Map-Conditioned Improved Failure-Memory Diffusion,1,task_03
+1,0.88,13,0,0.0,6.0,0.0019431923081775983,Map-Conditioned Improved Failure-Memory Diffusion,1,task_03
+1,0.88,13,0,0.0,6.0,0.0019124774631703845,Map-Conditioned Improved Failure-Memory Diffusion,1,task_03
+1,0.94,7,0,0.0,0.0,0.0019326547169060046,Map-Conditioned Improved Failure-Memory Diffusion,1,task_03
+0,-1.0,1,1,0.0,,1.8749997252598405e-06,Random Policy,1,task_04
+0,-1.0,1,1,0.0,,1.500011421740055e-06,Random Policy,1,task_04
+0,-1.0,1,1,0.0,,1.2500095181167126e-06,Random Policy,1,task_04
+0,-1.0,1,1,0.0,,1.2499949662014842e-06,Random Policy,1,task_04
+0,-1.0,1,1,0.0,,1.2079981388524175e-06,Random Policy,1,task_04
+1,0.94,7,0,0.0,0.0,2.200000121125153e-07,Value Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,1.0742847475090197e-07,Value Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,1.0714159413639988e-07,Value Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,1.1314321974558489e-07,Value Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,1.0143100683178221e-07,Value Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,2.500019036233425e-07,Policy Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,1.369979664949434e-07,Policy Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,1.0685887121196305e-07,Policy Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,1.2499679412160602e-07,Policy Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,9.54293812225972e-08,Policy Iteration,1,task_04
+1,0.94,7,0,0.0,0.0,9.759990332115973e-07,Q-learning,1,task_04
+1,0.94,7,0,0.0,0.0,8.151421622772302e-07,Q-learning,1,task_04
+1,0.94,7,0,0.0,0.0,7.559990210990821e-07,Q-learning,1,task_04
+1,0.94,7,0,0.0,0.0,7.380003808066249e-07,Q-learning,1,task_04
+1,0.94,7,0,0.0,0.0,7.679981146273869e-07,Q-learning,1,task_04
+1,0.94,7,0,0.0,0.0,0.0017623035673750564,MCTS,1,task_04
+1,0.94,7,0,0.0,0.0,0.001800506003616777,MCTS,1,task_04
+1,0.9,11,0,0.0,4.0,0.0018516135473460467,MCTS,1,task_04
+1,0.92,9,0,0.0,2.0,0.0019366343347226372,MCTS,1,task_04
+1,0.94,7,0,0.0,0.0,0.0017976608588859172,MCTS,1,task_04
+0,-1.03,4,1,0.0,,0.0013488650001818314,Map-Conditioned Standard Diffusion,1,task_04
+1,0.88,13,0,0.0,6.0,0.0013467211527033495,Map-Conditioned Standard Diffusion,1,task_04
+0,-1.01,2,1,0.0,,0.0013311040020198561,Map-Conditioned Standard Diffusion,1,task_04
+0,-1.0,1,1,0.0,,0.0013561670057242736,Map-Conditioned Standard Diffusion,1,task_04
+0,-1.01,2,1,0.0,,0.0013772710008197464,Map-Conditioned Standard Diffusion,1,task_04
+0,-1.03,4,1,0.0,,0.0013885832486266736,Map-Conditioned Failure-Memory Diffusion,1,task_04
+1,0.88,13,0,0.21428571428571427,6.0,0.0014016504618876542,Map-Conditioned Failure-Memory Diffusion,1,task_04
+0,-1.01,2,1,0.3333333333333333,,0.0013908125038142316,Map-Conditioned Failure-Memory Diffusion,1,task_04
+0,-1.01,2,1,1.0,,0.0013728545018238947,Map-Conditioned Failure-Memory Diffusion,1,task_04
+1,0.94,7,0,0.5,0.0,0.0014142202812113933,Map-Conditioned Failure-Memory Diffusion,1,task_04
+1,0.92,9,0,0.0,2.0,0.0019287825545891086,Map-Conditioned Improved Failure-Memory Diffusion,1,task_04
+1,0.94,7,0,0.0,0.0,0.00194868456830071,Map-Conditioned Improved Failure-Memory Diffusion,1,task_04
+1,0.9,11,0,0.0,4.0,0.00192995809299067,Map-Conditioned Improved Failure-Memory Diffusion,1,task_04
+1,0.88,13,0,0.0,6.0,0.0019334069992720077,Map-Conditioned Improved Failure-Memory Diffusion,1,task_04
+1,0.88,13,0,0.0,6.0,0.00190416022871012,Map-Conditioned Improved Failure-Memory Diffusion,1,task_04
+0,-1.03,4,1,0.0,,1.114996848627925e-06,Random Policy,1,task_05
+0,-1.01,2,1,0.0,,1.0625080903992057e-06,Random Policy,1,task_05
+0,-1.03,4,1,0.0,,8.332499419339001e-07,Random Policy,1,task_05
+0,-1.0,1,1,0.0,,1.0829971870407462e-06,Random Policy,1,task_05
+0,-1.01,2,1,0.0,,9.165087249130011e-07,Random Policy,1,task_05
+1,0.96,5,0,0.0,0.0,3.6679848562926055e-07,Value Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.4980032574385406e-07,Value Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.581996912136674e-07,Value Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.167994923889637e-07,Value Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.0860094334930182e-07,Value Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,2.3359607439488173e-07,Policy Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.3340031728148461e-07,Policy Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.415959559381008e-07,Policy Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.3340322766453027e-07,Policy Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.3320241123437882e-07,Policy Iteration,1,task_05
+1,0.96,5,0,0.0,0.0,1.650195918045938e-06,Q-learning,1,task_05
+1,0.96,5,0,0.0,0.0,9.251991286873817e-07,Q-learning,1,task_05
+1,0.96,5,0,0.0,0.0,8.831964805722237e-07,Q-learning,1,task_05
+1,0.96,5,0,0.0,0.0,7.918017217889428e-07,Q-learning,1,task_05
+1,0.96,5,0,0.0,0.0,7.833965355530381e-07,Q-learning,1,task_05
+1,0.96,5,0,0.0,0.0,0.0008620834007160739,MCTS,1,task_05
+1,0.96,5,0,0.0,0.0,0.0006882917979964987,MCTS,1,task_05
+1,0.96,5,0,0.0,0.0,0.0007168167969211936,MCTS,1,task_05
+1,0.96,5,0,0.0,0.0,0.0007509999966714531,MCTS,1,task_05
+1,0.94,7,0,0.0,2.0,0.0007904465705256111,MCTS,1,task_05
+0,-1.01,2,1,0.0,,0.0014305829972727224,Map-Conditioned Standard Diffusion,1,task_05
+0,-1.01,2,1,0.0,,0.0013416880101431161,Map-Conditioned Standard Diffusion,1,task_05
+0,-1.0,1,1,0.0,,0.0013415830035228282,Map-Conditioned Standard Diffusion,1,task_05
+0,-1.0,1,1,0.0,,0.001364958006888628,Map-Conditioned Standard Diffusion,1,task_05
+0,-1.01,2,1,0.0,,0.001357583503704518,Map-Conditioned Standard Diffusion,1,task_05
+0,-1.01,2,1,0.0,,0.0014649584991275333,Map-Conditioned Failure-Memory Diffusion,1,task_05
+0,-1.03,4,1,0.2,,0.0013872290001017973,Map-Conditioned Failure-Memory Diffusion,1,task_05
+1,0.96,5,0,0.3333333333333333,0.0,0.001398233199142851,Map-Conditioned Failure-Memory Diffusion,1,task_05
+1,0.94,7,0,0.25,2.0,0.0013915417117199727,Map-Conditioned Failure-Memory Diffusion,1,task_05
+0,-1.03,4,1,0.4,,0.0013906457461416721,Map-Conditioned Failure-Memory Diffusion,1,task_05
+1,0.92,9,0,0.0,4.0,0.0020212455549173886,Map-Conditioned Improved Failure-Memory Diffusion,1,task_05
+1,0.96,5,0,0.0,0.0,0.0019721416028914973,Map-Conditioned Improved Failure-Memory Diffusion,1,task_05
+1,0.92,9,0,0.0,4.0,0.001982685222174041,Map-Conditioned Improved Failure-Memory Diffusion,1,task_05
+1,0.96,5,0,0.0,0.0,0.002005958199151792,Map-Conditioned Improved Failure-Memory Diffusion,1,task_05
+1,0.96,5,0,0.0,0.0,0.001989958601188846,Map-Conditioned Improved Failure-Memory Diffusion,1,task_05
+0,-1.01,2,1,0.0,,1.2090022210031748e-06,Random Policy,1,task_06
+0,-1.0,1,1,0.0,,1.3749959180131555e-06,Random Policy,1,task_06
+0,-1.0,1,1,0.0,,2.249988028779626e-06,Random Policy,1,task_06
+0,-1.02,3,1,0.0,,1.0693329386413097e-06,Random Policy,1,task_06
+0,-1.02,3,1,0.0,,9.166639453421036e-07,Random Policy,1,task_06
+1,0.94,7,0,0.0,0.0,1.9056980298565967e-07,Value Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.367194012605718e-07,Value Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.1914276650973729e-07,Value Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.1885796474026783e-07,Value Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.0142892798674958e-07,Value Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.548573241702148e-07,Policy Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.4871433709881137e-07,Policy Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.0142892798674958e-07,Policy Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.1314114090055227e-07,Policy Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.0113996852721487e-07,Policy Iteration,1,task_06
+1,0.94,7,0,0.0,0.0,1.0297143100095646e-06,Q-learning,1,task_06
+1,0.94,7,0,0.0,0.0,8.277087804994412e-07,Q-learning,1,task_06
+1,0.94,7,0,0.0,0.0,7.680001934724195e-07,Q-learning,1,task_06
+1,0.94,7,0,0.0,0.0,7.55855580791831e-07,Q-learning,1,task_06
+1,0.94,7,0,0.0,0.0,7.737149384671024e-07,Q-learning,1,task_06
+1,0.92,9,0,0.0,2.0,0.0005453103351303273,MCTS,1,task_06
+1,0.9,11,0,0.0,4.0,0.0006036250878506424,MCTS,1,task_06
+1,0.9,11,0,0.0,4.0,0.0006455454541454939,MCTS,1,task_06
+1,0.9,11,0,0.0,4.0,0.0005890569088726559,MCTS,1,task_06
+1,0.92,9,0,0.0,2.0,0.0006093147773450861,MCTS,1,task_06
+1,0.92,9,0,0.0,2.0,0.001324926001770008,Map-Conditioned Standard Diffusion,1,task_06
+1,0.94,7,0,0.0,0.0,0.0013258868566481397,Map-Conditioned Standard Diffusion,1,task_06
+0,-1.02,3,1,0.0,,0.0013066946654968585,Map-Conditioned Standard Diffusion,1,task_06
+1,0.92,9,0,0.0,2.0,0.0013420276680133408,Map-Conditioned Standard Diffusion,1,task_06
+0,-1.02,3,1,0.0,,0.001330389000941068,Map-Conditioned Standard Diffusion,1,task_06
+1,0.92,9,0,0.0,2.0,0.0014307083361523433,Map-Conditioned Failure-Memory Diffusion,1,task_06
+1,0.94,7,0,0.0,0.0,0.0014149938568672432,Map-Conditioned Failure-Memory Diffusion,1,task_06
+0,-1.02,3,1,0.0,,0.0013793606728237744,Map-Conditioned Failure-Memory Diffusion,1,task_06
+1,0.92,9,0,0.1,2.0,0.0014224166677902555,Map-Conditioned Failure-Memory Diffusion,1,task_06
+0,-1.01,2,1,1.0,,0.001402875001076609,Map-Conditioned Failure-Memory Diffusion,1,task_06
+1,0.94,7,0,0.0,0.0,0.001987059569468589,Map-Conditioned Improved Failure-Memory Diffusion,1,task_06
+1,0.94,7,0,0.0,0.0,0.0019676725662845585,Map-Conditioned Improved Failure-Memory Diffusion,1,task_06
+1,0.92,9,0,0.0,2.0,0.0019709352216321146,Map-Conditioned Improved Failure-Memory Diffusion,1,task_06
+1,0.92,9,0,0.0,2.0,0.0019320790015626699,Map-Conditioned Improved Failure-Memory Diffusion,1,task_06
+1,0.94,7,0,0.0,0.0,0.0019400952857852513,Map-Conditioned Improved Failure-Memory Diffusion,1,task_06
+0,-1.01,2,1,0.0,,1.250504283234477e-06,Random Policy,1,task_07
+0,-1.02,3,1,0.0,,9.723298717290163e-07,Random Policy,1,task_07
+0,-1.02,3,1,0.0,,9.306628877917925e-07,Random Policy,1,task_07
+0,-1.01,2,1,0.0,,1.020991476252675e-06,Random Policy,1,task_07
+0,-1.02,3,1,0.0,,9.166639453421036e-07,Random Policy,1,task_07
+1,0.92,9,0,0.0,0.0,1.6655637106547752e-07,Value Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,1.2022145609888764e-07,Value Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,1.0177447822772794e-07,Value Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,1.0655720769945118e-07,Value Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,9.744285812808408e-08,Value Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,1.8500173205716743e-07,Policy Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,1.1100039248251252e-07,Policy Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,1.2499933493220144e-07,Policy Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,1.109971587235729e-07,Policy Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,1.251108996156189e-07,Policy Iteration,1,task_07
+1,0.92,9,0,0.0,0.0,9.121124296345645e-07,Q-learning,1,task_07
+1,0.92,9,0,0.0,0.0,7.501140417945054e-07,Q-learning,1,task_07
+1,0.92,9,0,0.0,0.0,7.407781797357732e-07,Q-learning,1,task_07
+1,0.92,9,0,0.0,0.0,7.222212540606657e-07,Q-learning,1,task_07
+1,0.92,9,0,0.0,0.0,7.266628219642573e-07,Q-learning,1,task_07
+1,0.92,9,0,0.0,0.0,0.002251546556686258,MCTS,1,task_07
+1,0.86,15,0,0.0,6.0,0.002460733401433875,MCTS,1,task_07
+1,0.86,15,0,0.0,6.0,0.002389333399090295,MCTS,1,task_07
+1,0.9,11,0,0.0,2.0,0.0021344165460587565,MCTS,1,task_07
+1,0.84,17,0,0.0,8.0,0.0025040688231135443,MCTS,1,task_07
+0,-1.03,4,1,0.0,,0.0013748335004493129,Map-Conditioned Standard Diffusion,1,task_07
+0,-1.05,6,1,0.0,,0.0013306320009481472,Map-Conditioned Standard Diffusion,1,task_07
+0,-1.01,2,1,0.0,,0.0013941664947196841,Map-Conditioned Standard Diffusion,1,task_07
+0,-1.03,4,1,0.0,,0.0013423545024124905,Map-Conditioned Standard Diffusion,1,task_07
+0,-1.01,2,1,0.0,,0.0013236875020083971,Map-Conditioned Standard Diffusion,1,task_07
+0,-1.03,4,1,0.0,,0.0013876562516088597,Map-Conditioned Failure-Memory Diffusion,1,task_07
+0,-1.09,10,1,0.09090909090909091,,0.001417054199555423,Map-Conditioned Failure-Memory Diffusion,1,task_07
+0,-1.01,2,1,1.0,,0.0013918545009801164,Map-Conditioned Failure-Memory Diffusion,1,task_07
+0,-1.03,4,1,0.8,,0.001446364498406183,Map-Conditioned Failure-Memory Diffusion,1,task_07
+0,-1.05,6,1,0.5714285714285714,,0.0013967431683947022,Map-Conditioned Failure-Memory Diffusion,1,task_07
+1,0.9,11,0,0.0,2.0,0.0019821287278318778,Map-Conditioned Improved Failure-Memory Diffusion,1,task_07
+1,0.92,9,0,0.0,0.0,0.0019827822187734353,Map-Conditioned Improved Failure-Memory Diffusion,1,task_07
+1,0.88,13,0,0.0,4.0,0.0019391122298727098,Map-Conditioned Improved Failure-Memory Diffusion,1,task_07
+1,0.9,11,0,0.0,2.0,0.001987026454034177,Map-Conditioned Improved Failure-Memory Diffusion,1,task_07
+1,0.92,9,0,0.0,0.0,0.001952268335218024,Map-Conditioned Improved Failure-Memory Diffusion,1,task_07
+0,-1.0,1,1,0.0,,1.624997821636498e-06,Random Policy,1,task_08
+0,-1.0,1,1,0.0,,1.4590041246265173e-06,Random Policy,1,task_08
+0,-1.0,1,1,0.0,,1.2079981388524175e-06,Random Policy,1,task_08
+0,-1.07,8,1,0.0,,7.605012797284871e-07,Random Policy,1,task_08
+0,-1.01,2,1,0.0,,9.784998837858438e-07,Random Policy,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.7187267076224089e-07,Value Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.0912663128692657e-07,Value Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.1975316738244146e-07,Value Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.0437724995426834e-07,Value Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.302541932091117e-07,Value Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.4600118447560817e-07,Policy Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.0412441042717546e-07,Policy Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.1450174497440457e-07,Policy Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.1462543625384569e-07,Policy Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.1474912753328681e-07,Policy Iteration,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,9.583709470462054e-07,Q-learning,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,8.123715815600008e-07,Q-learning,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.706239557592198e-07,Q-learning,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.497492333641276e-07,Q-learning,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.396283763227984e-07,Q-learning,1,task_08
+1,0.89,12,0,0.0,4.0,0.0009334688341671912,MCTS,1,task_08
+1,0.8099999999999999,20,0,0.0,12.0,0.0008142415994370822,MCTS,1,task_08
+1,0.9299999999999999,8,0,0.0,0.0,0.0011198022493772442,MCTS,1,task_08
+1,0.91,10,0,0.0,2.0,0.000985887597198598,MCTS,1,task_08
+1,0.91,10,0,0.0,2.0,0.0010213126981398091,MCTS,1,task_08
+0,-1.03,4,1,0.0,,0.0013927710024290718,Map-Conditioned Standard Diffusion,1,task_08
+0,-1.03,4,1,0.0,,0.0013324164938239846,Map-Conditioned Standard Diffusion,1,task_08
+0,-1.03,4,1,0.0,,0.0013302602455951273,Map-Conditioned Standard Diffusion,1,task_08
+0,-1.0,1,1,0.0,,0.0014606670010834932,Map-Conditioned Standard Diffusion,1,task_08
+0,-1.03,4,1,0.0,,0.0013600102502095979,Map-Conditioned Standard Diffusion,1,task_08
+0,-1.03,4,1,0.0,,0.0013827709954057354,Map-Conditioned Failure-Memory Diffusion,1,task_08
+0,-1.02,3,1,0.5,,0.0014361946668941528,Map-Conditioned Failure-Memory Diffusion,1,task_08
+0,-1.03,4,1,0.6,,0.0014091457487666048,Map-Conditioned Failure-Memory Diffusion,1,task_08
+0,-1.01,2,1,0.3333333333333333,,0.0013756249973084778,Map-Conditioned Failure-Memory Diffusion,1,task_08
+0,-1.03,4,1,1.0,,0.0013806562492391095,Map-Conditioned Failure-Memory Diffusion,1,task_08
+1,0.91,10,0,0.0,2.0,0.0019628042020485735,Map-Conditioned Improved Failure-Memory Diffusion,1,task_08
+1,0.8099999999999999,20,0,0.0,12.0,0.001964093849528581,Map-Conditioned Improved Failure-Memory Diffusion,1,task_08
+1,0.89,12,0,0.0,4.0,0.0019855728326850417,Map-Conditioned Improved Failure-Memory Diffusion,1,task_08
+1,0.89,12,0,0.0,4.0,0.002000906333705643,Map-Conditioned Improved Failure-Memory Diffusion,1,task_08
+1,0.83,18,0,0.0,10.0,0.0019628841659545693,Map-Conditioned Improved Failure-Memory Diffusion,1,task_08
+0,-1.05,6,1,0.0,,9.096693247556686e-07,Random Policy,1,task_09
+0,-1.15,16,1,0.0,,7.134376573958434e-07,Random Policy,1,task_09
+0,-1.01,2,1,0.0,,9.999930625781417e-07,Random Policy,1,task_09
+0,-1.02,3,1,0.0,,8.613375636438528e-07,Random Policy,1,task_09
+0,-1.01,2,1,0.0,,9.380019037052989e-07,Random Policy,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.8225182429887354e-07,Value Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.1962583812419325e-07,Value Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.302505552303046e-07,Value Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.1987503967247903e-07,Value Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.146217982750386e-07,Value Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.5637670003343374e-07,Policy Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.1987503967247903e-07,Policy Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.0925032256636769e-07,Policy Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.1449810699559748e-07,Policy Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.0437543096486479e-07,Policy Iteration,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,9.583745850250125e-07,Q-learning,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,8.123770385282114e-07,Q-learning,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.711223588557914e-07,Q-learning,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.605030987178907e-07,Q-learning,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.4474883149378e-07,Q-learning,1,task_09
+1,0.9299999999999999,8,0,0.0,0.0,0.0017002030017465586,MCTS,1,task_09
+1,0.91,10,0,0.0,2.0,0.001967566800885834,MCTS,1,task_09
+1,0.8099999999999999,20,0,0.0,12.0,0.002395074998639757,MCTS,1,task_09
+1,0.87,14,0,0.0,6.0,0.00210054171475349,MCTS,1,task_09
+1,0.91,10,0,0.0,2.0,0.0019479208014672623,MCTS,1,task_09
+0,-1.01,2,1,0.0,,0.00145377100125188,Map-Conditioned Standard Diffusion,1,task_09
+0,-1.01,2,1,0.0,,0.0014049165038159117,Map-Conditioned Standard Diffusion,1,task_09
+0,-1.01,2,1,0.0,,0.0013461045018630102,Map-Conditioned Standard Diffusion,1,task_09
+0,-1.01,2,1,0.0,,0.0013517914994736202,Map-Conditioned Standard Diffusion,1,task_09
+0,-1.01,2,1,0.0,,0.0013386040009208955,Map-Conditioned Standard Diffusion,1,task_09
+0,-1.01,2,1,0.0,,0.0014248124934965745,Map-Conditioned Failure-Memory Diffusion,1,task_09
+0,-1.03,4,1,0.2,,0.0014905520001775585,Map-Conditioned Failure-Memory Diffusion,1,task_09
+0,-1.03,4,1,0.6,,0.001415572998666903,Map-Conditioned Failure-Memory Diffusion,1,task_09
+0,-1.01,2,1,0.3333333333333333,,0.0014000209994264878,Map-Conditioned Failure-Memory Diffusion,1,task_09
+0,-1.04,5,1,0.6666666666666666,,0.0014551165979355574,Map-Conditioned Failure-Memory Diffusion,1,task_09
+1,0.85,16,0,0.0,8.0,0.001998461000766838,Map-Conditioned Improved Failure-Memory Diffusion,1,task_09
+1,0.91,10,0,0.0,2.0,0.0019754251014092008,Map-Conditioned Improved Failure-Memory Diffusion,1,task_09
+1,0.89,12,0,0.0,4.0,0.0019610485821128045,Map-Conditioned Improved Failure-Memory Diffusion,1,task_09
+1,0.8099999999999999,20,0,0.0,12.0,0.001988637401518645,Map-Conditioned Improved Failure-Memory Diffusion,1,task_09
+1,0.87,14,0,0.0,6.0,0.001953770641453697,Map-Conditioned Improved Failure-Memory Diffusion,1,task_09
+0,-1.02,3,1,0.0,,1.2219970813021064e-06,Random Policy,2,task_00
+0,-1.0,1,1,0.0,,1.4160032151266932e-06,Random Policy,2,task_00
+0,-1.02,3,1,0.0,,9.166687959805131e-07,Random Policy,2,task_00
+0,-1.06,7,1,0.0,,7.621420081704855e-07,Random Policy,2,task_00
+0,-1.01,2,1,0.0,,1.0210060281679034e-06,Random Policy,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.9787694327533245e-07,Value Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1449810699559748e-07,Value Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.0924850357696414e-07,Value Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.4062607078813016e-07,Value Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.2999953469261527e-07,Value Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,2.1350206225179136e-07,Policy Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.1462543625384569e-07,Policy Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.4062607078813016e-07,Policy Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,5.026253347750753e-06,Policy Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.8250284483656287e-07,Policy Iteration,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,1.171743861050345e-06,Q-learning,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.448779797414318e-07,Q-learning,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.499966159230098e-07,Q-learning,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.500002539018169e-07,Q-learning,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,7.341241143876687e-07,Q-learning,2,task_00
+1,0.8099999999999999,20,0,0.0,12.0,0.002301283250562847,MCTS,2,task_00
+1,0.83,18,0,0.0,10.0,0.0021556481693146955,MCTS,2,task_00
+1,0.83,18,0,0.0,10.0,0.0022654976120166895,MCTS,2,task_00
+1,0.89,12,0,0.0,4.0,0.0021878472483270648,MCTS,2,task_00
+1,0.9299999999999999,8,0,0.0,0.0,0.0019356511293153744,MCTS,2,task_00
+0,-1.02,3,1,0.0,,0.0014061806674969073,Map-Conditioned Standard Diffusion,2,task_00
+0,-1.02,3,1,0.0,,0.0013260416647729774,Map-Conditioned Standard Diffusion,2,task_00
+0,-1.02,3,1,0.0,,0.0013695693342015147,Map-Conditioned Standard Diffusion,2,task_00
+1,0.91,10,0,0.0,2.0,0.0013253498982521705,Map-Conditioned Standard Diffusion,2,task_00
+0,-1.06,7,1,0.0,,0.0013575298591084512,Map-Conditioned Standard Diffusion,2,task_00
+0,-1.02,3,1,0.0,,0.0014158333360683173,Map-Conditioned Failure-Memory Diffusion,2,task_00
+0,-1.08,9,1,0.1,,0.001414398109773174,Map-Conditioned Failure-Memory Diffusion,2,task_00
+0,-1.04,5,1,0.6666666666666666,,0.0013922750047640875,Map-Conditioned Failure-Memory Diffusion,2,task_00
+1,0.91,10,0,0.6363636363636364,2.0,0.0014203622020431794,Map-Conditioned Failure-Memory Diffusion,2,task_00
+0,-1.05,6,1,1.0,,0.0014462431645370089,Map-Conditioned Failure-Memory Diffusion,2,task_00
+1,0.83,18,0,0.0,10.0,0.0019893633887275225,Map-Conditioned Improved Failure-Memory Diffusion,2,task_00
+1,0.73,28,0,0.0,20.0,0.0019513734296197072,Map-Conditioned Improved Failure-Memory Diffusion,2,task_00
+1,0.91,10,0,0.0,2.0,0.0019775542023126036,Map-Conditioned Improved Failure-Memory Diffusion,2,task_00
+1,0.91,10,0,0.0,2.0,0.0019359499972779303,Map-Conditioned Improved Failure-Memory Diffusion,2,task_00
+1,0.83,18,0,0.0,10.0,0.0019472316085335074,Map-Conditioned Improved Failure-Memory Diffusion,2,task_00
+0,-1.0,1,1,0.0,,1.624997821636498e-06,Random Policy,2,task_01
+0,-1.0,1,1,0.0,,1.4169927453622222e-06,Random Policy,2,task_01
+0,-1.03,4,1,0.0,,8.547503966838121e-07,Random Policy,2,task_01
+0,-1.0,1,1,0.0,,1.2089876690879464e-06,Random Policy,2,task_01
+0,-1.0,1,1,0.0,,1.2499949662014842e-06,Random Policy,2,task_01
+1,0.95,6,0,0.0,0.0,1.8032975882912675e-07,Value Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,1.2499852649246654e-07,Value Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,1.2533322054271898e-07,Value Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,1.1833617463707924e-07,Value Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,9.049836080521345e-08,Value Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,1.8766392410422364e-07,Policy Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,1.1800633122523625e-07,Policy Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,1.38662774891903e-07,Policy Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,1.1833374931787451e-07,Policy Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,9.733291032413642e-08,Policy Iteration,2,task_01
+1,0.95,6,0,0.0,0.0,1.069500285666436e-06,Q-learning,2,task_01
+1,0.95,6,0,0.0,0.0,8.054994395934045e-07,Q-learning,2,task_01
+1,0.95,6,0,0.0,0.0,7.710016992253562e-07,Q-learning,2,task_01
+1,0.95,6,0,0.0,0.0,7.359994924627244e-07,Q-learning,2,task_01
+1,0.95,6,0,0.0,0.0,7.708319268810252e-07,Q-learning,2,task_01
+1,0.95,6,0,0.0,0.0,0.0011077846623569105,MCTS,2,task_01
+1,0.95,6,0,0.0,0.0,0.001130867999260469,MCTS,2,task_01
+1,0.95,6,0,0.0,0.0,0.0011642151681977946,MCTS,2,task_01
+1,0.95,6,0,0.0,0.0,0.0011865276683238335,MCTS,2,task_01
+1,0.95,6,0,0.0,0.0,0.0011477708346016395,MCTS,2,task_01
+0,-1.0,1,1,0.0,,0.0014356250030687079,Map-Conditioned Standard Diffusion,2,task_01
+0,-1.0,1,1,0.0,,0.0013184160052333027,Map-Conditioned Standard Diffusion,2,task_01
+0,-1.0,1,1,0.0,,0.0013178750086808577,Map-Conditioned Standard Diffusion,2,task_01
+0,-1.0,1,1,0.0,,0.0013055000017629936,Map-Conditioned Standard Diffusion,2,task_01
+1,0.95,6,0,0.0,0.0,0.0013359931641995597,Map-Conditioned Standard Diffusion,2,task_01
+0,-1.0,1,1,0.0,,0.0014085839939070866,Map-Conditioned Failure-Memory Diffusion,2,task_01
+0,-1.04,5,1,0.16666666666666666,,0.0014342335984110833,Map-Conditioned Failure-Memory Diffusion,2,task_01
+0,-1.06,7,1,0.625,,0.00139610114066662,Map-Conditioned Failure-Memory Diffusion,2,task_01
+0,-1.04,5,1,0.5,,0.0014314831962110475,Map-Conditioned Failure-Memory Diffusion,2,task_01
+1,0.95,6,0,0.7142857142857143,0.0,0.001442271003422017,Map-Conditioned Failure-Memory Diffusion,2,task_01
+1,0.95,6,0,0.0,0.0,0.0019855278320998573,Map-Conditioned Improved Failure-Memory Diffusion,2,task_01
+1,0.95,6,0,0.0,0.0,0.0019271530012095657,Map-Conditioned Improved Failure-Memory Diffusion,2,task_01
+1,0.95,6,0,0.0,0.0,0.0019473473342562404,Map-Conditioned Improved Failure-Memory Diffusion,2,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.0019568908701330656,Map-Conditioned Improved Failure-Memory Diffusion,2,task_01
+1,0.9299999999999999,8,0,0.0,2.0,0.0019295678775961278,Map-Conditioned Improved Failure-Memory Diffusion,2,task_01
+0,-1.03,4,1,0.0,,1.0210023901890963e-06,Random Policy,2,task_02
+0,-1.0,1,1,0.0,,1.3329990906640887e-06,Random Policy,2,task_02
+0,-1.0,1,1,0.0,,1.0829971870407462e-06,Random Policy,2,task_02
+0,-1.0,1,1,0.0,,1.2079981388524175e-06,Random Policy,2,task_02
+0,-1.01,2,1,0.0,,9.79496689978987e-07,Random Policy,2,task_02
+1,0.96,5,0,0.0,0.0,1.8340069800615312e-07,Value Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.2479722499847412e-07,Value Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.2519885785877705e-07,Value Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.2480304576456546e-07,Value Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,9.159557521343231e-08,Value Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.4179968275129795e-07,Policy Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.0840012691915035e-07,Policy Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.3320241123437882e-07,Policy Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.752021489664912e-07,Policy Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.0839721653610468e-07,Policy Iteration,2,task_02
+1,0.96,5,0,0.0,0.0,1.174997305497527e-06,Q-learning,2,task_02
+1,0.96,5,0,0.0,0.0,8.586037438362837e-07,Q-learning,2,task_02
+1,0.96,5,0,0.0,0.0,8.333998266607523e-07,Q-learning,2,task_02
+1,0.96,5,0,0.0,0.0,8.50198557600379e-07,Q-learning,2,task_02
+1,0.96,5,0,0.0,0.0,7.580034434795379e-07,Q-learning,2,task_02
+1,0.92,9,0,0.0,4.0,0.0018876112185858397,MCTS,2,task_02
+1,0.96,5,0,0.0,0.0,0.0013532917975680903,MCTS,2,task_02
+1,0.94,7,0,0.0,2.0,0.0017446728577072332,MCTS,2,task_02
+1,0.96,5,0,0.0,0.0,0.0013483500020811333,MCTS,2,task_02
+1,0.96,5,0,0.0,0.0,0.0014645918010501191,MCTS,2,task_02
+0,-1.0,1,1,0.0,,0.0015942500031087548,Map-Conditioned Standard Diffusion,2,task_02
+0,-1.01,2,1,0.0,,0.00138591650465969,Map-Conditioned Standard Diffusion,2,task_02
+0,-1.0,1,1,0.0,,0.0013435000000754371,Map-Conditioned Standard Diffusion,2,task_02
+0,-1.0,1,1,0.0,,0.0013495839957613498,Map-Conditioned Standard Diffusion,2,task_02
+0,-1.0,1,1,0.0,,0.0013516250037355348,Map-Conditioned Standard Diffusion,2,task_02
+0,-1.0,1,1,0.0,,0.0014254580019041896,Map-Conditioned Failure-Memory Diffusion,2,task_02
+0,-1.01,2,1,0.3333333333333333,,0.0014014789994689636,Map-Conditioned Failure-Memory Diffusion,2,task_02
+0,-1.01,2,1,0.3333333333333333,,0.0014225624981918372,Map-Conditioned Failure-Memory Diffusion,2,task_02
+1,0.96,5,0,0.3333333333333333,0.0,0.001424816800863482,Map-Conditioned Failure-Memory Diffusion,2,task_02
+0,-1.03,4,1,0.4,,0.0013956452494312543,Map-Conditioned Failure-Memory Diffusion,2,task_02
+1,0.96,5,0,0.0,0.0,0.0019848584051942453,Map-Conditioned Improved Failure-Memory Diffusion,2,task_02
+1,0.96,5,0,0.0,0.0,0.0019465085992123933,Map-Conditioned Improved Failure-Memory Diffusion,2,task_02
+1,0.96,5,0,0.0,0.0,0.0019365333981113508,Map-Conditioned Improved Failure-Memory Diffusion,2,task_02
+1,0.9,11,0,0.0,6.0,0.0019331779079617593,Map-Conditioned Improved Failure-Memory Diffusion,2,task_02
+1,0.88,13,0,0.0,8.0,0.001955371922052179,Map-Conditioned Improved Failure-Memory Diffusion,2,task_02
+0,-1.01,2,1,0.0,,1.2289965525269508e-06,Random Policy,2,task_03
+0,-1.05,6,1,0.0,,8.543308164613942e-07,Random Policy,2,task_03
+0,-1.0,1,1,0.0,,1.2920063454657793e-06,Random Policy,2,task_03
+0,-1.01,2,1,0.0,,1.0204967111349106e-06,Random Policy,2,task_03
+0,-1.03,4,1,0.0,,8.334973244927824e-07,Random Policy,2,task_03
+1,0.94,7,0,0.0,0.0,1.7842726915010383e-07,Value Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,1.1899724735745362e-07,Value Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,1.36856605032725e-07,Value Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,1.4285407295184476e-07,Value Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,1.19431725969272e-07,Value Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,2.4385683770690646e-07,Policy Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,1.309963408857584e-07,Policy Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,1.1286049682114805e-07,Policy Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,1.252836747361081e-07,Policy Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,1.36856605032725e-07,Policy Iteration,2,task_03
+1,0.94,7,0,0.0,0.0,9.938583908868687e-07,Q-learning,2,task_03
+1,0.94,7,0,0.0,0.0,8.215720299631357e-07,Q-learning,2,task_03
+1,0.94,7,0,0.0,0.0,7.800013658457569e-07,Q-learning,2,task_03
+1,0.94,7,0,0.0,0.0,7.439936910356794e-07,Q-learning,2,task_03
+1,0.94,7,0,0.0,0.0,7.797144852312548e-07,Q-learning,2,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007408492002286949,MCTS,2,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0008184174413327128,MCTS,2,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007442333406652324,MCTS,2,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0007276074189576321,MCTS,2,task_03
+0,-0.9900000000000002,50,0,0.0,,0.0008157124801073223,MCTS,2,task_03
+0,-1.01,2,1,0.0,,0.001456708494515624,Map-Conditioned Standard Diffusion,2,task_03
+0,-1.02,3,1,0.0,,0.001322694666062792,Map-Conditioned Standard Diffusion,2,task_03
+1,0.94,7,0,0.0,0.0,0.001364952142466791,Map-Conditioned Standard Diffusion,2,task_03
+0,-1.02,3,1,0.0,,0.001310888328589499,Map-Conditioned Standard Diffusion,2,task_03
+0,-1.02,3,1,0.0,,0.001303319339058362,Map-Conditioned Standard Diffusion,2,task_03
+0,-1.01,2,1,0.0,,0.0014667709983768873,Map-Conditioned Failure-Memory Diffusion,2,task_03
+0,-1.02,3,1,0.5,,0.0013860276618894811,Map-Conditioned Failure-Memory Diffusion,2,task_03
+1,0.94,7,0,0.25,0.0,0.0013933391435005302,Map-Conditioned Failure-Memory Diffusion,2,task_03
+0,-1.08,9,1,0.1,,0.0013957315548193744,Map-Conditioned Failure-Memory Diffusion,2,task_03
+1,0.86,15,0,0.75,8.0,0.0013944305314604814,Map-Conditioned Failure-Memory Diffusion,2,task_03
+1,0.92,9,0,0.0,2.0,0.0019483102207434261,Map-Conditioned Improved Failure-Memory Diffusion,2,task_03
+1,0.94,7,0,0.0,0.0,0.0019435418570148094,Map-Conditioned Improved Failure-Memory Diffusion,2,task_03
+1,0.9,11,0,0.0,4.0,0.0019685947256882423,Map-Conditioned Improved Failure-Memory Diffusion,2,task_03
+1,0.94,7,0,0.0,0.0,0.0019358394284998731,Map-Conditioned Improved Failure-Memory Diffusion,2,task_03
+1,0.88,13,0,0.0,6.0,0.0019607501565657845,Map-Conditioned Improved Failure-Memory Diffusion,2,task_03
+0,-1.07,8,1,0.0,,8.491224434692413e-07,Random Policy,2,task_04
+0,-1.01,2,1,0.0,,1.0000003385357559e-06,Random Policy,2,task_04
+0,-1.0,1,1,0.0,,1.0829971870407462e-06,Random Policy,2,task_04
+0,-1.0,1,1,0.0,,1.0829971870407462e-06,Random Policy,2,task_04
+0,-1.02,3,1,0.0,,8.746671179930369e-07,Random Policy,2,task_04
+1,0.94,7,0,0.0,0.0,1.6071550947214875e-07,Value Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.0700023267418146e-07,Value Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.0128548767949854e-07,Value Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.009944493749312e-07,Value Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.1300185828336648e-07,Value Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.6714121946798904e-07,Policy Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.0114620506231273e-07,Policy Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.3685868387775762e-07,Policy Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.0714159413639988e-07,Policy Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,1.0700231151921408e-07,Policy Iteration,2,task_04
+1,0.94,7,0,0.0,0.0,9.64284741452762e-07,Q-learning,2,task_04
+1,0.94,7,0,0.0,0.0,8.332842428769384e-07,Q-learning,2,task_04
+1,0.94,7,0,0.0,0.0,7.617116872487324e-07,Q-learning,2,task_04
+1,0.94,7,0,0.0,0.0,7.381417422688433e-07,Q-learning,2,task_04
+1,0.94,7,0,0.0,0.0,7.382851825760943e-07,Q-learning,2,task_04
+1,0.9,11,0,0.0,4.0,0.001613185633852316,MCTS,2,task_04
+1,0.94,7,0,0.0,0.0,0.0017383811438256608,MCTS,2,task_04
+1,0.88,13,0,0.0,6.0,0.0015880446925830955,MCTS,2,task_04
+1,0.84,17,0,0.0,10.0,0.0024569582935381573,MCTS,2,task_04
+1,0.94,7,0,0.0,0.0,0.001720315427519381,MCTS,2,task_04
+0,-1.03,4,1,0.0,,0.0013755414947809186,Map-Conditioned Standard Diffusion,2,task_04
+0,-1.07,8,1,0.0,,0.0013776770010736072,Map-Conditioned Standard Diffusion,2,task_04
+0,-1.01,2,1,0.0,,0.001339646005362738,Map-Conditioned Standard Diffusion,2,task_04
+0,-1.01,2,1,0.0,,0.0013312709997990169,Map-Conditioned Standard Diffusion,2,task_04
+0,-1.05,6,1,0.0,,0.0013255416658163692,Map-Conditioned Standard Diffusion,2,task_04
+0,-1.03,4,1,0.0,,0.0013936147552158218,Map-Conditioned Failure-Memory Diffusion,2,task_04
+1,0.86,15,0,0.0625,8.0,0.0014034916025896867,Map-Conditioned Failure-Memory Diffusion,2,task_04
+1,0.94,7,0,0.125,0.0,0.0014180651466761316,Map-Conditioned Failure-Memory Diffusion,2,task_04
+0,-1.05,6,1,0.14285714285714285,,0.0014163751620799303,Map-Conditioned Failure-Memory Diffusion,2,task_04
+0,-1.05,6,1,0.7142857142857143,,0.001392076332801177,Map-Conditioned Failure-Memory Diffusion,2,task_04
+1,0.82,19,0,0.0,12.0,0.0019400196837714727,Map-Conditioned Improved Failure-Memory Diffusion,2,task_04
+1,0.92,9,0,0.0,2.0,0.0019273102241438916,Map-Conditioned Improved Failure-Memory Diffusion,2,task_04
+1,0.84,17,0,0.0,10.0,0.0019349020594210528,Map-Conditioned Improved Failure-Memory Diffusion,2,task_04
+1,0.86,15,0,0.0,8.0,0.001923205599693271,Map-Conditioned Improved Failure-Memory Diffusion,2,task_04
+1,0.94,7,0,0.0,0.0,0.0019582384265959263,Map-Conditioned Improved Failure-Memory Diffusion,2,task_04
+0,-1.04,5,1,0.0,,9.498005965724588e-07,Random Policy,2,task_05
+0,-1.0,1,1,0.0,,1.2090022210031748e-06,Random Policy,2,task_05
+0,-1.03,4,1,0.0,,8.749993867240846e-07,Random Policy,2,task_05
+0,-1.02,3,1,0.0,,8.890056051313877e-07,Random Policy,2,task_05
+0,-1.01,2,1,0.0,,9.790019248612225e-07,Random Policy,2,task_05
+1,0.96,5,0,0.0,0.0,1.581996912136674e-07,Value Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.3319659046828748e-07,Value Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.248001353815198e-07,Value Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.252046786248684e-07,Value Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.253996742889285e-07,Value Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,2.9980146791785956e-07,Policy Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.500011421740055e-07,Policy Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.667998731136322e-07,Policy Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.2500095181167126e-07,Policy Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.0840303730219602e-07,Policy Iteration,2,task_05
+1,0.96,5,0,0.0,0.0,1.166996662504971e-06,Q-learning,2,task_05
+1,0.96,5,0,0.0,0.0,8.668022928759455e-07,Q-learning,2,task_05
+1,0.96,5,0,0.0,0.0,8.584000170230866e-07,Q-learning,2,task_05
+1,0.96,5,0,0.0,0.0,8.163973689079285e-07,Q-learning,2,task_05
+1,0.96,5,0,0.0,0.0,8.001981768757104e-07,Q-learning,2,task_05
+1,0.96,5,0,0.0,0.0,0.0008008918026462198,MCTS,2,task_05
+1,0.96,5,0,0.0,0.0,0.0006712665956001729,MCTS,2,task_05
+1,0.94,7,0,0.0,2.0,0.0007654644266170051,MCTS,2,task_05
+1,0.96,5,0,0.0,0.0,0.000829558601253666,MCTS,2,task_05
+1,0.96,5,0,0.0,0.0,0.0006634998018853367,MCTS,2,task_05
+0,-1.01,2,1,0.0,,0.0013810834934702143,Map-Conditioned Standard Diffusion,2,task_05
+1,0.96,5,0,0.0,0.0,0.00135531660343986,Map-Conditioned Standard Diffusion,2,task_05
+0,-1.01,2,1,0.0,,0.001326833495113533,Map-Conditioned Standard Diffusion,2,task_05
+0,-1.01,2,1,0.0,,0.0013268539987620898,Map-Conditioned Standard Diffusion,2,task_05
+0,-1.01,2,1,0.0,,0.0013329584980965592,Map-Conditioned Standard Diffusion,2,task_05
+0,-1.01,2,1,0.0,,0.0014332080027088523,Map-Conditioned Failure-Memory Diffusion,2,task_05
+1,0.96,5,0,0.16666666666666666,0.0,0.0013985170022351666,Map-Conditioned Failure-Memory Diffusion,2,task_05
+0,-1.09,10,1,0.45454545454545453,,0.0013873999021598137,Map-Conditioned Failure-Memory Diffusion,2,task_05
+0,-1.03,4,1,0.6,,0.001384510502248304,Map-Conditioned Failure-Memory Diffusion,2,task_05
+1,0.96,5,0,0.6666666666666666,0.0,0.0014090747979935258,Map-Conditioned Failure-Memory Diffusion,2,task_05
+1,0.96,5,0,0.0,0.0,0.002007333599613048,Map-Conditioned Improved Failure-Memory Diffusion,2,task_05
+1,0.96,5,0,0.0,0.0,0.002006408202578314,Map-Conditioned Improved Failure-Memory Diffusion,2,task_05
+1,0.94,7,0,0.0,2.0,0.001974547714261072,Map-Conditioned Improved Failure-Memory Diffusion,2,task_05
+1,0.96,5,0,0.0,0.0,0.001982650000718422,Map-Conditioned Improved Failure-Memory Diffusion,2,task_05
+1,0.96,5,0,0.0,0.0,0.002007483402849175,Map-Conditioned Improved Failure-Memory Diffusion,2,task_05
+0,-1.01,2,1,0.0,,1.2080054148100317e-06,Random Policy,2,task_06
+0,-1.02,3,1,0.0,,9.583357799177368e-07,Random Policy,2,task_06
+0,-1.02,3,1,0.0,,9.029996969426671e-07,Random Policy,2,task_06
+0,-1.02,3,1,0.0,,8.886660604427258e-07,Random Policy,2,task_06
+0,-1.0,1,1,0.0,,1.0840012691915035e-06,Random Policy,2,task_06
+1,0.94,7,0,0.0,0.0,1.7285596446267197e-07,Value Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.3099841973079102e-07,Value Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.2514231327388969e-07,Value Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.1328666005283594e-07,Value Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.0700023267418146e-07,Value Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.4885569856102977e-07,Policy Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.3686076272279024e-07,Policy Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.0099652821996382e-07,Policy Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,9.527970438024827e-08,Policy Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.1899724735745362e-07,Policy Iteration,2,task_06
+1,0.94,7,0,0.0,0.0,1.0238582035526633e-06,Q-learning,2,task_06
+1,0.94,7,0,0.0,0.0,8.217154702703868e-07,Q-learning,2,task_06
+1,0.94,7,0,0.0,0.0,7.858595511476909e-07,Q-learning,2,task_06
+1,0.94,7,0,0.0,0.0,7.619964890182018e-07,Q-learning,2,task_06
+1,0.94,7,0,0.0,0.0,7.321463531947561e-07,Q-learning,2,task_06
+1,0.9,11,0,0.0,4.0,0.0006221325456863269,MCTS,2,task_06
+1,0.92,9,0,0.0,2.0,0.0005443056676692019,MCTS,2,task_06
+1,0.74,27,0,0.0,20.0,0.0006274506643724939,MCTS,2,task_06
+1,0.92,9,0,0.0,2.0,0.0005865231149881664,MCTS,2,task_06
+1,0.82,19,0,0.0,12.0,0.000558258840771343,MCTS,2,task_06
+1,0.94,7,0,0.0,0.0,0.0013369762870882238,Map-Conditioned Standard Diffusion,2,task_06
+1,0.94,7,0,0.0,0.0,0.0013429820017855881,Map-Conditioned Standard Diffusion,2,task_06
+1,0.94,7,0,0.0,0.0,0.0013361665707114817,Map-Conditioned Standard Diffusion,2,task_06
+0,-1.09,10,1,0.0,,0.0013209666998591275,Map-Conditioned Standard Diffusion,2,task_06
+0,-1.02,3,1,0.0,,0.0013302496663527563,Map-Conditioned Standard Diffusion,2,task_06
+1,0.94,7,0,0.0,0.0,0.0013821842876495793,Map-Conditioned Failure-Memory Diffusion,2,task_06
+1,0.94,7,0,0.0,0.0,0.001404190284249905,Map-Conditioned Failure-Memory Diffusion,2,task_06
+1,0.94,7,0,0.0,0.0,0.001370612858279076,Map-Conditioned Failure-Memory Diffusion,2,task_06
+0,-1.09,10,1,0.0,,0.001385612299782224,Map-Conditioned Failure-Memory Diffusion,2,task_06
+0,-1.02,3,1,0.5,,0.001416402665199712,Map-Conditioned Failure-Memory Diffusion,2,task_06
+1,0.94,7,0,0.0,0.0,0.0019470714261322947,Map-Conditioned Improved Failure-Memory Diffusion,2,task_06
+1,0.92,9,0,0.0,2.0,0.002006296330364421,Map-Conditioned Improved Failure-Memory Diffusion,2,task_06
+1,0.92,9,0,0.0,2.0,0.001976162337491082,Map-Conditioned Improved Failure-Memory Diffusion,2,task_06
+1,0.88,13,0,0.0,6.0,0.001983580232123271,Map-Conditioned Improved Failure-Memory Diffusion,2,task_06
+1,0.92,9,0,0.0,2.0,0.0019698749949586475,Map-Conditioned Improved Failure-Memory Diffusion,2,task_06
+0,-1.0,1,1,0.0,,1.624997821636498e-06,Random Policy,2,task_07
+0,-1.01,2,1,0.0,,1.2710006558336318e-06,Random Policy,2,task_07
+0,-1.01,2,1,0.0,,1.00000761449337e-06,Random Policy,2,task_07
+0,-1.03,4,1,0.0,,9.270042937714607e-07,Random Policy,2,task_07
+0,-1.0,1,1,0.0,,1.1660013115033507e-06,Random Policy,2,task_07
+1,0.92,9,0,0.0,0.0,1.483341394406226e-07,Value Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,1.9911385606974363e-07,Value Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,1.897779940110114e-07,Value Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,1.1566347287346919e-07,Value Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,1.0655397394051154e-07,Value Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,1.6199838784005908e-07,Policy Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,1.1100039248251252e-07,Policy Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,1.0166938106218974e-07,Policy Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,1.0188604291114542e-07,Policy Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,9.722296252018876e-08,Policy Iteration,2,task_07
+1,0.92,9,0,0.0,0.0,9.722199239250685e-07,Q-learning,2,task_07
+1,0.92,9,0,0.0,0.0,7.96112645831373e-07,Q-learning,2,task_07
+1,0.92,9,0,0.0,0.0,7.687809152735604e-07,Q-learning,2,task_07
+1,0.92,9,0,0.0,0.0,7.362266640282339e-07,Q-learning,2,task_07
+1,0.92,9,0,0.0,0.0,7.362185796308848e-07,Q-learning,2,task_07
+1,0.7599999999999999,25,0,0.0,16.0,0.0025033083593007177,MCTS,2,task_07
+1,0.92,9,0,0.0,0.0,0.0021256481090353597,MCTS,2,task_07
+1,0.7599999999999999,25,0,0.0,16.0,0.002435626599472016,MCTS,2,task_07
+1,0.9,11,0,0.0,2.0,0.0019790529053848745,MCTS,2,task_07
+1,0.84,17,0,0.0,8.0,0.0021901471182525925,MCTS,2,task_07
+0,-1.01,2,1,0.0,,0.0014270205065258779,Map-Conditioned Standard Diffusion,2,task_07
+0,-1.07,8,1,0.0,,0.0013517603765649255,Map-Conditioned Standard Diffusion,2,task_07
+1,0.9,11,0,0.0,2.0,0.0013360112722941928,Map-Conditioned Standard Diffusion,2,task_07
+0,-1.01,2,1,0.0,,0.001375957996060606,Map-Conditioned Standard Diffusion,2,task_07
+0,-1.01,2,1,0.0,,0.0013511874931282364,Map-Conditioned Standard Diffusion,2,task_07
+0,-1.01,2,1,0.0,,0.0014578124973922968,Map-Conditioned Failure-Memory Diffusion,2,task_07
+0,-1.03,4,1,0.4,,0.001433406250725966,Map-Conditioned Failure-Memory Diffusion,2,task_07
+1,0.9,11,0,0.16666666666666666,2.0,0.0014094088149828497,Map-Conditioned Failure-Memory Diffusion,2,task_07
+0,-1.07,8,1,0.2222222222222222,,0.0014151353752822615,Map-Conditioned Failure-Memory Diffusion,2,task_07
+0,-1.15,16,1,0.5294117647058824,,0.0014145938121146173,Map-Conditioned Failure-Memory Diffusion,2,task_07
+1,0.86,15,0,0.0,6.0,0.0019755223310009267,Map-Conditioned Improved Failure-Memory Diffusion,2,task_07
+1,0.9,11,0,0.0,2.0,0.001982128820434975,Map-Conditioned Improved Failure-Memory Diffusion,2,task_07
+1,0.84,17,0,0.0,8.0,0.001986019587253823,Map-Conditioned Improved Failure-Memory Diffusion,2,task_07
+1,0.9,11,0,0.0,2.0,0.00198450390863317,Map-Conditioned Improved Failure-Memory Diffusion,2,task_07
+1,0.86,15,0,0.0,6.0,0.001968722266610712,Map-Conditioned Improved Failure-Memory Diffusion,2,task_07
+0,-1.05,6,1,0.0,,9.101689405118426e-07,Random Policy,2,task_08
+0,-1.01,2,1,0.0,,1.0204967111349106e-06,Random Policy,2,task_08
+0,-1.0,1,1,0.0,,1.0410003596916795e-06,Random Policy,2,task_08
+0,-1.0,1,1,0.0,,1.0840012691915035e-06,Random Policy,2,task_08
+0,-1.03,4,1,0.0,,8.230017556343228e-07,Random Policy,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.87625118996948e-07,Value Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.1475094652269036e-07,Value Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.0424810170661658e-07,Value Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.1462543625384569e-07,Value Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.406278897775337e-07,Value Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,2.293745637871325e-07,Policy Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.0412441042717546e-07,Policy Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.2500095181167126e-07,Policy Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.093740138458088e-07,Policy Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,1.093740138458088e-07,Policy Iteration,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,9.94628862827085e-07,Q-learning,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,8.072493073996156e-07,Q-learning,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.657490641577169e-07,Q-learning,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.448725227732211e-07,Q-learning,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,7.915023161331192e-07,Q-learning,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,0.0011526721245900262,MCTS,2,task_08
+1,0.85,16,0,0.0,8.0,0.0008736823729122989,MCTS,2,task_08
+1,0.91,10,0,0.0,2.0,0.0009301123980549164,MCTS,2,task_08
+1,0.87,14,0,0.0,6.0,0.0008619197157843571,MCTS,2,task_08
+1,0.9299999999999999,8,0,0.0,0.0,0.0010380417534179287,MCTS,2,task_08
+0,-1.03,4,1,0.0,,0.001402135250827996,Map-Conditioned Standard Diffusion,2,task_08
+0,-1.03,4,1,0.0,,0.0013045729974692222,Map-Conditioned Standard Diffusion,2,task_08
+0,-1.03,4,1,0.0,,0.0012952607503393665,Map-Conditioned Standard Diffusion,2,task_08
+0,-1.05,6,1,0.0,,0.0013163610031673063,Map-Conditioned Standard Diffusion,2,task_08
+0,-1.03,4,1,0.0,,0.0012902605012641288,Map-Conditioned Standard Diffusion,2,task_08
+0,-1.03,4,1,0.0,,0.001356103748548776,Map-Conditioned Failure-Memory Diffusion,2,task_08
+0,-1.05,6,1,0.7142857142857143,,0.0014056734992967297,Map-Conditioned Failure-Memory Diffusion,2,task_08
+0,-1.02,3,1,0.5,,0.0013825973389126982,Map-Conditioned Failure-Memory Diffusion,2,task_08
+1,0.91,10,0,0.5454545454545454,2.0,0.0013934503003838472,Map-Conditioned Failure-Memory Diffusion,2,task_08
+0,-1.03,4,1,1.0,,0.0013862705018254928,Map-Conditioned Failure-Memory Diffusion,2,task_08
+1,0.7899999999999999,22,0,0.0,14.0,0.001952795500983484,Map-Conditioned Improved Failure-Memory Diffusion,2,task_08
+1,0.89,12,0,0.0,4.0,0.001969968664828533,Map-Conditioned Improved Failure-Memory Diffusion,2,task_08
+1,0.91,10,0,0.0,2.0,0.0019707667001057417,Map-Conditioned Improved Failure-Memory Diffusion,2,task_08
+1,0.91,10,0,0.0,2.0,0.001960712400614284,Map-Conditioned Improved Failure-Memory Diffusion,2,task_08
+1,0.6099999999999999,40,0,0.0,32.0,0.001952973900915822,Map-Conditioned Improved Failure-Memory Diffusion,2,task_08
+0,-1.03,4,1,0.0,,1.0837502486538142e-06,Random Policy,2,task_09
+0,-1.1099999999999999,12,1,0.0,,7.63999802681307e-07,Random Policy,2,task_09
+0,-1.0,1,1,0.0,,1.1660013115033507e-06,Random Policy,2,task_09
+0,-1.02,3,1,0.0,,9.029948463042577e-07,Random Policy,2,task_09
+0,-1.0,1,1,0.0,,1.2079981388524175e-06,Random Policy,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.7712409317027777e-07,Value Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.301232259720564e-07,Value Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.1987503967247903e-07,Value Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.3037606549914926e-07,Value Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.302505552303046e-07,Value Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.93000232684426e-07,Policy Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.302505552303046e-07,Policy Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,9.887116902973503e-08,Policy Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,9.375253284815699e-08,Policy Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.0437543096486479e-07,Policy Iteration,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,1.000124029815197e-06,Q-learning,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.917478797025979e-07,Q-learning,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.343733159359545e-07,Q-learning,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.291255315067247e-07,Q-learning,2,task_09
+1,0.9299999999999999,8,0,0.0,0.0,7.342478056671098e-07,Q-learning,2,task_09
+1,0.7899999999999999,22,0,0.0,14.0,0.002487091000975025,MCTS,2,task_09
+1,0.87,14,0,0.0,6.0,0.002117095213699421,MCTS,2,task_09
+1,0.89,12,0,0.0,4.0,0.0020099408332801736,MCTS,2,task_09
+1,0.83,18,0,0.0,10.0,0.0022218888908456494,MCTS,2,task_09
+1,0.91,10,0,0.0,2.0,0.0019508165991283023,MCTS,2,task_09
+0,-1.01,2,1,0.0,,0.0014797705007367767,Map-Conditioned Standard Diffusion,2,task_09
+0,-1.01,2,1,0.0,,0.0013346039995667525,Map-Conditioned Standard Diffusion,2,task_09
+0,-1.01,2,1,0.0,,0.0013257500031613745,Map-Conditioned Standard Diffusion,2,task_09
+0,-1.01,2,1,0.0,,0.0013321249934961088,Map-Conditioned Standard Diffusion,2,task_09
+0,-1.01,2,1,0.0,,0.0014556250025634654,Map-Conditioned Standard Diffusion,2,task_09
+0,-1.01,2,1,0.0,,0.0016431670082965866,Map-Conditioned Failure-Memory Diffusion,2,task_09
+0,-1.03,4,1,0.2,,0.0014563332515535876,Map-Conditioned Failure-Memory Diffusion,2,task_09
+0,-1.03,4,1,0.4,,0.0013824894995195791,Map-Conditioned Failure-Memory Diffusion,2,task_09
+0,-1.04,5,1,0.6666666666666666,,0.0013707084028283135,Map-Conditioned Failure-Memory Diffusion,2,task_09
+0,-1.01,2,1,1.0,,0.0015555415084236301,Map-Conditioned Failure-Memory Diffusion,2,task_09
+1,0.8099999999999999,20,0,0.0,12.0,0.0019721165517694317,Map-Conditioned Improved Failure-Memory Diffusion,2,task_09
+1,0.89,12,0,0.0,4.0,0.0019814199974158933,Map-Conditioned Improved Failure-Memory Diffusion,2,task_09
+1,0.89,12,0,0.0,4.0,0.002010531333022906,Map-Conditioned Improved Failure-Memory Diffusion,2,task_09
+1,0.7699999999999999,24,0,0.0,16.0,0.0019806197918417943,Map-Conditioned Improved Failure-Memory Diffusion,2,task_09
+1,0.85,16,0,0.0,8.0,0.0019771954384850687,Map-Conditioned Improved Failure-Memory Diffusion,2,task_09

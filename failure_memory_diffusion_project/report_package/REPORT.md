@@ -7,7 +7,7 @@
 ## Abstract
 This revised report studies diffusion-based planning in a deterministic GridWorld and focuses on a more defensible evaluation protocol than the earlier draft. The diffusion model is trained on BFS shortest-path demonstrations and then used online to propose candidate trajectories. The main research question is whether online failure memory can improve candidate ranking without retraining the generator.
 
-The key methodological upgrades in this version are: seed-level reporting, 95% confidence intervals over seed means in the figures, numeric parameter sweeps for `lambda_F` and `K`, and a new remove-one-component ablation for the final planner. Under the refreshed benchmark, Improved Failure-Memory Diffusion reached `success = 1.000 +- 0.000` with zero collision on the obstacle map and `success = 0.500 +- 0.189` with zero collision on the deceptive map. The deceptive-map gain over the original failure-memory planner appeared in 9 of 10 seeds.
+The key methodological upgrades in this version are: seed-level reporting, 95% confidence intervals over seed means in the figures, numeric parameter sweeps for `lambda_F` and `K`, a new remove-one-component ablation for the final planner, and a deployment-style cross-map study that trains one map-conditioned improved planner across many maps before evaluating it on one unseen hold-out map. Under the refreshed benchmark, Improved Failure-Memory Diffusion reached `success = 1.000 +- 0.000` with zero collision on the obstacle map and `success = 0.500 +- 0.189` with zero collision on the deceptive map. The deceptive-map gain over the original failure-memory planner appeared in 9 of 10 seeds. In the deployment study, the map-conditioned improved planner achieved `success = 1.000 +- 0.000` on a held-out unseen map, though with higher inference time than the classical baselines.
 
 ## What Changed Relative to the Earlier Draft
 1. All main reported metrics are now aggregated per seed first and summarized as `mean +- SD` across the 10 seed means.
@@ -17,6 +17,7 @@ The key methodological upgrades in this version are: seed-level reporting, 95% c
 5. A new remove-one-component ablation was added for the final planner.
 6. Reproducibility details are collected in one implementation table.
 7. The report framing now separates oracle/reference baselines from approximate and learned planners.
+8. A deployment-style cross-map generalization study was added to test whether the improved planner can be carried toward more realistic use.
 
 ## Problem Setup and Fairness Framing
 The task is a deterministic, fully observable GridWorld with four actions, fixed start and goal states, collision termination, and a 50-step limit. The comparison mixes methods with different assumptions, so the baselines should be interpreted in two tiers:
@@ -32,14 +33,15 @@ Diffusion planners such as Diffuser, Decision Diffuser, and later action-diffusi
 The research gap for this project is therefore narrower than general reinforcement learning: can online failure memory change candidate ranking enough to improve a fixed diffusion generator without retraining it after each failed episode?
 
 ## Research Questions
-This report is framed as a controlled study of diffusion-planner behavior in deterministic GridWorld navigation rather than only as a leaderboard comparison. The evaluation is organized around four research questions:
+This report is framed as a controlled study of diffusion-planner behavior in deterministic GridWorld navigation rather than only as a leaderboard comparison. The evaluation is organized around five research questions:
 
 1. How does a diffusion-based planner behave in small deterministic GridWorlds when it is trained on BFS shortest-path demonstrations?
 2. Can online failure memory improve the robustness of a fixed diffusion planner on obstacle-heavy and deceptive maps without retraining the generator?
 3. Which components of the final planner, tail-focused memory, adaptive weighting, candidate diversity, and loop penalty, contribute most to the observed improvement?
 4. How do the candidate budget `K` and the failure-memory coefficient `lambda_F` affect the trade-off between success, safety, and inference cost?
+5. Can the improved planner be adapted into a more deployment-realistic cross-map setting, and what advantages and limitations appear when it is compared against classical planners on an unseen map?
 
-The benchmark section answers Research Questions 1 and 2, the exploration and remove-one ablations answer Research Question 3, and the parameter sweeps answer Research Question 4.
+The benchmark section answers Research Questions 1 and 2, the exploration and remove-one ablations answer Research Question 3, the parameter sweeps answer Research Question 4, and the deployment study answers Research Question 5.
 
 ## Method Summary
 The final planner combines four mechanisms:
@@ -64,16 +66,18 @@ The earlier large box-diagram figures were not reused in this package because th
 | Environment | Deterministic GridWorld with 4 actions, max_steps = 50 |
 | Rewards | goal = +1.0, collision = -1.0, move = -0.01, timeout = -0.5 |
 | Diffusion input | 12-step horizon, 4-way one-hot action encoding, 48-dim flattened trajectory |
-| Condition vector | [row, col, goal_row, goal_col] normalized by grid size |
+| Benchmark condition | [row, col, goal_row, goal_col] normalized by grid size |
 | Network | Conditional MLP: 48+4+64 -> 128 -> 128 -> 48 |
 | Activations | ReLU |
 | Time embedding | 64-dim sinusoidal embedding |
 | Optimizer | Adam, learning rate = 1e-3 |
 | Batch size | 32 in all rerun experiments |
 | Noise schedule | Linear beta schedule from 1e-4 to 0.02 over 25 diffusion steps |
-| Training data | BFS shortest paths from every reachable traversable start state on each map |
+| Benchmark training data | BFS shortest paths from every reachable traversable start state on each map |
 | Padding rule | Sequences shorter than the horizon repeat the final action |
-| Retraining policy | One diffusion model retrained for each seed and each map |
+| Benchmark retraining policy | One diffusion model retrained for each seed and each map |
+| Deployment condition | Flattened occupancy grid plus normalized [row, col, goal_row, goal_col] |
+| Deployment training protocol | One map-conditioned diffusion model trained across many generated maps and evaluated on one unseen hold-out map |
 | Standard diffusion | lambda_D = 0.1, K selected from {5, 10, 20, 30, 40} |
 | Failure-memory diffusion | lambda_F sweep over {0.0, 0.1, 0.5, 1.0, 2.0, 5.0}; K sweep over {5, 10, 20, 30, 40} |
 | Improved planner | tail_k = 5, raw_multiplier = 3, lambda_loop = 0.2 |
@@ -219,13 +223,74 @@ The numeric sweeps support a more careful claim than the earlier draft:
 - `lambda_F = 0.5` was the strongest setting in this exploratory sweep, but the report should not describe it as independently validated.
 - Larger `K` improves robustness under the current generator, but the improvement from `K=30` to `K=40` is smaller than the jump from `K=10` to `K=20`, while the computational cost keeps rising.
 
+## Choosing the Final Planner
+The development-stage experiments justify carrying only the improved planner into the deployment study. Relative to the standard diffusion and original failure-memory variants, the improved method was consistently the safest diffusion-family planner on the difficult maps, and it produced the clearest success gains under deceptive geometry. The trade-off is inference cost: oversampling, diversity filtering, adaptive weighting, and loop-aware rescoring make the improved planner slower than the simpler diffusion baselines.
+
+That trade-off is acceptable for the deployment study because the next question is no longer which diffusion-family variant wins on a fixed map, but whether the strongest diffusion-family variant can be moved toward a more realistic application setting. For that reason, the deployment section drops the two weaker diffusion baselines from the main figure and keeps only the improved planner against classical comparison methods.
+
+## Cross-Map Deployment Study
+The deployment study moves beyond single-map training and evaluation. Instead of retraining one diffusion model per map, it trains one map-conditioned diffusion model across `18` procedurally generated training maps with `1362` BFS-generated supervision samples, then evaluates the learned policy family on one held-out unseen map with `10` start-goal tasks.
+
+Three design changes make this setting more realistic than the fixed-map benchmark:
+1. The diffusion model is conditioned on the obstacle layout as well as the current state and goal, so candidate generation can adapt to different map geometry instead of assuming one fixed wall pattern.
+2. Training data comes from many maps and many goals rather than one environment, which turns the learned model into a transferable action prior instead of a single-map imitation model.
+3. Deployment evaluation uses one unseen hold-out map and compares the improved planner directly with `Random Policy`, exact planning, `Q-learning`, and `MCTS`, rather than only with weaker diffusion variants.
+
+The hold-out map was still drawn from the same procedural family as the training maps, so this is same-distribution cross-map generalization rather than fully out-of-distribution transfer. Also, BFS is not used to control the improved planner on the hold-out map; it is used only offline to create the training targets and to compute reference shortest-path metrics.
+
+![Held-out deployment map](figures/13_heldout_map_overview.png)
+
+*Figure note.* The deployment study trains on many procedurally generated maps and evaluates on one unseen map with multiple start-goal tasks. This is a stronger test of transfer than the fixed-map benchmark, but it still stays within the same map generator family.
+
+The held-out efficiency comparison is:
+
+| Algorithm | Success Rate | Collision Rate | Average Return | Inference Time |
+| --- | --- | --- | --- | --- |
+| Random Policy | 0.000 +- 0.000 | 1.000 +- 0.000 | -1.015 +- 0.003 | 0.001 ms +- 0.000 ms |
+| Value Iteration | 1.000 +- 0.000 | 0.000 +- 0.000 | 0.940 +- 0.000 | 0.000 ms +- 0.000 ms |
+| Policy Iteration | 1.000 +- 0.000 | 0.000 +- 0.000 | 0.940 +- 0.000 | 0.000 ms +- 0.000 ms |
+| Q-learning | 1.000 +- 0.000 | 0.000 +- 0.000 | 0.940 +- 0.000 | 0.001 ms +- 0.000 ms |
+| MCTS | 0.913 +- 0.012 | 0.000 +- 0.000 | 0.732 +- 0.023 | 1.436 ms +- 0.040 ms |
+| Map-Conditioned Improved Failure-Memory Diffusion | 1.000 +- 0.000 | 0.000 +- 0.000 | 0.899 +- 0.008 | 1.995 ms +- 0.053 ms |
+
+![Deployment efficiency dashboard](figures/12_deployment_efficiency_dashboard.png)
+
+*Figure note.* The deployment figure keeps only the improved diffusion planner from the diffusion family. The two weaker diffusion variants were useful for algorithm development, but they are omitted here because the deployment question is whether the strongest learned planner can compete with classical baselines under a more realistic transfer setup.
+
+### Deployment Interpretation
+The deployment result supports a cautious positive answer to Research Question 5. The map-conditioned improved planner reached `success = 1.000 +- 0.000` with zero collision on the held-out unseen map, which is stronger than `MCTS` on success and much stronger than the weaker diffusion-family variants observed during development. This suggests that conditioning on map geometry and training across many maps can convert the improved planner from a fixed-map method into a transferable same-distribution deployment policy.
+
+At the same time, the comparison remains nuanced. `Value Iteration`, `Policy Iteration`, and `Q-learning` each reached `success = 1.000` in this specific held-out experiment, while the improved deployment planner required more inference time: about `1.995 ms` per action versus `1.436 ms` for `MCTS` and `0.001 ms` for `Q-learning`. The improved planner therefore offers a meaningful transfer advantage over naive diffusion deployment, but not a universal computational advantage over all baselines.
+
+### Advantages and Limitations Relative to Other Algorithms
+Advantages of the deployment-oriented improved planner:
+- It does not require BFS trajectories on the target hold-out map at deployment time.
+- It can transfer across unseen maps from the same generator family because the learned condition includes obstacle layout, state, and goal.
+- Its failure-memory and adaptive rescoring logic can suppress unsafe candidate trajectories that raw diffusion alone would still rank too highly.
+
+Limitations relative to the other baselines:
+- It still depends on BFS-generated expert supervision during offline training, which is a stronger source of information than reward-only learning.
+- It still uses exact simulator scoring online, so it is not a purely feed-forward policy at test time.
+- Its inference cost is materially higher than the exact planners and tabular `Q-learning` in this small deterministic setting.
+- The hold-out evaluation is same-distribution, not arbitrary real-world transfer, because train and test maps come from the same procedural family.
+
 ## Limitations
 1. The environment is small, deterministic, and fully observable.
-2. The diffusion model is retrained separately for each seed and each map.
+2. In the core benchmark and ablation pipeline, the diffusion model is retrained separately for each seed and each map.
 3. Training demonstrations come from BFS with full map knowledge.
 4. Online scoring uses the exact simulator, so the diffusion-family planners are model-based at inference time.
 5. Even with 10 seeds, statistical power remains moderate compared with a much larger experimental study.
 6. The new ablation indicates that some earlier mechanism-level claims were too strong.
+7. The deployment study is more realistic than the fixed-map benchmark, but it still evaluates same-distribution transfer within one procedural map generator family.
+8. The deployment comparison is not perfectly matched to `Q-learning`, because the improved planner uses expert BFS supervision and simulator-based candidate scoring while tabular `Q-learning` learns from reward interaction.
+9. The deployment study still uses only one held-out map, so stronger evidence would require many hold-out maps and broader statistical summaries.
+
+## Future Work
+1. Evaluate the deployment pipeline across many held-out maps, map sizes, and obstacle generators instead of one same-distribution hold-out map.
+2. Compare against stronger transfer baselines such as map-conditioned reinforcement learning rather than only tabular target-map `Q-learning`.
+3. Reduce inference cost through candidate pruning, distillation, or learned value guidance so that the improved planner is more practical under tight latency budgets.
+4. Replace exact simulator scoring with a learned world model or partial-lookahead scoring to move closer to realistic real-world planning settings.
+5. Extend the setup to partial observability, stochastic transitions, and dynamic obstacles, which are closer to real deployment domains than deterministic static GridWorlds.
 
 ## Conclusion
 The revised evidence supports a stronger and more honest report because it now answers the research questions directly.
@@ -234,5 +299,6 @@ The revised evidence supports a stronger and more honest report because it now a
 2. Research Question 2 asked whether online failure memory improves robustness without retraining the generator. The answer is yes. Relative to the original failure-memory planner, the improved planner consistently increased success on the deceptive and obstacle maps and collision dropped to zero across all 10 seeds on those two difficult maps.
 3. Research Question 3 asked which components matter most. The new ablation shows that adaptive weighting is the most critical mechanism in the final design. Diversity and the loop penalty were not individually decisive under the current budget, and tail-only memory should be described as a cleaner credit-assignment choice rather than a universally stronger empirical variant.
 4. Research Question 4 asked how `K` and `lambda_F` control the trade-off between robustness and cost. The sweeps show that `lambda_F = 0.5` was the strongest value among the tested settings in this study, while larger `K` improved success and reduced collision at the cost of slower action selection. The gain from increasing `K` is real but diminishing.
+5. Research Question 5 asked whether the improved planner can be pushed toward a more realistic deployment-style application. The answer is partially yes. Training one map-conditioned improved planner across many maps allowed successful transfer to one unseen same-distribution hold-out map without using BFS to control the planner at deployment time. That is a stronger application story than the fixed-map benchmark, but it still relies on expert offline supervision and simulator-based online scoring.
 
-Taken together, these answers support a narrower but more defensible conclusion than the earlier draft. The project does not show that diffusion planning is the best general planner in small known GridWorlds. It does show that online failure-aware ranking can materially improve diffusion-based planning in deterministic environments, especially when adaptive weighting is used to counter misleading local goal-distance bias.
+Taken together, these answers support a narrower but more defensible conclusion than the earlier draft. The project does not show that diffusion planning is the best general planner in small known GridWorlds or that it is already ready for unconstrained real-world deployment. It does show that online failure-aware ranking can materially improve diffusion-based planning in deterministic environments, and that the improved version is the right candidate for further study when the goal shifts from fixed-map analysis toward more realistic cross-map application.
