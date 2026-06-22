@@ -13,6 +13,7 @@ class ValueIterationPlanner:
         self.last_episode_repeated_failure_rate = 0.0
 
     def train(self):
+        # Solve the tabular MDP exactly by repeatedly applying the Bellman optimality backup.
         states = self.env.get_all_states()
         while True:
             delta = 0.0

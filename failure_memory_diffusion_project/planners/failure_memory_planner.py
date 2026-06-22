@@ -25,6 +25,7 @@ class FailureMemoryDiffusionPlanner(StandardDiffusionPlanner):
             seed=seed,
         )
         self.lambda_failure = lambda_failure
+        # Failure memory stores where unsuccessful trajectories have already concentrated.
         self.failure_memory = np.zeros_like(self.env.grid, dtype=np.float32)
         self.last_episode_repeated_failure_rate = 0.0
 
@@ -49,6 +50,7 @@ class FailureMemoryDiffusionPlanner(StandardDiffusionPlanner):
         final_state = rollout["final_state"]
         distance = abs(final_state[0] - self.env.goal[0]) + abs(final_state[1] - self.env.goal[1])
 
+        # Normalize the memory map before scoring so the penalty stays comparable across episodes.
         if np.max(self.failure_memory) > 0:
             normalized_memory = self.failure_memory / (np.max(self.failure_memory) + 1e-8)
         else:
@@ -61,6 +63,7 @@ class FailureMemoryDiffusionPlanner(StandardDiffusionPlanner):
         return score, rollout
 
     def end_episode(self, path, success: bool, collision: bool, truncated: bool):
+        # Only failed or unfinished episodes reinforce the memory map for future avoidance.
         self.last_episode_repeated_failure_rate = self.get_repeated_failure_rate(path)
         if collision or truncated or (not success):
             self.update_failure_memory(path)

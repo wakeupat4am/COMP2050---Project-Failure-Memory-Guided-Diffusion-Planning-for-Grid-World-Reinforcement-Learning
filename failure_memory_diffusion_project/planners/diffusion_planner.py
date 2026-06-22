@@ -8,6 +8,7 @@ from utils.bfs import bfs_shortest_path, path_to_actions
 
 
 def normalize_condition(state, goal, grid_shape):
+    # Compress the planning query into normalized coordinates so one model can generalize across maps.
     rows, cols = grid_shape
     return np.array(
         [
@@ -38,6 +39,7 @@ def action_sequence_to_one_hot(actions: Sequence[int], horizon: int, action_dim:
 
 
 def build_diffusion_training_data(env, horizon: int):
+    # Use BFS shortest paths as expert demonstrations for training the diffusion policy prior.
     free_states = env.get_all_states()
     action_vectors = []
     conditions = []
@@ -91,6 +93,7 @@ class StandardDiffusionPlanner:
         return score, rollout
 
     def act(self, state):
+        # Sample multiple open-loop plans and execute the first action from the best-scoring rollout.
         condition = self._condition(state)
         candidates = self.diffusion_model.sample(condition, num_samples=self.num_candidates, horizon=self.horizon)
 

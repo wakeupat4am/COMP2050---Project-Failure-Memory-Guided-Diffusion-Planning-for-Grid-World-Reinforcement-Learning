@@ -13,6 +13,7 @@ class PolicyIterationPlanner:
         self.last_episode_repeated_failure_rate = 0.0
 
     def policy_evaluation(self):
+        # Evaluate the current policy until the tabular value function converges.
         states = self.env.get_all_states()
         while True:
             delta = 0.0
@@ -31,6 +32,7 @@ class PolicyIterationPlanner:
                 break
 
     def policy_improvement(self) -> bool:
+        # Greedify the policy against the evaluated value function and report whether it changed.
         stable = True
         for state in self.env.get_all_states():
             if self.env.is_terminal_state(state):
@@ -51,6 +53,7 @@ class PolicyIterationPlanner:
         return stable
 
     def train(self):
+        # Alternate evaluation and improvement until the policy becomes stable.
         while True:
             self.policy_evaluation()
             if self.policy_improvement():

@@ -39,6 +39,7 @@ class TabularQLearningPlanner:
         return int(np.argmax(self.Q[state_idx]))
 
     def train(self):
+        # Learn state-action values from sampled interaction rather than a full model of the gridworld.
         for _ in range(self.episodes):
             state = self.env.reset()
             done = False

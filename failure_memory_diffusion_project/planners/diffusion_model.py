@@ -14,6 +14,7 @@ class SinusoidalTimeEmbedding(nn.Module):
         self.embedding_dim = embedding_dim
 
     def forward(self, timesteps: torch.Tensor) -> torch.Tensor:
+        # Encode the discrete diffusion step so the denoiser can behave differently at each noise level.
         half_dim = self.embedding_dim // 2
         exponent = -math.log(10000.0) / max(half_dim - 1, 1)
         frequencies = torch.exp(torch.arange(half_dim, device=timesteps.device) * exponent)
@@ -37,6 +38,7 @@ class ConditionalDenoisingMLP(nn.Module):
         )
 
     def forward(self, x_t: torch.Tensor, t: torch.Tensor, condition: torch.Tensor) -> torch.Tensor:
+        # Predict the noise in the current action-plan sample conditioned on state-goal features.
         time_features = self.time_embedding(t)
         features = torch.cat([x_t, condition, time_features], dim=1)
         return self.network(features)
@@ -73,12 +75,14 @@ class DiffusionActionModel:
         self.alpha_bars = torch.cumprod(self.alphas, dim=0)
 
     def q_sample(self, x0: torch.Tensor, t: torch.Tensor, noise: torch.Tensor | None = None) -> torch.Tensor:
+        # Forward diffusion: corrupt a clean action plan to a chosen timestep.
         if noise is None:
             noise = torch.randn_like(x0)
         alpha_bar_t = self.alpha_bars[t].unsqueeze(1)
         return torch.sqrt(alpha_bar_t) * x0 + torch.sqrt(1.0 - alpha_bar_t) * noise
 
     def training_step(self, x0: torch.Tensor, condition: torch.Tensor) -> float:
+        # Standard DDPM objective: predict the sampled Gaussian noise from the corrupted plan.
         batch_size = x0.shape[0]
         t = torch.randint(0, self.diffusion_steps, (batch_size,), device=self.device)
         noise = torch.randn_like(x0)
@@ -91,6 +95,7 @@ class DiffusionActionModel:
         return float(loss.item())
 
     def fit(self, action_vectors: np.ndarray, conditions: np.ndarray, epochs: int = 30, batch_size: int = 64):
+        # Supervised training on shortest-path demonstrations converted into fixed-horizon action vectors.
         dataset = TensorDataset(
             torch.tensor(action_vectors, dtype=torch.float32),
             torch.tensor(conditions, dtype=torch.float32),
@@ -109,6 +114,7 @@ class DiffusionActionModel:
 
     @torch.no_grad()
     def sample(self, condition, num_samples: int, horizon: int | None = None):
+        # Reverse diffusion: iteratively denoise random noise into candidate action sequences.
         self.model.eval()
         condition = torch.tensor(condition, dtype=torch.float32, device=self.device)
         if condition.ndim == 1:

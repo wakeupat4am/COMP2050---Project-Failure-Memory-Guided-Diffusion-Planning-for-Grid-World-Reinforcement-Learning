@@ -58,6 +58,7 @@ def run_exploration_comparison(
             diffusion_model = DiffusionActionModel(horizon=diffusion_horizon, diffusion_steps=25)
             diffusion_model.fit(action_vectors, conditions, epochs=diffusion_epochs, batch_size=32)
 
+            # Isolate the contribution of each exploration-oriented diffusion variant.
             planners = {
                 "Failure-Memory Baseline": FailureMemoryDiffusionPlanner(
                     env,
@@ -104,6 +105,7 @@ def run_exploration_comparison(
             }
 
             for algorithm_name, planner in planners.items():
+                # Each variant is evaluated in a fresh environment copy for fair episode accounting.
                 eval_env = GridWorldEnv(grid=grid, start=start, goal=goal, max_steps=50)
                 metrics_df = evaluate_planner(planner, eval_env, num_episodes=num_episodes_eval, seed=seed, bfs_length=bfs_length)
                 metrics_df["Algorithm"] = algorithm_name
@@ -112,6 +114,7 @@ def run_exploration_comparison(
                 episode_records.append(metrics_df)
 
     raw_df = pd.concat(episode_records, ignore_index=True)
+    # Save raw, per-seed, and aggregated views because later plots and report tables use different levels.
     per_seed_df, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["Algorithm", "Map"])
     summary_csv_path = os.path.join(tables_dir, "exploration_comparison.csv")
     per_seed_csv_path = os.path.join(tables_dir, "exploration_comparison_per_seed.csv")

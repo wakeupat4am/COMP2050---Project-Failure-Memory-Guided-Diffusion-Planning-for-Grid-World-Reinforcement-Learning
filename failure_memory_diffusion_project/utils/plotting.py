@@ -36,8 +36,14 @@ ALGORITHM_COLORS = {
     "Improved Failure-Memory Diffusion": "#8c564b",
 }
 
+AXIS_LABEL_FONT_SIZE = 13
+TICK_LABEL_FONT_SIZE = 11
+LEGEND_FONT_SIZE = 14
+LEGEND_TITLE_FONT_SIZE = 14
+
 
 def _ordered_algorithms(df: pd.DataFrame) -> list[str]:
+    # Keep a stable plotting order so figures remain comparable across different experiment subsets.
     present = set(df["Algorithm"].tolist())
     ordered = [name for name in ALGORITHM_ORDER if name in present]
     remaining = sorted(present - set(ordered))
@@ -53,6 +59,7 @@ def _plot_grouped_bars(
     output_path: str,
     ylim: tuple[float, float] | None = None,
 ) -> None:
+    # Shared bar-chart template for the headline benchmark metrics.
     maps = list(df["Map"].drop_duplicates())
     algorithms = _ordered_algorithms(df)
     x = np.arange(len(maps))
@@ -80,13 +87,22 @@ def _plot_grouped_bars(
         )
 
     ax.set_xticks(x)
-    ax.set_xticklabels([name.replace("_", "\n") for name in maps])
-    ax.set_ylabel(ylabel)
-    ax.set_title(title)
+    ax.set_xticklabels([name.replace("_", "\n") for name in maps], fontsize=TICK_LABEL_FONT_SIZE)
+    ax.set_ylabel(ylabel, fontsize=AXIS_LABEL_FONT_SIZE)
+    ax.tick_params(axis="y", labelsize=TICK_LABEL_FONT_SIZE)
     if ylim is not None:
         ax.set_ylim(*ylim)
     ax.grid(axis="y", linestyle="--", alpha=0.35)
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=3, frameon=False)
+    ax.legend(
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.18),
+        ncol=3,
+        frameon=False,
+        fontsize=LEGEND_FONT_SIZE,
+        title_fontsize=LEGEND_TITLE_FONT_SIZE,
+        columnspacing=1.4,
+        handletextpad=0.7,
+    )
     plt.tight_layout()
     plt.savefig(output_path, dpi=220, bbox_inches="tight")
     plt.close(fig)
@@ -139,16 +155,16 @@ def plot_inference_time_table(df: pd.DataFrame, output_dir: str) -> None:
 
 
 def plot_metric_heatmap(df: pd.DataFrame, output_dir: str, metric: str, filename: str, title: str) -> None:
+    # Heatmaps provide a compact cross-map summary when exact mean values still matter.
     pivot = df.pivot(index="Algorithm", columns="Map", values=metric)
     pivot = pivot.reindex(_ordered_algorithms(df))
 
     fig, ax = plt.subplots(figsize=(8, 5.5))
     image = ax.imshow(pivot.to_numpy(), aspect="auto", cmap="YlGnBu")
     ax.set_xticks(np.arange(len(pivot.columns)))
-    ax.set_xticklabels(pivot.columns, rotation=25, ha="right")
+    ax.set_xticklabels(pivot.columns, rotation=25, ha="right", fontsize=TICK_LABEL_FONT_SIZE)
     ax.set_yticks(np.arange(len(pivot.index)))
-    ax.set_yticklabels(pivot.index)
-    ax.set_title(title)
+    ax.set_yticklabels(pivot.index, fontsize=TICK_LABEL_FONT_SIZE)
 
     for row_idx in range(pivot.shape[0]):
         for col_idx in range(pivot.shape[1]):
@@ -156,13 +172,15 @@ def plot_metric_heatmap(df: pd.DataFrame, output_dir: str, metric: str, filename
             label = "NaN" if pd.isna(value) else f"{value:.2f}"
             ax.text(col_idx, row_idx, label, ha="center", va="center", color="black", fontsize=8)
 
-    fig.colorbar(image, ax=ax, shrink=0.85)
+    cbar = fig.colorbar(image, ax=ax, shrink=0.85)
+    cbar.ax.tick_params(labelsize=TICK_LABEL_FONT_SIZE)
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, filename), dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
 def plot_diffusion_focus(df: pd.DataFrame, output_dir: str) -> None:
+    # Highlight only diffusion-family planners when comparing their internal tradeoffs.
     focus_algorithms = [
         name
         for name in [
@@ -198,21 +216,33 @@ def plot_diffusion_focus(df: pd.DataFrame, output_dir: str) -> None:
                 color=ALGORITHM_COLORS[algorithm],
                 capsize=3,
             )
-        ax.set_title(title)
+        ax.set_title(title, fontsize=AXIS_LABEL_FONT_SIZE)
         ax.grid(True, linestyle="--", alpha=0.35)
-        ax.tick_params(axis="x", rotation=20)
+        ax.tick_params(axis="x", rotation=20, labelsize=TICK_LABEL_FONT_SIZE)
+        ax.tick_params(axis="y", labelsize=TICK_LABEL_FONT_SIZE)
 
     axes[0].set_ylim(0.0, 1.05)
     axes[2].set_ylim(0.0, 1.05)
     handles, labels = axes[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc="upper center", ncol=2, frameon=False)
-    fig.suptitle("Diffusion-Family Comparison with 95% CIs", y=0.98)
-    plt.tight_layout(rect=(0, 0, 1, 0.95))
+    fig.legend(
+        handles,
+        labels,
+        loc="upper center",
+        ncol=2,
+        frameon=False,
+        fontsize=LEGEND_FONT_SIZE,
+        title_fontsize=LEGEND_TITLE_FONT_SIZE,
+        bbox_to_anchor=(0.5, 1.02),
+        columnspacing=1.4,
+        handletextpad=0.7,
+    )
+    plt.tight_layout(rect=(0, 0, 1, 0.92))
     plt.savefig(os.path.join(output_dir, "diffusion_focus_comparison.png"), dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
 def create_all_plots(df: pd.DataFrame, output_dir: str) -> None:
+    # Main benchmark plotting bundle used by the comparison scripts.
     os.makedirs(output_dir, exist_ok=True)
     plot_success_rate_table(df, output_dir)
     plot_average_return_table(df, output_dir)
@@ -236,6 +266,7 @@ def create_all_plots(df: pd.DataFrame, output_dir: str) -> None:
 
 
 def plot_lambda_failure_ablation(df: pd.DataFrame, output_dir: str) -> None:
+    # Show how the failure-memory penalty weight changes performance and stability.
     os.makedirs(output_dir, exist_ok=True)
     x = df["lambda_F"].to_numpy()
     metrics = [
@@ -248,20 +279,21 @@ def plot_lambda_failure_ablation(df: pd.DataFrame, output_dir: str) -> None:
     for ax, (column, title, color) in zip(axes, metrics):
         error_col = column.replace("Mean", "CI Halfwidth")
         ax.errorbar(x, df[column].to_numpy(), yerr=df[error_col].to_numpy(), marker="o", linewidth=2.2, color=color, capsize=3)
-        ax.set_title(title)
-        ax.set_xlabel(r"$\lambda_F$")
+        ax.set_title(title, fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.set_xlabel(r"$\lambda_F$", fontsize=AXIS_LABEL_FONT_SIZE)
         ax.grid(True, linestyle="--", alpha=0.35)
+        ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
         if "Rate" in title:
             ax.set_ylim(0.0, 1.05)
 
-    axes[0].set_ylabel("Metric Value")
-    fig.suptitle("Failure-Memory Planner Ablation on lambda_F", y=1.02)
+    axes[0].set_ylabel("Metric Value", fontsize=AXIS_LABEL_FONT_SIZE)
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "lambda_failure_ablation.png"), dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
 def plot_k_ablation(df: pd.DataFrame, output_dir: str) -> None:
+    # Plot sensitivity to the number of sampled candidate trajectories.
     os.makedirs(output_dir, exist_ok=True)
     x = df["K"].to_numpy()
     metrics = [
@@ -276,22 +308,22 @@ def plot_k_ablation(df: pd.DataFrame, output_dir: str) -> None:
     for ax, (column, title, color) in zip(axes, metrics):
         error_col = column.replace("Mean", "CI Halfwidth")
         ax.errorbar(x, df[column].to_numpy(), yerr=df[error_col].to_numpy(), marker="o", linewidth=2.2, color=color, capsize=3)
-        ax.set_title(title)
-        ax.set_xlabel("K")
+        ax.set_title(title, fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.set_xlabel("K", fontsize=AXIS_LABEL_FONT_SIZE)
         ax.grid(True, linestyle="--", alpha=0.35)
+        ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
         if "Rate" in title:
             ax.set_ylim(0.0, 1.05)
 
-    axes[0].set_ylabel("Metric Value")
-    axes[2].set_ylabel("Metric Value")
-    lambda_value = float(df["lambda_F"].iloc[0]) if not df.empty else float("nan")
-    fig.suptitle(f"Failure-Memory Planner Ablation on K (lambda_F={lambda_value:.2f})", y=0.98)
-    plt.tight_layout(rect=(0, 0, 1, 0.96))
+    axes[0].set_ylabel("Metric Value", fontsize=AXIS_LABEL_FONT_SIZE)
+    axes[2].set_ylabel("Metric Value", fontsize=AXIS_LABEL_FONT_SIZE)
+    plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "k_ablation_failure_memory.png"), dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
 def plot_standard_lambda_ablation(df: pd.DataFrame, output_dir: str) -> None:
+    # Mirror the lambda sweep for the standard diffusion planner's distance penalty.
     os.makedirs(output_dir, exist_ok=True)
     x = df["lambda_D"].to_numpy()
     metrics = [
@@ -304,20 +336,21 @@ def plot_standard_lambda_ablation(df: pd.DataFrame, output_dir: str) -> None:
     for ax, (column, title, color) in zip(axes, metrics):
         error_col = column.replace("Mean", "CI Halfwidth")
         ax.errorbar(x, df[column].to_numpy(), yerr=df[error_col].to_numpy(), marker="o", linewidth=2.2, color=color, capsize=3)
-        ax.set_title(title)
-        ax.set_xlabel(r"$\lambda_D$")
+        ax.set_title(title, fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.set_xlabel(r"$\lambda_D$", fontsize=AXIS_LABEL_FONT_SIZE)
         ax.grid(True, linestyle="--", alpha=0.35)
+        ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
         if "Rate" in title:
             ax.set_ylim(0.0, 1.05)
 
-    axes[0].set_ylabel("Metric Value")
-    fig.suptitle("Standard Diffusion Ablation on lambda_D", y=1.02)
+    axes[0].set_ylabel("Metric Value", fontsize=AXIS_LABEL_FONT_SIZE)
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "lambda_distance_ablation_standard_diffusion.png"), dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
 def plot_standard_k_ablation(df: pd.DataFrame, output_dir: str) -> None:
+    # Mirror the candidate-count sweep for the standard diffusion planner.
     os.makedirs(output_dir, exist_ok=True)
     x = df["K"].to_numpy()
     metrics = [
@@ -333,22 +366,22 @@ def plot_standard_k_ablation(df: pd.DataFrame, output_dir: str) -> None:
         error_col = column.replace("Mean", "CI Halfwidth")
         yerr = df[error_col].to_numpy() if error_col in df.columns else None
         ax.errorbar(x, df[column].to_numpy(), yerr=yerr, marker="o", linewidth=2.2, color=color, capsize=3)
-        ax.set_title(title)
-        ax.set_xlabel("K")
+        ax.set_title(title, fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.set_xlabel("K", fontsize=AXIS_LABEL_FONT_SIZE)
         ax.grid(True, linestyle="--", alpha=0.35)
+        ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
         if "Rate" in title:
             ax.set_ylim(0.0, 1.05)
 
-    axes[0].set_ylabel("Metric Value")
-    axes[2].set_ylabel("Metric Value")
-    lambda_value = float(df["lambda_D"].iloc[0]) if not df.empty else float("nan")
-    fig.suptitle(f"Standard Diffusion Ablation on K (lambda_D={lambda_value:.2f})", y=0.98)
-    plt.tight_layout(rect=(0, 0, 1, 0.96))
+    axes[0].set_ylabel("Metric Value", fontsize=AXIS_LABEL_FONT_SIZE)
+    axes[2].set_ylabel("Metric Value", fontsize=AXIS_LABEL_FONT_SIZE)
+    plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "k_ablation_standard_diffusion.png"), dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
 def compare_best_diffusion_variants(df: pd.DataFrame, output_dir: str) -> None:
+    # Final side-by-side summary for the tuned standard and failure-memory diffusion variants.
     os.makedirs(output_dir, exist_ok=True)
     metrics = ["Success Rate", "Collision Rate", "Repeated Failure Rate", "Average Return"]
     colors = ["#d62728", "#9467bd"]
@@ -360,19 +393,20 @@ def compare_best_diffusion_variants(df: pd.DataFrame, output_dir: str) -> None:
     for ax, metric in zip(axes, metrics):
         ax.bar(x, df[metric].to_numpy(), color=colors, edgecolor="black", linewidth=0.4)
         ax.set_xticks(x)
-        ax.set_xticklabels(planners, rotation=10)
-        ax.set_title(metric)
+        ax.set_xticklabels(planners, rotation=10, fontsize=TICK_LABEL_FONT_SIZE)
+        ax.set_title(metric, fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.tick_params(axis="y", labelsize=TICK_LABEL_FONT_SIZE)
         ax.grid(axis="y", linestyle="--", alpha=0.35)
         if "Rate" in metric:
             ax.set_ylim(0.0, 1.05)
 
-    fig.suptitle("Best Standard Diffusion vs Best Failure-Memory Diffusion", y=0.98)
-    plt.tight_layout(rect=(0, 0, 1, 0.96))
+    plt.tight_layout()
     plt.savefig(os.path.join(output_dir, "best_diffusion_variant_comparison.png"), dpi=220, bbox_inches="tight")
     plt.close(fig)
 
 
 def create_exploration_plots(df: pd.DataFrame, output_dir: str) -> None:
+    # Plot the exploration-variant benchmark with the same grouped-bar style across metrics.
     os.makedirs(output_dir, exist_ok=True)
     metric_specs = [
         ("Success Rate Mean", "Success Rate", "exploration_success_rate.png", (0.0, 1.05)),
@@ -405,19 +439,29 @@ def create_exploration_plots(df: pd.DataFrame, output_dir: str) -> None:
                 linewidth=0.4,
             )
         ax.set_xticks(x)
-        ax.set_xticklabels([name.replace("_", "\n") for name in maps])
-        ax.set_ylabel(ylabel)
-        ax.set_title(f"{ylabel} for Exploration Variants")
+        ax.set_xticklabels([name.replace("_", "\n") for name in maps], fontsize=TICK_LABEL_FONT_SIZE)
+        ax.set_ylabel(ylabel, fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.tick_params(axis="y", labelsize=TICK_LABEL_FONT_SIZE)
         if ylim is not None:
             ax.set_ylim(*ylim)
         ax.grid(axis="y", linestyle="--", alpha=0.35)
-        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=3, frameon=False)
+        ax.legend(
+            loc="upper center",
+            bbox_to_anchor=(0.5, -0.18),
+            ncol=3,
+            frameon=False,
+            fontsize=LEGEND_FONT_SIZE,
+            title_fontsize=LEGEND_TITLE_FONT_SIZE,
+            columnspacing=1.4,
+            handletextpad=0.7,
+        )
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, filename), dpi=220, bbox_inches="tight")
         plt.close(fig)
 
 
 def create_component_ablation_plots(df: pd.DataFrame, output_dir: str) -> None:
+    # Plot remove-one ablations to show which exploration components matter most.
     os.makedirs(output_dir, exist_ok=True)
     metric_specs = [
         ("Success Rate Mean", "Success Rate", "component_ablation_success_rate.png", (0.0, 1.05)),
@@ -448,13 +492,22 @@ def create_component_ablation_plots(df: pd.DataFrame, output_dir: str) -> None:
                 linewidth=0.4,
             )
         ax.set_xticks(x)
-        ax.set_xticklabels([name.replace("_", "\n") for name in maps])
-        ax.set_ylabel(ylabel)
-        ax.set_title(f"{ylabel} for Remove-One Component Ablation")
+        ax.set_xticklabels([name.replace("_", "\n") for name in maps], fontsize=TICK_LABEL_FONT_SIZE)
+        ax.set_ylabel(ylabel, fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.tick_params(axis="y", labelsize=TICK_LABEL_FONT_SIZE)
         if ylim is not None:
             ax.set_ylim(*ylim)
         ax.grid(axis="y", linestyle="--", alpha=0.35)
-        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2, frameon=False)
+        ax.legend(
+            loc="upper center",
+            bbox_to_anchor=(0.5, -0.20),
+            ncol=2,
+            frameon=False,
+            fontsize=LEGEND_FONT_SIZE,
+            title_fontsize=LEGEND_TITLE_FONT_SIZE,
+            columnspacing=1.4,
+            handletextpad=0.7,
+        )
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, filename), dpi=220, bbox_inches="tight")
         plt.close(fig)

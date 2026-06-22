@@ -10,6 +10,7 @@ from .seed import set_global_seed
 
 
 def evaluate_planner(planner, env, num_episodes: int, seed: int, bfs_length: Optional[float] = None) -> pd.DataFrame:
+    # Common evaluation harness used by all benchmark, ablation, and exploration scripts.
     set_global_seed(seed)
     records: List[Dict[str, float]] = []
 
@@ -21,6 +22,7 @@ def evaluate_planner(planner, env, num_episodes: int, seed: int, bfs_length: Opt
         if hasattr(planner, "start_episode"):
             planner.start_episode()
 
+        # Episode rollout measures both task success and planner-side decision cost.
         state = env.reset()
         done = False
         path = [state]
@@ -59,6 +61,7 @@ def evaluate_planner(planner, env, num_episodes: int, seed: int, bfs_length: Opt
         if hasattr(planner, "end_episode"):
             planner.end_episode(path=path, success=bool(info["success"]), collision=bool(info["collision"]), truncated=truncated)
 
+        # Derived metrics align all planners on the same benchmark outputs and report schema.
         success = 1 if info["success"] else 0
         path_length = max(0, len(path) - 1)
         if success and bfs_length not in (None, np.inf):

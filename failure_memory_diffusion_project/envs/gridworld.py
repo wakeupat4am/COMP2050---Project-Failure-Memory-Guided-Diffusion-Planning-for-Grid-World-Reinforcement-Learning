@@ -19,6 +19,7 @@ class TransitionResult:
 
 
 class GridWorldEnv:
+    # Shared action encoding used by every planner and by the diffusion dataset builder.
     ACTIONS = {
         0: (-1, 0),  # up
         1: (1, 0),   # down
@@ -60,6 +61,7 @@ class GridWorldEnv:
         return states
 
     def _compute_transition(self, state: Position, action: int, steps_taken: int) -> TransitionResult:
+        # Central transition model for both online interaction and planner-side simulation.
         if self.is_terminal_state(state):
             return TransitionResult(
                 next_state=state,
@@ -119,6 +121,7 @@ class GridWorldEnv:
         return result.next_state, result.reward, result.terminated, result.truncated, result.info
 
     def simulate_action_sequence(self, start_state: Position, action_sequence: List[int]):
+        # Roll out an open-loop candidate plan and return enough detail for trajectory scoring.
         state = tuple(start_state)
         path = [state]
         total_reward = 0.0

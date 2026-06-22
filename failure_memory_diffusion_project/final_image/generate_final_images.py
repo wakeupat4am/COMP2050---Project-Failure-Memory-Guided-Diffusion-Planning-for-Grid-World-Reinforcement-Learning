@@ -23,7 +23,10 @@ import pandas as pd
 
 
 OUTPUT_DIR = PROJECT_ROOT / "final_image"
-LEGEND_FONT_SIZE = 18
+LEGEND_FONT_SIZE = 20
+AXIS_LABEL_FONT_SIZE = 17
+TICK_LABEL_FONT_SIZE = 13
+PANEL_TITLE_FONT_SIZE = 14
 
 
 ALGO_ORDER = [
@@ -167,9 +170,6 @@ def plot_final_method_overview() -> None:
     ax.axis("off")
     fig.patch.set_facecolor("#f7f3ea")
 
-    ax.text(0.03, 0.94, "Final Method Overview", fontsize=24, fontweight="bold", color="#1f2933")
-    ax.text(0.03, 0.89, "Current state and goal -> candidate generation -> scoring -> memory guidance -> action -> feedback", fontsize=13, color="#44515c")
-
     box(ax, (0.04, 0.58), 0.14, 0.2, "State + Goal", ["current row/col", "goal row/col"], "#dceefb", "#2f6b8a")
     box(ax, (0.23, 0.58), 0.15, 0.2, "Diffusion Model", ["sample K x 3 raw", "action sequences"], "#ffe3c2", "#b96a20")
     box(ax, (0.43, 0.58), 0.15, 0.2, "Simulation", ["simulate each", "candidate path"], "#eadbf7", "#7a4da1")
@@ -209,7 +209,7 @@ def draw_grid(ax, grid, start, goal, title):
                 ax.text(c + 0.5, r + 0.62, "X", ha="center", va="center", fontsize=16, fontweight="bold", color="#ffffff")
             elif (r, c) not in [start, goal]:
                 ax.text(c + 0.5, r + 0.62, ".", ha="center", va="center", fontsize=14, color="#9aa5b1")
-    ax.set_title(title, fontsize=14, fontweight="bold")
+    ax.set_title(title, fontsize=PANEL_TITLE_FONT_SIZE, fontweight="bold")
 
 
 def plot_map_scenes() -> None:
@@ -221,7 +221,6 @@ def plot_map_scenes() -> None:
     draw_grid(axes[1, 0], *create_deceptive_map(), "Deceptive")
     random_map = generate_random_valid_maps(1, (5, 5), 0.2, 123)[0]
     draw_grid(axes[1, 1], *random_map, "Random-Small")
-    fig.suptitle("Evaluation Map Scenes", fontsize=22, fontweight="bold")
     save_fig(fig, "map_scenes.png")
 
 
@@ -231,8 +230,6 @@ def plot_diffusion_architecture() -> None:
     ax.set_ylim(0, 1)
     ax.axis("off")
     fig.patch.set_facecolor("#f7f3ea")
-    ax.text(0.03, 0.94, "Conditional Diffusion Architecture", fontsize=24, fontweight="bold", color="#1f2933")
-
     box(ax, (0.04, 0.55), 0.16, 0.22, r"Noisy sequence $x_t$", ["flattened one-hot", "action trajectory"], "#dceefb", "#2f6b8a")
     box(ax, (0.26, 0.55), 0.16, 0.22, "Timestep Embedding", [r"sin/cos embed", r"for diffusion step $t$"], "#ffe3c2", "#b96a20")
     box(ax, (0.48, 0.55), 0.16, 0.22, "State-Goal Condition", ["[r, c, goal_r, goal_c]", "normalized by grid size"], "#eadbf7", "#7a4da1")
@@ -267,7 +264,6 @@ def plot_planner_comparison() -> None:
         box(ax, (0.10, 0.16), 0.80, 0.16, "Execute", ["take first action of", "best trajectory"], "#f7f7f7", color)
         arrow_between(ax, 0.50, 0.68, 0.50, 0.58)
         arrow_between(ax, 0.50, 0.42, 0.50, 0.32)
-    fig.suptitle("Diffusion Planner Comparison", fontsize=22, fontweight="bold")
     save_fig(fig, "planner_comparison.png")
 
 
@@ -293,12 +289,11 @@ def grouped_bar(df: pd.DataFrame, value_col: str, ylabel: str, filename: str, yl
             linewidth=0.4,
         )
     ax.set_xticks(x)
-    ax.set_xticklabels([m.replace("_", "\n") for m in maps], fontsize=13)
-    ax.set_ylabel(ylabel, fontsize=17)
-    ax.set_title(f"{ylabel} by Algorithm and Map", fontsize=20, fontweight="bold")
+    ax.set_xticklabels([m.replace("_", "\n") for m in maps], fontsize=TICK_LABEL_FONT_SIZE)
+    ax.set_ylabel(ylabel, fontsize=AXIS_LABEL_FONT_SIZE)
     if ylim is not None:
         ax.set_ylim(*ylim)
-    ax.tick_params(axis="y", labelsize=13)
+    ax.tick_params(axis="y", labelsize=TICK_LABEL_FONT_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.35)
     ax.legend(
         loc="upper center",
@@ -342,11 +337,10 @@ def plot_exploration_success_rate() -> None:
             linewidth=0.4,
         )
     ax.set_xticks(x)
-    ax.set_xticklabels([m.replace("_", "\n") for m in maps], fontsize=13)
-    ax.set_ylabel("Success Rate", fontsize=17)
+    ax.set_xticklabels([m.replace("_", "\n") for m in maps], fontsize=TICK_LABEL_FONT_SIZE)
+    ax.set_ylabel("Success Rate", fontsize=AXIS_LABEL_FONT_SIZE)
     ax.set_ylim(0, 1.05)
-    ax.set_title("Exploration Method Success Rate", fontsize=20, fontweight="bold")
-    ax.tick_params(axis="y", labelsize=13)
+    ax.tick_params(axis="y", labelsize=TICK_LABEL_FONT_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.35)
     ax.legend(
         loc="upper center",
@@ -368,12 +362,11 @@ def plot_lambda_failure_ablation() -> None:
     for ax, (col, title, color) in zip(axes, metrics):
         error_col = col.replace("Mean", "CI Halfwidth")
         ax.errorbar(x, df[col].to_numpy(), yerr=df[error_col].to_numpy(), marker="o", linewidth=2.5, color=color, capsize=3)
-        ax.set_xlabel(r"$\lambda_F$", fontsize=13)
-        ax.set_title(title, fontsize=14, fontweight="bold")
-        ax.tick_params(axis="both", labelsize=11)
+        ax.set_xlabel(r"$\lambda_F$", fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.set_title(title, fontsize=PANEL_TITLE_FONT_SIZE, fontweight="bold")
+        ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
         ax.grid(True, linestyle="--", alpha=0.35)
         ax.set_ylim(0, 1.05)
-    fig.suptitle(r"Failure-Memory Strength Ablation on $\lambda_F$", fontsize=20, fontweight="bold")
     save_fig(fig, "lambda_failure_ablation.png")
 
 
@@ -410,14 +403,13 @@ def plot_k_candidate_ablation() -> None:
                 label="Failure-Memory Diffusion",
                 capsize=3,
             )
-        ax.set_xlabel("K", fontsize=13)
-        ax.set_title(title, fontsize=14, fontweight="bold")
-        ax.tick_params(axis="both", labelsize=11)
+        ax.set_xlabel("K", fontsize=AXIS_LABEL_FONT_SIZE)
+        ax.set_title(title, fontsize=PANEL_TITLE_FONT_SIZE, fontweight="bold")
+        ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
         ax.grid(True, linestyle="--", alpha=0.35)
         if ylim is not None:
             ax.set_ylim(*ylim)
     axes[0].legend(frameon=False, fontsize=LEGEND_FONT_SIZE)
-    fig.suptitle("Candidate-Budget Ablation", fontsize=20, fontweight="bold")
     save_fig(fig, "k_candidate_ablation.png")
 
 

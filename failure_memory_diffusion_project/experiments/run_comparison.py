@@ -32,6 +32,7 @@ from utils.plotting import create_all_plots
 
 
 def _build_maps():
+    # Shared benchmark suite spanning easy, structured, deceptive, and random layouts.
     maps = {
         "easy": create_easy_map(),
         "obstacle": create_obstacle_map(),
@@ -74,6 +75,7 @@ def run_comparison(
             env = GridWorldEnv(grid=grid, start=start, goal=goal, max_steps=50)
             bfs_length = shortest_path_length(grid, start, goal)
 
+            # Train each baseline once per map so every evaluated episode uses fixed planner parameters.
             vi_planner = ValueIterationPlanner(env)
             vi_planner.train()
 
@@ -87,6 +89,7 @@ def run_comparison(
             diffusion_model = DiffusionActionModel(horizon=diffusion_horizon, diffusion_steps=25)
             diffusion_model.fit(action_vectors, conditions, epochs=diffusion_epochs, batch_size=32)
 
+            # Compare classical planners against diffusion-based planners under the same map/seed setup.
             planners = {
                 "Random Policy": RandomPolicyPlanner(seed=seed),
                 "Value Iteration": vi_planner,
@@ -115,6 +118,7 @@ def run_comparison(
             }
 
             for algorithm_name, planner in planners.items():
+                # Recreate the environment so planners are evaluated without cross-contaminating state.
                 eval_env = GridWorldEnv(grid=grid, start=start, goal=goal, max_steps=50)
                 metrics_df = evaluate_planner(planner, eval_env, num_episodes=num_episodes_eval, seed=seed, bfs_length=bfs_length)
                 metrics_df["Algorithm"] = algorithm_name
@@ -123,6 +127,7 @@ def run_comparison(
                 episode_records.append(metrics_df)
 
     raw_df = pd.concat(episode_records, ignore_index=True)
+    # Aggregate at both per-seed and overall levels before saving tables and figures.
     per_seed_df, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["Algorithm", "Map"])
 
     csv_path = os.path.join(tables_dir, "efficiency_comparison.csv")

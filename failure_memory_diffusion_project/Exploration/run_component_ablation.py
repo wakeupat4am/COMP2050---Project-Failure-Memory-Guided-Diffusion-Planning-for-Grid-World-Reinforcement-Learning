@@ -54,6 +54,7 @@ def run_component_ablation(
             diffusion_model = DiffusionActionModel(horizon=diffusion_horizon, diffusion_steps=25)
             diffusion_model.fit(action_vectors, conditions, epochs=diffusion_epochs, batch_size=32)
 
+            # Remove one mechanism at a time to show which part of the full method drives the gains.
             planners = {
                 "Full Method": CombinedExplorationFailureMemoryPlanner(
                     env,
@@ -103,6 +104,7 @@ def run_component_ablation(
             }
 
             for variant_name, planner in planners.items():
+                # Evaluate every ablation variant under the same seed and map before aggregation.
                 eval_env = GridWorldEnv(grid=grid, start=start, goal=goal, max_steps=50)
                 metrics_df = evaluate_planner(
                     planner,
@@ -117,6 +119,7 @@ def run_component_ablation(
                 episode_records.append(metrics_df)
 
     raw_df = pd.concat(episode_records, ignore_index=True)
+    # Persist all aggregation levels so the report can inspect both overall trends and per-seed variance.
     per_seed_df, summary_df = aggregate_raw_to_seed_summary(raw_df=raw_df, group_cols=["Algorithm", "Map"])
 
     raw_csv_path = os.path.join(tables_dir, "component_ablation_raw.csv")

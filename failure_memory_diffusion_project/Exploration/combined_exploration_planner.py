@@ -22,6 +22,7 @@ class CombinedExplorationFailureMemoryPlanner(AdaptiveFailureMemoryDiffusionPlan
         self.lambda_loop = lambda_loop
 
     def update_failure_memory(self, path):
+        # Tail-only updates emphasize the terminal part of failed trajectories where traps usually manifest.
         tail = path[-self.tail_k :] if path else []
         for state in tail:
             self.failure_memory[state] += 1.0
@@ -35,6 +36,7 @@ class CombinedExplorationFailureMemoryPlanner(AdaptiveFailureMemoryDiffusionPlan
         return repeated_states / max(len(path), 1)
 
     def score_trajectory(self, state, action_sequence):
+        # Combine reward, goal distance, failure memory, and loop aversion into one rollout score.
         rollout = self.simulate_trajectory(state, action_sequence)
         final_state = rollout["final_state"]
         distance = abs(final_state[0] - self.env.goal[0]) + abs(final_state[1] - self.env.goal[1])
@@ -54,6 +56,7 @@ class CombinedExplorationFailureMemoryPlanner(AdaptiveFailureMemoryDiffusionPlan
         return score, rollout
 
     def act(self, state):
+        # Oversample, score, and then keep a diverse shortlist across first actions before choosing.
         raw_candidates = self.diffusion_model.sample(
             self._condition(state),
             num_samples=self.num_candidates * self.raw_multiplier,
@@ -76,6 +79,7 @@ class CombinedExplorationFailureMemoryPlanner(AdaptiveFailureMemoryDiffusionPlan
 
         selected = []
         used_ids = set()
+        # Reserve one high-scoring candidate per first action to avoid collapsing onto a single mode.
         for action, items in grouped.items():
             best = max(items, key=lambda entry: entry["score"])
             selected.append(best)

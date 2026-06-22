@@ -40,6 +40,9 @@ ALGORITHM_COLORS = {
     "Map-Conditioned Improved Failure-Memory Diffusion": "#8c564b",
 }
 
+AXIS_LABEL_FONT_SIZE = 13
+TICK_LABEL_FONT_SIZE = 11
+
 
 def _ordered_algorithms(summary_df: pd.DataFrame) -> list[str]:
     preferred = [
@@ -76,10 +79,10 @@ def plot_holdout_map(holdout_map: HoldoutMap, output_path: Path) -> None:
         ax.text(sc, sr - 0.22, str(idx), ha="center", va="center", color="white", fontsize=8, weight="bold")
         ax.text(gc, gr + 0.22, str(idx), ha="center", va="center", color="#2d2d2d", fontsize=8, weight="bold")
 
-    ax.set_title("Held-Out Deployment Map with Evaluation Tasks")
-    ax.set_xlabel("Blue circles: start states | Orange stars: goal states")
+    ax.set_xlabel("Blue circles: start states | Orange stars: goal states", fontsize=AXIS_LABEL_FONT_SIZE)
     ax.set_xticks(np.arange(cols))
     ax.set_yticks(np.arange(rows))
+    ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
     plt.tight_layout()
     plt.savefig(output_path, dpi=220, bbox_inches="tight")
     plt.close(fig)
@@ -91,9 +94,9 @@ def plot_task_difficulty(holdout_map: HoldoutMap, output_path: Path) -> None:
 
     fig, ax = plt.subplots(figsize=(10, 4.8))
     ax.bar(labels, values, color="#5b8c5a", edgecolor="black", linewidth=0.4)
-    ax.set_ylabel("BFS Shortest Path Length")
-    ax.set_xlabel("Held-Out Tasks")
-    ax.set_title("Held-Out Task Difficulty")
+    ax.set_ylabel("BFS Shortest Path Length", fontsize=AXIS_LABEL_FONT_SIZE)
+    ax.set_xlabel("Held-Out Tasks", fontsize=AXIS_LABEL_FONT_SIZE)
+    ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
     ax.grid(axis="y", linestyle="--", alpha=0.35)
     plt.tight_layout()
     plt.savefig(output_path, dpi=220, bbox_inches="tight")
@@ -111,9 +114,9 @@ def plot_training_loss(loss_df: pd.DataFrame, output_path: Path) -> None:
     fig, ax = plt.subplots(figsize=(8.5, 5.0))
     ax.plot(epochs, loss_mean, color="#7a4da1", linewidth=2.4, marker="o")
     ax.fill_between(epochs, loss_mean - loss_std, loss_mean + loss_std, color="#cdb7e8", alpha=0.35)
-    ax.set_xlabel("Epoch")
-    ax.set_ylabel("Training Loss (MSE)")
-    ax.set_title("Map-Conditioned Diffusion Training Loss")
+    ax.set_xlabel("Epoch", fontsize=AXIS_LABEL_FONT_SIZE)
+    ax.set_ylabel("Training Loss (MSE)", fontsize=AXIS_LABEL_FONT_SIZE)
+    ax.tick_params(axis="both", labelsize=TICK_LABEL_FONT_SIZE)
     ax.grid(True, linestyle="--", alpha=0.35)
     plt.tight_layout()
     plt.savefig(output_path, dpi=220, bbox_inches="tight")
@@ -157,14 +160,14 @@ def plot_efficiency_dashboard(summary_df: pd.DataFrame, output_path: Path) -> No
             linewidth=0.4,
             capsize=4,
         )
-        ax.set_title(title)
+        ax.set_title(title, fontsize=AXIS_LABEL_FONT_SIZE)
         ax.set_xticks(x)
-        ax.set_xticklabels(labels, rotation=20, ha="right")
+        ax.set_xticklabels(labels, rotation=20, ha="right", fontsize=TICK_LABEL_FONT_SIZE)
+        ax.tick_params(axis="y", labelsize=TICK_LABEL_FONT_SIZE)
         if ylim is not None:
             ax.set_ylim(*ylim)
         ax.grid(axis="y", linestyle="--", alpha=0.35)
 
-    fig.suptitle("Cross-Map Deployment Efficiency on One Held-Out Unseen Map", y=0.98)
-    plt.tight_layout(rect=(0, 0, 1, 0.96))
+    plt.tight_layout()
     plt.savefig(output_path, dpi=220, bbox_inches="tight")
     plt.close(fig)

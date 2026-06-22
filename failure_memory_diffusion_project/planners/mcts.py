@@ -71,6 +71,7 @@ class MonteCarloTreeSearchPlanner:
         return valid_candidates[int(self.rng.integers(len(valid_candidates)))][0]
 
     def selection(self, node: MCTSNode) -> MCTSNode:
+        # Traverse the current search tree with UCB until expansion becomes possible.
         current = node
         while not current.untried_actions and current.children and not (current.terminated or current.truncated):
             best_score = -float("inf")
@@ -87,6 +88,7 @@ class MonteCarloTreeSearchPlanner:
         return current
 
     def expansion(self, node: MCTSNode) -> MCTSNode:
+        # Materialize one unexplored action from the selected frontier node.
         if not node.untried_actions or node.terminated or node.truncated:
             return node
         action = node.untried_actions.pop(int(self.rng.integers(len(node.untried_actions))))
@@ -105,6 +107,7 @@ class MonteCarloTreeSearchPlanner:
         return child
 
     def rollout(self, state, depth):
+        # Estimate downstream value with a shallow simulation policy biased toward the goal.
         current_state = state
         total_reward = 0.0
         current_depth = depth
@@ -121,6 +124,7 @@ class MonteCarloTreeSearchPlanner:
         return total_reward
 
     def backpropagation(self, node: MCTSNode, reward: float) -> None:
+        # Push the simulated return back up the tree so future selections favor better branches.
         current = node
         while current is not None:
             current.visits += 1
@@ -128,6 +132,7 @@ class MonteCarloTreeSearchPlanner:
             current = current.parent
 
     def search(self, root_state):
+        # Full MCTS loop: selection, expansion, rollout, and backpropagation across many simulations.
         root = MCTSNode(state=tuple(root_state))
 
         for _ in range(self.simulations):
