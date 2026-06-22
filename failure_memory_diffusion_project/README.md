@@ -6,7 +6,7 @@ This project studies diffusion-based planning in a deterministic GridWorld and p
 
 The final method keeps the original failure-memory idea but improves it with:
 
-- dead-end-only memory updates,
+- tail-only failure-memory updates,
 - diverse trajectory candidate selection,
 - adaptive failure-aware weighting,
 - and a loop penalty.

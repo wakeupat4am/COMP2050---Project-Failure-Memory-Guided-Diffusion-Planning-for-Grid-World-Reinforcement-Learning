@@ -1,3 +1,5 @@
+# Exploration-study design and variant comparison setup developed by the author.
+# Implementation drafting/editing assisted by AI; no copied external code.
 from __future__ import annotations
 
 import os

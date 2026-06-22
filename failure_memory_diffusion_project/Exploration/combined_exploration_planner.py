@@ -1,3 +1,5 @@
+# Core exploration-planner ideas and combination strategy developed by the author.
+# Implementation drafting/editing assisted by AI; no copied external code.
 from __future__ import annotations
 
 from collections import defaultdict

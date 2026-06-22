@@ -1,3 +1,5 @@
+# Core environment design and project use developed by the author.
+# Implementation drafting/editing assisted by AI; no copied external code.
 from __future__ import annotations
 
 from dataclasses import dataclass

@@ -1,3 +1,5 @@
+# Core diffusion-planning idea and project adaptation developed by the author.
+# Implementation drafting/editing assisted by AI; based on standard DDPM-style components, no copied external code.
 from __future__ import annotations
 
 import math

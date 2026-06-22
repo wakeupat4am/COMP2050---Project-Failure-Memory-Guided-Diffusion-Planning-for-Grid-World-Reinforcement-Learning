@@ -1,3 +1,5 @@
+# Baseline selection and project integration developed by the author.
+# Implementation drafting/editing assisted by AI; based on standard tabular Q-learning, no copied external code.
 from __future__ import annotations
 
 import numpy as np
